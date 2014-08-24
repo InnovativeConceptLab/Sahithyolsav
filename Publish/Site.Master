@@ -1,0 +1,83 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site.master.vb" Inherits="Sahithyolsav.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>SSF Sahithyolsav-2014</title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/jquery-1.6.min.js" type="text/javascript"></script>
+    <script src="Scripts/commonScripts.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header" style="height: 60px;">
+            <div class="title">
+                <h1>
+                    Sahithyolsav-2014
+                </h1>
+            </div>
+            <div style="float: right; padding-top: 15px; padding-right: 10px; color: #f9f9f9;
+                font-size: large;">
+                <asp:Label ID="loginInfo" runat="server" Text=""></asp:Label>&nbsp;&nbsp;&nbsp;
+                <asp:LinkButton ID="logout" runat="server" Text="" Font-Underline="false" Font-Bold="true"
+                    ForeColor="#3a4f63"></asp:LinkButton>
+                <%--  <asp:ImageButton ID="logout" runat="server" ImageUrl="~/image/logout.png" />--%>
+            </div>
+            <div id="menubar" style="display: none; height: 35px;" class="clear hideSkiplink">
+                <div id="main1">
+                    <ul id="menu2">
+                        <li id="liMain" runat="server"><a href="#" class="drop" onclick="loadIframe('home')">
+                            Home</a></li>
+                        <li id="limenu1" runat="server"><a href="#" class="drop">Masters</a>
+                            <div class="dropdown_2columns">
+                                <a href="#" onclick="loadIframe('dist')">District</a>
+                                <br />
+                                <a href="#" onclick="loadIframe('div')">Division </a>
+                                <br />
+                                <a href="#" onclick="loadIframe('sector')">Sector</a><br />
+                                <a href="#" onclick="loadIframe('unit')">Unit</a><br />
+                                <a href="#" onclick="loadIframe('section')">Section</a><br />
+                                <a href="#" onclick="loadIframe('item')">Item</a>
+                            </div>
+                        </li>
+                        <li id="limenu2" runat="server"><a href="#" class="drop">Users</a>
+                            <div class="dropdown_2columns">
+                                <a href="#" onclick="loadIframe('user')">Manage Users</a>
+                            </div>
+                        </li>
+                        <li><a href="#" class="drop">Program</a>
+                            <div class="dropdown_2columns">
+                                <a href="#" onclick="loadIframe('part')">Participant</a><br />
+                                <a href="#" onclick="loadIframe('chess')">Chess Number</a><br />
+                                <a href="#" onclick="loadIframe('codeletter')">Code Letter</a><br />
+                                <a href="#" onclick="loadIframe('tabulation')">Tabulation</a>
+                            </div>
+                        </li>
+                        <li><a href="#" class="drop">Reports</a>
+                            <div class="dropdown_2columns">
+                                <a href="#" onclick="loadIframe('rpt')">Show Reports</a>
+                            </div>
+                        </li>
+                        <li><a href="#" class="drop">Settings</a>
+                            <div class="dropdown_2columns">
+                                <a href="#" onclick="loadIframe('pswd')">Change Password</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+    </form>
+</body>
+</html>
