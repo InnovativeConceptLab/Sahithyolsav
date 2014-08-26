@@ -277,6 +277,13 @@ Public Class frmParticipantList
     Protected Sub ddlSection_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ddlSection.SelectedIndexChanged
         participantModal.Show()
         bindItemList()
+        If ddlSection.SelectedItem.ToString = "campus".ToLower Then
+            campusname.Visible = True
+            ' campuscourse.Visible = True
+        Else
+            campusname.Visible = False
+            '  campuscourse.Visible = False
+        End If
     End Sub
     Private Sub bindItemList()
         Dim dt As New DataTable
@@ -329,6 +336,7 @@ Public Class frmParticipantList
         Return False
         lblmsg.Visible = False
     End Function
+   
     Protected Sub btnSave_Click(ByVal sender As Object, ByVal e As System.Web.UI.ImageClickEventArgs) Handles btnSave.Click
         Dim arrItemList As New ArrayList
         Dim arrParticipant As New ArrayList
@@ -340,11 +348,16 @@ Public Class frmParticipantList
             participantModal.Show()
             Exit Sub
         End If
+        '    fileUploadImage.SaveAs(Server.MapPath("Images/" + img.ImageUrl))
 
         arrParticipant.Add(0)
         arrParticipant.Add(txtParticipant.Text.ToString())
         arrParticipant.Add(0)
         arrParticipant.Add(True)
+        arrParticipant.Add(Session("ImagePath"))
+        arrParticipant.Add(txtAge.Text)
+        arrParticipant.Add(txtCampus.Text)
+        arrParticipant.Add(txtCorse.Text)
         If Participant.SaveParticipant(arrParticipant, retParticipantId) = True Then
             arrParticipantList.Add(0)
             arrParticipantList.Add(retParticipantId)
@@ -517,4 +530,22 @@ Public Class frmParticipantList
         End If
         participantModal.Show()
     End Sub
+
+  
+    Protected Sub btnUpload_Click(sender As Object, e As EventArgs) Handles btnUpload.Click
+        If fileUploadImage.HasFile Then
+            Dim fileName As String
+            fileName = fileUploadImage.FileName
+            Dim randomValue = CInt(Math.Floor((100 - 1 + 1) * Rnd())) + 1
+            fileUploadImage.SaveAs(Server.MapPath("~/ParticipantPhoto/" + "_" + randomValue.ToString + fileUploadImage.FileName))
+           
+            Session("ImagePath") = "_" + randomValue.ToString + fileUploadImage.FileName
+            ''   fileUploadImage.SaveAs(MapPath("~/Image/" + fileUploadImage.FileName))
+
+            'Dim img1 As System.Drawing.Image = System.Drawing.Image.FromFile(MapPath("~/image/") + fileUploadImage.FileName)
+            'img.ImageUrl = "~/Image/" + fileUploadImage.FileName
+        End If
+        participantModal.Show()
+    End Sub
+
 End Class

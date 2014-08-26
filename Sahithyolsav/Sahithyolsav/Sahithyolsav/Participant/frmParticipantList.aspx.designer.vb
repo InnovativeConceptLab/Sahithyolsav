@@ -203,6 +203,42 @@ Partial Public Class frmParticipantList
     Protected WithEvents txtParticipant As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''UpdatePanel2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents UpdatePanel2 As Global.System.Web.UI.UpdatePanel
+
+    '''<summary>
+    '''fileUploadImage control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents fileUploadImage As Global.System.Web.UI.WebControls.FileUpload
+
+    '''<summary>
+    '''btnUpload control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnUpload As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''txtAge control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtAge As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
     '''ddlPartcipantLevelIdComboPopUp control.
     '''</summary>
     '''<remarks>
@@ -219,6 +255,33 @@ Partial Public Class frmParticipantList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ddlSection As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''campusname control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents campusname As Global.System.Web.UI.HtmlControls.HtmlTableRow
+
+    '''<summary>
+    '''txtCampus control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtCampus As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txtCorse control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtCorse As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''chkBoxPanel control.

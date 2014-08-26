@@ -75,7 +75,20 @@
             $("#lblmsg").css("color", "black");
             return true;
         }
-     
+        function checkImage(fupID) {
+           // ShowLoading();
+            var btnSendAppro = document.getElementById(fupID);
+            if (btnSendAppro.value == "") {
+
+                alert('Please Select Image .Then try to upload');
+                return false
+            }
+            else {
+                return true;
+            }
+        }
+      
+
     </script>
     <style type="text/css">
         .modalPopup
@@ -194,9 +207,9 @@
             <asp:ModalPopupExtender ID="participantModal" runat="server" TargetControlID="targetButton"
                 PopupControlID="pnlpopup" CancelControlID="btnCancel" BackgroundCssClass="modalBackground">
             </asp:ModalPopupExtender>
-            <asp:Panel ID="pnlpopup" runat="server" BackColor="White" Height="480px" Width="650px"
-                Style="display: block">
-                <table width="100%" style="border: Solid 3px #4b6c9e; width: 650px; height: 100%"
+            <asp:Panel ID="pnlpopup" runat="server" BackColor="White" Height="530px" Width="650px"
+                Style="display: block" ScrollBars="Vertical">
+                <table width="100%" style="border: Solid 3px #4b6c9e; width: 650px; height: 100%; overflow: scroll;"
                     class="" cellpadding="5" cellspacing="0">
                     <tr style="background-color: #4b6c9e">
                         <td colspan="2" style="height: 10%; color: White; font-weight: bold; font-size: larger"
@@ -226,13 +239,38 @@
                             <asp:TextBox ID="txtParticipant" runat="server" Width="85%" />
                         </td>
                     </tr>
+              
+                    <tr>
+                        <td align="right" style="width: 30%">
+                            &nbsp;</td>
+                        <td style="width: 70%">
+                         <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
+            <ContentTemplate>
+                <asp:FileUpload ID="fileUploadImage" runat="server"></asp:FileUpload>
+                <asp:Button ID="btnUpload" runat="server" Text="Upload Image" OnClick="btnUpload_Click" OnClientClick="return checkImage('fileUploadImage');"/>
+           
+            </ContentTemplate>
+            <Triggers>
+               <asp:PostBackTrigger ControlID="btnUpload"  />
+            
+            </Triggers>
+ </asp:UpdatePanel>
+                             </td>
+                    </tr>
                     <tr>
                         <td style="width: 30%" align="right">
+                            Age</td>
+                        <td style="width: 70%">
+                            <asp:TextBox ID="txtAge" runat="server" Width="90%" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="width: 30%">
                             Select
                         </td>
                         <td style="width: 70%">
-                            <asp:DropDownList ID="ddlPartcipantLevelIdComboPopUp" runat="server" Width="90%"
-                                onchange="ShowLoading()">
+                            <asp:DropDownList ID="ddlPartcipantLevelIdComboPopUp" runat="server" 
+                                onchange="ShowLoading()" Width="90%">
                             </asp:DropDownList>
                         </td>
                     </tr>
@@ -245,6 +283,18 @@
                                 onchange="ShowLoading()">
                             </asp:DropDownList>
                         </td>
+                    </tr>
+                    <tr id="campusname" runat="server" >
+                        <td align="right" style="width: 30%">
+                          Campus</td>
+                        <td style="width: 70%">
+                         <asp:TextBox ID="txtCampus" runat="server" Width="90%" /></td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="width: 30%">
+                           Course</td>
+                        <td style="width: 70%">
+                          <asp:TextBox ID="txtCorse" runat="server" Width="90%" /></td>
                     </tr>
                     <tr>
                         <td style="width: 30%" align="right">

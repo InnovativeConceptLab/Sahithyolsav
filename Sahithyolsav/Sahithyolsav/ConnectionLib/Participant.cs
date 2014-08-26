@@ -13,19 +13,23 @@ namespace ConnectionLib
     {
         public static bool SaveParticipant(ArrayList Param, out int ParticipantId)
         {
-            SqlParameter[] p = new SqlParameter[5];
+            SqlParameter[] p = new SqlParameter[9];
 
             p[0] = new SqlParameter("@intParticipantId", Param[0]);
             p[1] = new SqlParameter("@vchPartcipantName", Param[1]);
             p[2] = new SqlParameter("@intUnitId", Param[2]);
             p[3] = new SqlParameter("@isActive", Param[3]);
-            p[4] = new SqlParameter("@ParticipantId", SqlDbType.Int, 4);
-            p[4].Direction = ParameterDirection.Output;
+            p[4] = new SqlParameter("@vchImagePath", Param[4]);
+            p[5] = new SqlParameter("@intAge", Param[5]);
+            p[6] = new SqlParameter("@vchCampusName", Param[6]);
+            p[7] = new SqlParameter("@vchCourse", Param[7]);
+            p[8] = new SqlParameter("@ParticipantId", SqlDbType.Int, 4);
+            p[8].Direction = ParameterDirection.Output;
             try
             {
                 if (DataLayer.SqlHelper.ExecuteNonQuery(Utilities.GetConnectionString(Utilities.DataBase.Sahithyolsav), CommandType.StoredProcedure, "spSaveParticipant", p) == 1)
                 {
-                    ParticipantId = Convert.ToInt32(p[4].Value);
+                    ParticipantId = Convert.ToInt32(p[8].Value);
                     return true;
                 }
                 else
