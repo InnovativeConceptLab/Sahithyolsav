@@ -138,6 +138,8 @@
     <Content Include="Participant\frmParticipantList.aspx" />
     <Content Include="Participant\frmTabulation.aspx" />
     <Content Include="Reports\frmReports.aspx" />
+    <Content Include="Schedule\frmStage.aspx" />
+    <Content Include="Schedule\schedule.aspx" />
     <Content Include="Scripts\commonScripts.js" />
     <Content Include="Scripts\jquery-1.6.min.js" />
     <Content Include="Scripts\jquery.validationEngine-en.js" />
@@ -346,6 +348,20 @@
       <DependentUpon>frmReports.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Schedule\frmStage.aspx.designer.vb">
+      <DependentUpon>frmStage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule\frmStage.aspx.vb">
+      <DependentUpon>frmStage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Schedule\schedule.aspx.designer.vb">
+      <DependentUpon>schedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule\schedule.aspx.vb">
+      <DependentUpon>schedule.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Site.Master.designer.vb">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
@@ -395,7 +411,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>36176</DevelopmentServerPort>
+          <DevelopmentServerPort>2083</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

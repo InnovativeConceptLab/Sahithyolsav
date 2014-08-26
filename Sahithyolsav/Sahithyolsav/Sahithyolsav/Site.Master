@@ -2,7 +2,7 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-<head runat="server">
+<head id="Head1" runat="server">
     <title>SSF Sahithyolsav-2014</title>
     <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
     <script src="Scripts/jquery-1.6.min.js" type="text/javascript"></script>
@@ -11,7 +11,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form runat="server">
+    <form id="Form1" runat="server">
     <div class="page">
         <div class="header" style="height: 60px;">
             <div class="title">
@@ -54,6 +54,13 @@
                                 <a href="#" onclick="loadIframe('chess')">Chess Number</a><br />
                                 <a href="#" onclick="loadIframe('codeletter')">Code Letter</a><br />
                                 <a href="#" onclick="loadIframe('tabulation')">Tabulation</a>
+                            </div>
+                        </li>
+                         <li><a href="#" class="drop">Schedule</a>
+                            <div class="dropdown_2columns">
+                                <a href="#" onclick="loadIframe('stage')">Stages</a><br />
+                                <a href="#" onclick="loadIframe('sch')">Schedule Stage</a><br />
+                              
                             </div>
                         </li>
                         <li><a href="#" class="drop">Reports</a>

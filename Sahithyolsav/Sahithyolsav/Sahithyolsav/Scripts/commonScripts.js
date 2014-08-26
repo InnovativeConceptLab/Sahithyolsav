@@ -49,8 +49,12 @@ function loadIframe(id) {
         case 'rpt':
             document.getElementById('iframeContent').src = "../Reports/frmReports.aspx";
             break;
-            
-            
+        case 'stage':
+            document.getElementById('iframeContent').src = "../Schedule/frmStage.aspx";
+            break;
+        case 'sch':
+            document.getElementById('iframeContent').src = "../Schedule/schedule.aspx";
+            break;
     }
 }
 function isNumberKey(e) {
@@ -59,7 +63,7 @@ function isNumberKey(e) {
     var keyCode = e.which ? e.which : e.keyCode
     var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1);
     return ret;
- }
+}
 function isNumberStarKey(evt) {
     var charCode = (evt.which) ? evt.which : event.keyCode;
     if (charCode != 42 && charCode > 31

@@ -6,3 +6,8 @@ F:\WORK\TESTPROJECTS\Sahithyolsav\Sahithyolsav\Sahithyolsav\ConnectionLib\bin\De
 F:\WORK\TESTPROJECTS\Sahithyolsav\Sahithyolsav\Sahithyolsav\ConnectionLib\bin\Debug\ConnectionLib.pdb
 F:\WORK\TESTPROJECTS\Sahithyolsav\Sahithyolsav\Sahithyolsav\ConnectionLib\obj\Debug\ConnectionLib.dll
 F:\WORK\TESTPROJECTS\Sahithyolsav\Sahithyolsav\Sahithyolsav\ConnectionLib\obj\Debug\ConnectionLib.pdb
+D:\My Projects\Sahithyolsav-2014\Sahithyolsav\Sahithyolsav\Sahithyolsav\ConnectionLib\bin\Debug\ConnectionLib.dll
+D:\My Projects\Sahithyolsav-2014\Sahithyolsav\Sahithyolsav\Sahithyolsav\ConnectionLib\bin\Debug\ConnectionLib.pdb
+D:\My Projects\Sahithyolsav-2014\Sahithyolsav\Sahithyolsav\Sahithyolsav\ConnectionLib\obj\Debug\ConnectionLib.csprojResolveAssemblyReference.cache
+D:\My Projects\Sahithyolsav-2014\Sahithyolsav\Sahithyolsav\Sahithyolsav\ConnectionLib\obj\Debug\ConnectionLib.dll
+D:\My Projects\Sahithyolsav-2014\Sahithyolsav\Sahithyolsav\Sahithyolsav\ConnectionLib\obj\Debug\ConnectionLib.pdb
