@@ -6,7 +6,703 @@ Sahithyolsav
 </name>
 </assembly>
 <members>
-<member name="F:Sahithyolsav.schedule.Head1">
+<member name="F:Sahithyolsav.Login.RegisterHyperLink">
+	<summary>
+RegisterHyperLink control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.Login.LoginUser">
+	<summary>
+LoginUser control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItem.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItem.ScriptManager1">
+	<summary>
+ScriptManager1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItem.itemUpdatePannel">
+	<summary>
+itemUpdatePannel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItem.btnAdditem">
+	<summary>
+btnAdditem control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItem.ddlSearchSection">
+	<summary>
+ddlSearchSection control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItem.imgSearch">
+	<summary>
+imgSearch control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItem.gvusectiondetails">
+	<summary>
+gvusectiondetails control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItem.targetButton">
+	<summary>
+targetButton control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItem.itemModal">
+	<summary>
+itemModal control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItem.pnlpopup">
+	<summary>
+pnlpopup control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItem.lblId">
+	<summary>
+lblId control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItem.ddlSection">
+	<summary>
+ddlSection control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItem.txtItemName">
+	<summary>
+txtItemName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItem.txtCode">
+	<summary>
+txtCode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItem.ChkGrpItem">
+	<summary>
+ChkGrpItem control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItem.txtNoofpartcpnts">
+	<summary>
+txtNoofpartcpnts control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItem.txtMarkFrst">
+	<summary>
+txtMarkFrst control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItem.txtMarkSecnd">
+	<summary>
+txtMarkSecnd control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItem.txtMarkThrd">
+	<summary>
+txtMarkThrd control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItem.btnSave">
+	<summary>
+btnSave control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItem.btnUpdate">
+	<summary>
+btnUpdate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItem.btnCancel">
+	<summary>
+btnCancel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItem.lblmsg">
+	<summary>
+lblmsg control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.Head1">
+	<summary>
+Head1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.ScriptManager1">
+	<summary>
+ScriptManager1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.UpdateProgress">
+	<summary>
+UpdateProgress control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.modalPopup">
+	<summary>
+modalPopup control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.levelUpdatePnel">
+	<summary>
+levelUpdatePnel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.level1Text">
+	<summary>
+level1Text control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.level1">
+	<summary>
+level1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.ddlPartcipantLevelIdCombo1">
+	<summary>
+ddlPartcipantLevelIdCombo1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.pnlContent">
+	<summary>
+pnlContent control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.btnParticipant">
+	<summary>
+btnParticipant control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.participantHeader">
+	<summary>
+participantHeader control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.gvParticipantdetails">
+	<summary>
+gvParticipantdetails control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.UpdatePanel1">
+	<summary>
+UpdatePanel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.targetButton">
+	<summary>
+targetButton control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.participantModal">
+	<summary>
+participantModal control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.pnlpopup">
+	<summary>
+pnlpopup control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.lblId">
+	<summary>
+lblId control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.hparticpantLitsId">
+	<summary>
+hparticpantLitsId control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.hparticpantId">
+	<summary>
+hparticpantId control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.ddlType">
+	<summary>
+ddlType control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.txtParticipant">
+	<summary>
+txtParticipant control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.UpdatePanel2">
+	<summary>
+UpdatePanel2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.fileUploadImage">
+	<summary>
+fileUploadImage control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.btnUpload">
+	<summary>
+btnUpload control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.txtAge">
+	<summary>
+txtAge control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.ddlPartcipantLevelIdComboPopUp">
+	<summary>
+ddlPartcipantLevelIdComboPopUp control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.ddlSection">
+	<summary>
+ddlSection control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.campusname">
+	<summary>
+campusname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.txtCampus">
+	<summary>
+txtCampus control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.course">
+	<summary>
+course control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.txtCorse">
+	<summary>
+txtCorse control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.chkBoxPanel">
+	<summary>
+chkBoxPanel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.chkItemList">
+	<summary>
+chkItemList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.txtChessNo">
+	<summary>
+txtChessNo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.rowGrpParticipant">
+	<summary>
+rowGrpParticipant control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.txtGroupParticiapnt">
+	<summary>
+txtGroupParticiapnt control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.btnSave">
+	<summary>
+btnSave control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.btnUpdate">
+	<summary>
+btnUpdate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.btnCancel">
+	<summary>
+btnCancel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmParticipantList.lblmsg">
+	<summary>
+lblmsg control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.Register.RegisterUser">
+	<summary>
+RegisterUser control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.Register.RegisterUserWizardStep">
+	<summary>
+RegisterUserWizardStep control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmProgramSettings.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmProgramSettings.ScriptManager1">
+	<summary>
+ScriptManager1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmProgramSettings.levelUpdatePnel">
+	<summary>
+levelUpdatePnel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmProgramSettings.pnlContent">
+	<summary>
+pnlContent control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmProgramSettings.btnAdd">
+	<summary>
+btnAdd control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmProgramSettings.participantHeader">
+	<summary>
+participantHeader control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmProgramSettings.gvCodeLtterMapdetails">
+	<summary>
+gvCodeLtterMapdetails control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmProgramSettings.UpdatePanel1">
+	<summary>
+UpdatePanel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmProgramSettings.targetButton">
+	<summary>
+targetButton control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmProgramSettings.pgrmsettingModal">
+	<summary>
+pgrmsettingModal control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmProgramSettings.pnlpopup">
+	<summary>
+pnlpopup control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmProgramSettings.hintParticipantListId">
+	<summary>
+hintParticipantListId control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmProgramSettings.txtPgrmDate">
+	<summary>
+txtPgrmDate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmProgramSettings.CalPgrmDate">
+	<summary>
+CalPgrmDate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmProgramSettings.txtSection">
+	<summary>
+txtSection control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmProgramSettings.btnSave">
+	<summary>
+btnSave control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmProgramSettings.btnUpdate">
+	<summary>
+btnUpdate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmProgramSettings.btnCancel">
+	<summary>
+btnCancel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmProgramSettings.lblmsg">
+	<summary>
+lblmsg control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.schedule.Head1">
 	<summary>
 Head1 control.
 </summary>
@@ -206,6 +902,46 @@ lblmsg control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
+</member><member name="F:Sahithyolsav.frmMain.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmMain.lnkClick">
+	<summary>
+lnkClick control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmTestPdf.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmTestPdf.gv">
+	<summary>
+gv control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmTestPdf.Button1">
+	<summary>
+Button1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
 </member><member name="F:Sahithyolsav.frmStage.Head1">
 	<summary>
 Head1 control.
@@ -374,23 +1110,7 @@ lblmsg control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.Register.RegisterUser">
-	<summary>
-RegisterUser control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.Register.RegisterUserWizardStep">
-	<summary>
-RegisterUserWizardStep control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmSector.form1">
+</member><member name="F:Sahithyolsav.ChangePassword1.form1">
 	<summary>
 form1 control.
 </summary>
@@ -398,511 +1118,78 @@ form1 control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmSector.ScriptManager1">
+</member><member name="F:Sahithyolsav.ChangePassword1.Label4">
 	<summary>
-ScriptManager1 control.
+Label4 control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmSector.sectorUpdatePannel">
+</member><member name="F:Sahithyolsav.ChangePassword1.Label3">
 	<summary>
-sectorUpdatePannel control.
+Label3 control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmSector.btnAdditem">
+</member><member name="F:Sahithyolsav.ChangePassword1.txt_npassword">
 	<summary>
-btnAdditem control.
+txt_npassword control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmSector.ddlsearchDistrict">
+</member><member name="F:Sahithyolsav.ChangePassword1.RequiredFieldValidator2">
 	<summary>
-ddlsearchDistrict control.
+RequiredFieldValidator2 control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmSector.ddlsearchDivision">
+</member><member name="F:Sahithyolsav.ChangePassword1.txt_ccpassword">
 	<summary>
-ddlsearchDivision control.
+txt_ccpassword control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmSector.txtsearchsectorName">
+</member><member name="F:Sahithyolsav.ChangePassword1.RequiredFieldValidator3">
 	<summary>
-txtsearchsectorName control.
+RequiredFieldValidator3 control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmSector.imgSearch">
+</member><member name="F:Sahithyolsav.ChangePassword1.lbl_msg">
 	<summary>
-imgSearch control.
+lbl_msg control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmSector.gvsectordetails">
+</member><member name="F:Sahithyolsav.ChangePassword1.CompareValidator1">
 	<summary>
-gvsectordetails control.
+CompareValidator1 control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmSector.targetButton">
+</member><member name="F:Sahithyolsav.ChangePassword1.btn_update">
 	<summary>
-targetButton control.
+btn_update control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmSector.sectorModal">
-	<summary>
-sectorModal control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmSector.pnlpopup">
-	<summary>
-pnlpopup control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmSector.lblId">
-	<summary>
-lblId control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmSector.ddldistrict">
-	<summary>
-ddldistrict control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmSector.ddldivision">
-	<summary>
-ddldivision control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmSector.txtSectorName">
-	<summary>
-txtSectorName control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmSector.txtCode">
-	<summary>
-txtCode control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmSector.btnSave">
-	<summary>
-btnSave control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmSector.btnUpdate">
-	<summary>
-btnUpdate control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmSector.btnCancel">
-	<summary>
-btnCancel control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmSector.lblmsg">
-	<summary>
-lblmsg control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDistrict.Head1">
-	<summary>
-Head1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDistrict.form1">
-	<summary>
-form1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDistrict.ScriptManager1">
-	<summary>
-ScriptManager1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDistrict.userUpdatePannel">
-	<summary>
-userUpdatePannel control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDistrict.btnAddDistrict">
-	<summary>
-btnAddDistrict control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDistrict.gvDistrict">
-	<summary>
-gvDistrict control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDistrict.targetButton">
-	<summary>
-targetButton control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDistrict.DistrictModal">
-	<summary>
-DistrictModal control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDistrict.pnlpopup">
-	<summary>
-pnlpopup control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDistrict.lblId">
-	<summary>
-lblId control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDistrict.txtDistName">
-	<summary>
-txtDistName control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDistrict.txtDistCode">
-	<summary>
-txtDistCode control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDistrict.btnSave">
-	<summary>
-btnSave control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDistrict.btnUpdate">
-	<summary>
-btnUpdate control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDistrict.btnCancel">
-	<summary>
-btnCancel control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDistrict.lblmsg">
-	<summary>
-lblmsg control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUnit.form1">
-	<summary>
-form1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUnit.ScriptManager1">
-	<summary>
-ScriptManager1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUnit.itemUpdatePannel">
-	<summary>
-itemUpdatePannel control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUnit.btnAdditem">
-	<summary>
-btnAdditem control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUnit.ddlsearchDistrict">
-	<summary>
-ddlsearchDistrict control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUnit.ddlsearchDivision">
-	<summary>
-ddlsearchDivision control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUnit.ddlsearchsector">
-	<summary>
-ddlsearchsector control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUnit.txtSearchUnit">
-	<summary>
-txtSearchUnit control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUnit.imgSearch">
-	<summary>
-imgSearch control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUnit.gvunitdetails">
-	<summary>
-gvunitdetails control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUnit.targetButton">
-	<summary>
-targetButton control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUnit.unitModal">
-	<summary>
-unitModal control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUnit.pnlpopup">
-	<summary>
-pnlpopup control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUnit.lblId">
-	<summary>
-lblId control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUnit.ddldistrict">
-	<summary>
-ddldistrict control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUnit.ddldivision">
-	<summary>
-ddldivision control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUnit.ddlSector">
-	<summary>
-ddlSector control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUnit.txtUnit">
-	<summary>
-txtUnit control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUnit.txtCode">
-	<summary>
-txtCode control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUnit.btnSave">
-	<summary>
-btnSave control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUnit.btnUpdate">
-	<summary>
-btnUpdate control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUnit.btnCancel">
-	<summary>
-btnCancel control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUnit.lblmsg">
-	<summary>
-lblmsg control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="P:Sahithyolsav.My.MyWebExtension.Application">
-	<summary>
- Returns information about the current application.
- </summary>
-</member><member name="P:Sahithyolsav.My.MyWebExtension.Computer">
-	<summary>
- Returns information about the host computer.
- </summary>
-</member><member name="P:Sahithyolsav.My.MyWebExtension.User">
-	<summary>
- Returns information for the current Web user.
- </summary>
-</member><member name="P:Sahithyolsav.My.MyWebExtension.Request">
-	<summary>
- Returns Request object.
- </summary>
-</member><member name="P:Sahithyolsav.My.MyWebExtension.Response">
-	<summary>
- Returns Response object.
- </summary>
-</member><member name="P:Sahithyolsav.My.MyWebExtension.Log">
-	<summary>
- Returns the Asp log object.
- </summary>
-</member><member name="P:Sahithyolsav.My.MyWebExtension.WebServices">
-	<summary>
- Provides access to WebServices added to this project.
- </summary>
-</member><member name="T:Sahithyolsav.My.MyWebExtension">
-	<summary>
- Module used to define the properties that are available in the My Namespace for Web projects.
- </summary>
-	<remarks></remarks>
 </member><member name="F:Sahithyolsav.frmTabulation.Head1">
 	<summary>
 Head1 control.
@@ -1239,7 +1526,7 @@ lblmsg control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmMain.form1">
+</member><member name="F:Sahithyolsav.frmSector.form1">
 	<summary>
 form1 control.
 </summary>
@@ -1247,47 +1534,7 @@ form1 control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmMain.lnkClick">
-	<summary>
-lnkClick control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmTestPdf.form1">
-	<summary>
-form1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmTestPdf.gv">
-	<summary>
-gv control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmTestPdf.Button1">
-	<summary>
-Button1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmItem.form1">
-	<summary>
-form1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmItem.ScriptManager1">
+</member><member name="F:Sahithyolsav.frmSector.ScriptManager1">
 	<summary>
 ScriptManager1 control.
 </summary>
@@ -1295,15 +1542,15 @@ ScriptManager1 control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmItem.itemUpdatePannel">
+</member><member name="F:Sahithyolsav.frmSector.sectorUpdatePannel">
 	<summary>
-itemUpdatePannel control.
+sectorUpdatePannel control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmItem.btnAdditem">
+</member><member name="F:Sahithyolsav.frmSector.btnAdditem">
 	<summary>
 btnAdditem control.
 </summary>
@@ -1311,15 +1558,31 @@ btnAdditem control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmItem.ddlSearchSection">
+</member><member name="F:Sahithyolsav.frmSector.ddlsearchDistrict">
 	<summary>
-ddlSearchSection control.
+ddlsearchDistrict control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmItem.imgSearch">
+</member><member name="F:Sahithyolsav.frmSector.ddlsearchDivision">
+	<summary>
+ddlsearchDivision control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmSector.txtsearchsectorName">
+	<summary>
+txtsearchsectorName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmSector.imgSearch">
 	<summary>
 imgSearch control.
 </summary>
@@ -1327,15 +1590,15 @@ imgSearch control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmItem.gvusectiondetails">
+</member><member name="F:Sahithyolsav.frmSector.gvsectordetails">
 	<summary>
-gvusectiondetails control.
+gvsectordetails control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmItem.targetButton">
+</member><member name="F:Sahithyolsav.frmSector.targetButton">
 	<summary>
 targetButton control.
 </summary>
@@ -1343,15 +1606,15 @@ targetButton control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmItem.itemModal">
+</member><member name="F:Sahithyolsav.frmSector.sectorModal">
 	<summary>
-itemModal control.
+sectorModal control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmItem.pnlpopup">
+</member><member name="F:Sahithyolsav.frmSector.pnlpopup">
 	<summary>
 pnlpopup control.
 </summary>
@@ -1359,7 +1622,7 @@ pnlpopup control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmItem.lblId">
+</member><member name="F:Sahithyolsav.frmSector.lblId">
 	<summary>
 lblId control.
 </summary>
@@ -1367,23 +1630,31 @@ lblId control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmItem.ddlSection">
+</member><member name="F:Sahithyolsav.frmSector.ddldistrict">
 	<summary>
-ddlSection control.
+ddldistrict control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmItem.txtItemName">
+</member><member name="F:Sahithyolsav.frmSector.ddldivision">
 	<summary>
-txtItemName control.
+ddldivision control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmItem.txtCode">
+</member><member name="F:Sahithyolsav.frmSector.txtSectorName">
+	<summary>
+txtSectorName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmSector.txtCode">
 	<summary>
 txtCode control.
 </summary>
@@ -1391,47 +1662,7 @@ txtCode control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmItem.ChkGrpItem">
-	<summary>
-ChkGrpItem control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmItem.txtNoofpartcpnts">
-	<summary>
-txtNoofpartcpnts control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmItem.txtMarkFrst">
-	<summary>
-txtMarkFrst control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmItem.txtMarkSecnd">
-	<summary>
-txtMarkSecnd control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmItem.txtMarkThrd">
-	<summary>
-txtMarkThrd control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmItem.btnSave">
+</member><member name="F:Sahithyolsav.frmSector.btnSave">
 	<summary>
 btnSave control.
 </summary>
@@ -1439,7 +1670,7 @@ btnSave control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmItem.btnUpdate">
+</member><member name="F:Sahithyolsav.frmSector.btnUpdate">
 	<summary>
 btnUpdate control.
 </summary>
@@ -1447,7 +1678,7 @@ btnUpdate control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmItem.btnCancel">
+</member><member name="F:Sahithyolsav.frmSector.btnCancel">
 	<summary>
 btnCancel control.
 </summary>
@@ -1455,7 +1686,1120 @@ btnCancel control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmItem.lblmsg">
+</member><member name="F:Sahithyolsav.frmSector.lblmsg">
+	<summary>
+lblmsg control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.ChangePassword.ChangeUserPassword">
+	<summary>
+ChangeUserPassword control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav._Default.ScriptManager1">
+	<summary>
+ScriptManager1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav._Default.UpdatePanel1">
+	<summary>
+UpdatePanel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav._Default.lnkClick">
+	<summary>
+lnkClick control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav._Default.lbblogin">
+	<summary>
+lbblogin control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav._Default.btnAdmin">
+	<summary>
+btnAdmin control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav._Default.btnState">
+	<summary>
+btnState control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav._Default.btnDistrict">
+	<summary>
+btnDistrict control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav._Default.btnDivision">
+	<summary>
+btnDivision control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav._Default.btnSector">
+	<summary>
+btnSector control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav._Default.btnUnit">
+	<summary>
+btnUnit control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav._Default.txtUserName">
+	<summary>
+txtUserName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav._Default.txtPassword">
+	<summary>
+txtPassword control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav._Default.lblErrorMsg">
+	<summary>
+lblErrorMsg control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav._Default.imgLogin">
+	<summary>
+imgLogin control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmLandingPage.ScriptManager1">
+	<summary>
+ScriptManager1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmLandingPage.UpdatePanel1">
+	<summary>
+UpdatePanel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.ScriptManager1">
+	<summary>
+ScriptManager1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.userUpdatePannel">
+	<summary>
+userUpdatePannel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.btnAddUser">
+	<summary>
+btnAddUser control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.gvuserdetails">
+	<summary>
+gvuserdetails control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.targetButton">
+	<summary>
+targetButton control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.UserModal">
+	<summary>
+UserModal control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.pnlpopup">
+	<summary>
+pnlpopup control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.lblId">
+	<summary>
+lblId control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.txtUserName">
+	<summary>
+txtUserName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.txtfname">
+	<summary>
+txtfname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.txtlname">
+	<summary>
+txtlname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.ddlLevelMapIdCombo">
+	<summary>
+ddlLevelMapIdCombo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.btnSave">
+	<summary>
+btnSave control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.btnUpdate">
+	<summary>
+btnUpdate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.btnCancel">
+	<summary>
+btnCancel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.lblmsg">
+	<summary>
+lblmsg control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.targetButton2">
+	<summary>
+targetButton2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.ModalMapUser">
+	<summary>
+ModalMapUser control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.PnlPopupUserMap">
+	<summary>
+PnlPopupUserMap control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.lblUserID">
+	<summary>
+lblUserID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.ddlLevel">
+	<summary>
+ddlLevel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.trDistrict">
+	<summary>
+trDistrict control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.ddlDistrict">
+	<summary>
+ddlDistrict control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.trDivision">
+	<summary>
+trDivision control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.ddlDiviosn">
+	<summary>
+ddlDiviosn control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.trSector">
+	<summary>
+trSector control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.ddlSector">
+	<summary>
+ddlSector control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.trUnit">
+	<summary>
+trUnit control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.ddlUnit">
+	<summary>
+ddlUnit control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.ImageSaveMapUser">
+	<summary>
+ImageSaveMapUser control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.BtnCancelMap">
+	<summary>
+BtnCancelMap control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmUsers.LblMapmsg">
+	<summary>
+LblMapmsg control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.TestPage.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="P:Sahithyolsav.My.MyWebExtension.Application">
+	<summary>
+ Returns information about the current application.
+ </summary>
+</member><member name="P:Sahithyolsav.My.MyWebExtension.Computer">
+	<summary>
+ Returns information about the host computer.
+ </summary>
+</member><member name="P:Sahithyolsav.My.MyWebExtension.User">
+	<summary>
+ Returns information for the current Web user.
+ </summary>
+</member><member name="P:Sahithyolsav.My.MyWebExtension.Request">
+	<summary>
+ Returns Request object.
+ </summary>
+</member><member name="P:Sahithyolsav.My.MyWebExtension.Response">
+	<summary>
+ Returns Response object.
+ </summary>
+</member><member name="P:Sahithyolsav.My.MyWebExtension.Log">
+	<summary>
+ Returns the Asp log object.
+ </summary>
+</member><member name="P:Sahithyolsav.My.MyWebExtension.WebServices">
+	<summary>
+ Provides access to WebServices added to this project.
+ </summary>
+</member><member name="T:Sahithyolsav.My.MyWebExtension">
+	<summary>
+ Module used to define the properties that are available in the My Namespace for Web projects.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Sahithyolsav.frmDistrict.Head1">
+	<summary>
+Head1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDistrict.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDistrict.ScriptManager1">
+	<summary>
+ScriptManager1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDistrict.userUpdatePannel">
+	<summary>
+userUpdatePannel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDistrict.btnAddDistrict">
+	<summary>
+btnAddDistrict control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDistrict.gvDistrict">
+	<summary>
+gvDistrict control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDistrict.targetButton">
+	<summary>
+targetButton control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDistrict.DistrictModal">
+	<summary>
+DistrictModal control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDistrict.pnlpopup">
+	<summary>
+pnlpopup control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDistrict.lblId">
+	<summary>
+lblId control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDistrict.txtDistName">
+	<summary>
+txtDistName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDistrict.txtDistCode">
+	<summary>
+txtDistCode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDistrict.btnSave">
+	<summary>
+btnSave control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDistrict.btnUpdate">
+	<summary>
+btnUpdate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDistrict.btnCancel">
+	<summary>
+btnCancel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDistrict.lblmsg">
+	<summary>
+lblmsg control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.Site.Head1">
+	<summary>
+Head1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.Site.HeadContent">
+	<summary>
+HeadContent control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.Site.Form1">
+	<summary>
+Form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.Site.loginInfo">
+	<summary>
+loginInfo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.Site.logout">
+	<summary>
+logout control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.Site.liMain">
+	<summary>
+liMain control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.Site.limenu1">
+	<summary>
+limenu1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.Site.limenu2">
+	<summary>
+limenu2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.Site.MainContent">
+	<summary>
+MainContent control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDivision.Head1">
+	<summary>
+Head1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDivision.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDivision.ScriptManager1">
+	<summary>
+ScriptManager1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDivision.userUpdatePannel">
+	<summary>
+userUpdatePannel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDivision.btnAddDivision">
+	<summary>
+btnAddDivision control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDivision.ddlDistrictS">
+	<summary>
+ddlDistrictS control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDivision.imgSearch">
+	<summary>
+imgSearch control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDivision.gvDivision">
+	<summary>
+gvDivision control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDivision.targetButton">
+	<summary>
+targetButton control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDivision.DivisionModal">
+	<summary>
+DivisionModal control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDivision.pnlpopup">
+	<summary>
+pnlpopup control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDivision.lblId">
+	<summary>
+lblId control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDivision.ddlDistrict">
+	<summary>
+ddlDistrict control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDivision.txtDivsnName">
+	<summary>
+txtDivsnName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDivision.txtDivsnCode">
+	<summary>
+txtDivsnCode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDivision.btnSave">
+	<summary>
+btnSave control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDivision.btnUpdate">
+	<summary>
+btnUpdate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDivision.btnCancel">
+	<summary>
+btnCancel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmDivision.lblmsg">
+	<summary>
+lblmsg control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.Head1">
+	<summary>
+Head1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.ScriptManager1">
+	<summary>
+ScriptManager1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.UpdateProgress">
+	<summary>
+UpdateProgress control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.modalPopup">
+	<summary>
+modalPopup control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.levelUpdatePnel">
+	<summary>
+levelUpdatePnel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.level1Text">
+	<summary>
+level1Text control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.level1">
+	<summary>
+level1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.ddlPartcipantLevelIdCombo1">
+	<summary>
+ddlPartcipantLevelIdCombo1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.sublist">
+	<summary>
+sublist control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.level2">
+	<summary>
+level2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.ddlPartcipantLevelIdCombo2">
+	<summary>
+ddlPartcipantLevelIdCombo2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.level3">
+	<summary>
+level3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.ddlPartcipantLevelIdCombo3">
+	<summary>
+ddlPartcipantLevelIdCombo3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.level4">
+	<summary>
+level4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.ddlPartcipantLevelIdCombo4">
+	<summary>
+ddlPartcipantLevelIdCombo4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.level5">
+	<summary>
+level5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.ddlPartcipantLevelIdCombo5">
+	<summary>
+ddlPartcipantLevelIdCombo5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.pnlContent">
+	<summary>
+pnlContent control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.participantHeader">
+	<summary>
+participantHeader control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.ddlSearchSection">
+	<summary>
+ddlSearchSection control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.ddlTeam">
+	<summary>
+ddlTeam control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.imgSearch">
+	<summary>
+imgSearch control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.gvChessNumMapdetails">
+	<summary>
+gvChessNumMapdetails control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.UpdatePanel1">
+	<summary>
+UpdatePanel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.targetButton">
+	<summary>
+targetButton control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.codeLetterModal">
+	<summary>
+codeLetterModal control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.pnlpopup">
+	<summary>
+pnlpopup control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.hintParticipantListId">
+	<summary>
+hintParticipantListId control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.hintItemId">
+	<summary>
+hintItemId control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.hCodeLetterMapID">
+	<summary>
+hCodeLetterMapID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.txtParticipant">
+	<summary>
+txtParticipant control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.txtSection">
+	<summary>
+txtSection control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.txtItem">
+	<summary>
+txtItem control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.txtChessNum">
+	<summary>
+txtChessNum control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.txtCodeLetter">
+	<summary>
+txtCodeLetter control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.btnSave">
+	<summary>
+btnSave control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.btnUpdate">
+	<summary>
+btnUpdate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.btnCancel">
+	<summary>
+btnCancel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.lblmsg">
 	<summary>
 lblmsg control.
 </summary>
@@ -1783,934 +3127,6 @@ lblmsg control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.Site.Head1">
-	<summary>
-Head1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.Site.HeadContent">
-	<summary>
-HeadContent control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.Site.Form1">
-	<summary>
-Form1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.Site.loginInfo">
-	<summary>
-loginInfo control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.Site.logout">
-	<summary>
-logout control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.Site.liMain">
-	<summary>
-liMain control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.Site.limenu1">
-	<summary>
-limenu1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.Site.limenu2">
-	<summary>
-limenu2 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.Site.MainContent">
-	<summary>
-MainContent control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.ChangePassword.ChangeUserPassword">
-	<summary>
-ChangeUserPassword control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDivision.Head1">
-	<summary>
-Head1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDivision.form1">
-	<summary>
-form1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDivision.ScriptManager1">
-	<summary>
-ScriptManager1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDivision.userUpdatePannel">
-	<summary>
-userUpdatePannel control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDivision.btnAddDivision">
-	<summary>
-btnAddDivision control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDivision.ddlDistrictS">
-	<summary>
-ddlDistrictS control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDivision.imgSearch">
-	<summary>
-imgSearch control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDivision.gvDivision">
-	<summary>
-gvDivision control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDivision.targetButton">
-	<summary>
-targetButton control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDivision.DivisionModal">
-	<summary>
-DivisionModal control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDivision.pnlpopup">
-	<summary>
-pnlpopup control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDivision.lblId">
-	<summary>
-lblId control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDivision.ddlDistrict">
-	<summary>
-ddlDistrict control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDivision.txtDivsnName">
-	<summary>
-txtDivsnName control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDivision.txtDivsnCode">
-	<summary>
-txtDivsnCode control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDivision.btnSave">
-	<summary>
-btnSave control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDivision.btnUpdate">
-	<summary>
-btnUpdate control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDivision.btnCancel">
-	<summary>
-btnCancel control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmDivision.lblmsg">
-	<summary>
-lblmsg control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav._Default.ScriptManager1">
-	<summary>
-ScriptManager1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav._Default.UpdatePanel1">
-	<summary>
-UpdatePanel1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav._Default.lnkClick">
-	<summary>
-lnkClick control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav._Default.lbblogin">
-	<summary>
-lbblogin control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav._Default.btnAdmin">
-	<summary>
-btnAdmin control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav._Default.btnState">
-	<summary>
-btnState control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav._Default.btnDistrict">
-	<summary>
-btnDistrict control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav._Default.btnDivision">
-	<summary>
-btnDivision control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav._Default.btnSector">
-	<summary>
-btnSector control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav._Default.btnUnit">
-	<summary>
-btnUnit control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav._Default.txtUserName">
-	<summary>
-txtUserName control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav._Default.txtPassword">
-	<summary>
-txtPassword control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav._Default.lblErrorMsg">
-	<summary>
-lblErrorMsg control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav._Default.imgLogin">
-	<summary>
-imgLogin control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.Head1">
-	<summary>
-Head1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.form1">
-	<summary>
-form1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.ScriptManager1">
-	<summary>
-ScriptManager1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.UpdateProgress">
-	<summary>
-UpdateProgress control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.modalPopup">
-	<summary>
-modalPopup control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.levelUpdatePnel">
-	<summary>
-levelUpdatePnel control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.level1Text">
-	<summary>
-level1Text control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.level1">
-	<summary>
-level1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.ddlPartcipantLevelIdCombo1">
-	<summary>
-ddlPartcipantLevelIdCombo1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.sublist">
-	<summary>
-sublist control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.level2">
-	<summary>
-level2 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.ddlPartcipantLevelIdCombo2">
-	<summary>
-ddlPartcipantLevelIdCombo2 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.level3">
-	<summary>
-level3 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.ddlPartcipantLevelIdCombo3">
-	<summary>
-ddlPartcipantLevelIdCombo3 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.level4">
-	<summary>
-level4 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.ddlPartcipantLevelIdCombo4">
-	<summary>
-ddlPartcipantLevelIdCombo4 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.level5">
-	<summary>
-level5 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.ddlPartcipantLevelIdCombo5">
-	<summary>
-ddlPartcipantLevelIdCombo5 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.pnlContent">
-	<summary>
-pnlContent control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.participantHeader">
-	<summary>
-participantHeader control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.ddlSearchSection">
-	<summary>
-ddlSearchSection control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.ddlTeam">
-	<summary>
-ddlTeam control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.imgSearch">
-	<summary>
-imgSearch control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.gvChessNumMapdetails">
-	<summary>
-gvChessNumMapdetails control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.UpdatePanel1">
-	<summary>
-UpdatePanel1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.targetButton">
-	<summary>
-targetButton control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.codeLetterModal">
-	<summary>
-codeLetterModal control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.pnlpopup">
-	<summary>
-pnlpopup control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.hintParticipantListId">
-	<summary>
-hintParticipantListId control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.hintItemId">
-	<summary>
-hintItemId control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.hCodeLetterMapID">
-	<summary>
-hCodeLetterMapID control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.txtParticipant">
-	<summary>
-txtParticipant control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.txtSection">
-	<summary>
-txtSection control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.txtItem">
-	<summary>
-txtItem control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.txtChessNum">
-	<summary>
-txtChessNum control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.txtCodeLetter">
-	<summary>
-txtCodeLetter control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.btnSave">
-	<summary>
-btnSave control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.btnUpdate">
-	<summary>
-btnUpdate control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.btnCancel">
-	<summary>
-btnCancel control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmChessNumber.lblmsg">
-	<summary>
-lblmsg control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.form1">
-	<summary>
-form1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.ScriptManager1">
-	<summary>
-ScriptManager1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.userUpdatePannel">
-	<summary>
-userUpdatePannel control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.btnAddUser">
-	<summary>
-btnAddUser control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.gvuserdetails">
-	<summary>
-gvuserdetails control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.targetButton">
-	<summary>
-targetButton control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.UserModal">
-	<summary>
-UserModal control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.pnlpopup">
-	<summary>
-pnlpopup control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.lblId">
-	<summary>
-lblId control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.txtUserName">
-	<summary>
-txtUserName control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.txtfname">
-	<summary>
-txtfname control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.txtlname">
-	<summary>
-txtlname control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.ddlLevelMapIdCombo">
-	<summary>
-ddlLevelMapIdCombo control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.btnSave">
-	<summary>
-btnSave control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.btnUpdate">
-	<summary>
-btnUpdate control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.btnCancel">
-	<summary>
-btnCancel control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.lblmsg">
-	<summary>
-lblmsg control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.targetButton2">
-	<summary>
-targetButton2 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.ModalMapUser">
-	<summary>
-ModalMapUser control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.PnlPopupUserMap">
-	<summary>
-PnlPopupUserMap control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.lblUserID">
-	<summary>
-lblUserID control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.ddlLevel">
-	<summary>
-ddlLevel control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.trDistrict">
-	<summary>
-trDistrict control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.ddlDistrict">
-	<summary>
-ddlDistrict control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.trDivision">
-	<summary>
-trDivision control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.ddlDiviosn">
-	<summary>
-ddlDiviosn control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.trSector">
-	<summary>
-trSector control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.ddlSector">
-	<summary>
-ddlSector control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.trUnit">
-	<summary>
-trUnit control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.ddlUnit">
-	<summary>
-ddlUnit control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.ImageSaveMapUser">
-	<summary>
-ImageSaveMapUser control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.BtnCancelMap">
-	<summary>
-BtnCancelMap control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmUsers.LblMapmsg">
-	<summary>
-LblMapmsg control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
 </member><member name="F:Sahithyolsav.frmReports.form1">
 	<summary>
 form1 control.
@@ -2818,86 +3234,6 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:Sahithyolsav.frmReports.gvReport">
 	<summary>
 gvReport control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.ChangePassword1.form1">
-	<summary>
-form1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.ChangePassword1.Label4">
-	<summary>
-Label4 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.ChangePassword1.Label3">
-	<summary>
-Label3 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.ChangePassword1.txt_npassword">
-	<summary>
-txt_npassword control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.ChangePassword1.RequiredFieldValidator2">
-	<summary>
-RequiredFieldValidator2 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.ChangePassword1.txt_ccpassword">
-	<summary>
-txt_ccpassword control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.ChangePassword1.RequiredFieldValidator3">
-	<summary>
-RequiredFieldValidator3 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.ChangePassword1.lbl_msg">
-	<summary>
-lbl_msg control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.ChangePassword1.CompareValidator1">
-	<summary>
-CompareValidator1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.ChangePassword1.btn_update">
-	<summary>
-btn_update control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -3031,7 +3367,7 @@ lblmsg control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.form1">
+</member><member name="F:Sahithyolsav.frmUnit.form1">
 	<summary>
 form1 control.
 </summary>
@@ -3039,7 +3375,7 @@ form1 control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.ScriptManager1">
+</member><member name="F:Sahithyolsav.frmUnit.ScriptManager1">
 	<summary>
 ScriptManager1 control.
 </summary>
@@ -3047,95 +3383,71 @@ ScriptManager1 control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.UpdateProgress">
+</member><member name="F:Sahithyolsav.frmUnit.itemUpdatePannel">
 	<summary>
-UpdateProgress control.
+itemUpdatePannel control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.modalPopup">
+</member><member name="F:Sahithyolsav.frmUnit.btnAdditem">
 	<summary>
-modalPopup control.
+btnAdditem control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.levelUpdatePnel">
+</member><member name="F:Sahithyolsav.frmUnit.ddlsearchDistrict">
 	<summary>
-levelUpdatePnel control.
+ddlsearchDistrict control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.level1Text">
+</member><member name="F:Sahithyolsav.frmUnit.ddlsearchDivision">
 	<summary>
-level1Text control.
+ddlsearchDivision control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.level1">
+</member><member name="F:Sahithyolsav.frmUnit.ddlsearchsector">
 	<summary>
-level1 control.
+ddlsearchsector control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.ddlPartcipantLevelIdCombo1">
+</member><member name="F:Sahithyolsav.frmUnit.txtSearchUnit">
 	<summary>
-ddlPartcipantLevelIdCombo1 control.
+txtSearchUnit control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.pnlContent">
+</member><member name="F:Sahithyolsav.frmUnit.imgSearch">
 	<summary>
-pnlContent control.
+imgSearch control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.btnParticipant">
+</member><member name="F:Sahithyolsav.frmUnit.gvunitdetails">
 	<summary>
-btnParticipant control.
+gvunitdetails control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.participantHeader">
-	<summary>
-participantHeader control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.gvParticipantdetails">
-	<summary>
-gvParticipantdetails control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.UpdatePanel1">
-	<summary>
-UpdatePanel1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.targetButton">
+</member><member name="F:Sahithyolsav.frmUnit.targetButton">
 	<summary>
 targetButton control.
 </summary>
@@ -3143,15 +3455,15 @@ targetButton control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.participantModal">
+</member><member name="F:Sahithyolsav.frmUnit.unitModal">
 	<summary>
-participantModal control.
+unitModal control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.pnlpopup">
+</member><member name="F:Sahithyolsav.frmUnit.pnlpopup">
 	<summary>
 pnlpopup control.
 </summary>
@@ -3159,7 +3471,7 @@ pnlpopup control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.lblId">
+</member><member name="F:Sahithyolsav.frmUnit.lblId">
 	<summary>
 lblId control.
 </summary>
@@ -3167,151 +3479,47 @@ lblId control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.hparticpantLitsId">
+</member><member name="F:Sahithyolsav.frmUnit.ddldistrict">
 	<summary>
-hparticpantLitsId control.
+ddldistrict control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.hparticpantId">
+</member><member name="F:Sahithyolsav.frmUnit.ddldivision">
 	<summary>
-hparticpantId control.
+ddldivision control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.ddlType">
+</member><member name="F:Sahithyolsav.frmUnit.ddlSector">
 	<summary>
-ddlType control.
+ddlSector control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.txtParticipant">
+</member><member name="F:Sahithyolsav.frmUnit.txtUnit">
 	<summary>
-txtParticipant control.
+txtUnit control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.UpdatePanel2">
+</member><member name="F:Sahithyolsav.frmUnit.txtCode">
 	<summary>
-UpdatePanel2 control.
+txtCode control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.fileUploadImage">
-	<summary>
-fileUploadImage control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.btnUpload">
-	<summary>
-btnUpload control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.txtAge">
-	<summary>
-txtAge control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.ddlPartcipantLevelIdComboPopUp">
-	<summary>
-ddlPartcipantLevelIdComboPopUp control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.ddlSection">
-	<summary>
-ddlSection control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.campusname">
-	<summary>
-campusname control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.txtCampus">
-	<summary>
-txtCampus control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.txtCorse">
-	<summary>
-txtCorse control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.chkBoxPanel">
-	<summary>
-chkBoxPanel control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.chkItemList">
-	<summary>
-chkItemList control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.txtChessNo">
-	<summary>
-txtChessNo control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.rowGrpParticipant">
-	<summary>
-rowGrpParticipant control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.txtGroupParticiapnt">
-	<summary>
-txtGroupParticiapnt control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.btnSave">
+</member><member name="F:Sahithyolsav.frmUnit.btnSave">
 	<summary>
 btnSave control.
 </summary>
@@ -3319,7 +3527,7 @@ btnSave control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.btnUpdate">
+</member><member name="F:Sahithyolsav.frmUnit.btnUpdate">
 	<summary>
 btnUpdate control.
 </summary>
@@ -3327,7 +3535,7 @@ btnUpdate control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.btnCancel">
+</member><member name="F:Sahithyolsav.frmUnit.btnCancel">
 	<summary>
 btnCancel control.
 </summary>
@@ -3335,199 +3543,7 @@ btnCancel control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Sahithyolsav.frmParticipantList.lblmsg">
-	<summary>
-lblmsg control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.TestPage.form1">
-	<summary>
-form1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.Login.RegisterHyperLink">
-	<summary>
-RegisterHyperLink control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.Login.LoginUser">
-	<summary>
-LoginUser control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmLandingPage.ScriptManager1">
-	<summary>
-ScriptManager1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmLandingPage.UpdatePanel1">
-	<summary>
-UpdatePanel1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmProgramSettings.form1">
-	<summary>
-form1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmProgramSettings.ScriptManager1">
-	<summary>
-ScriptManager1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmProgramSettings.levelUpdatePnel">
-	<summary>
-levelUpdatePnel control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmProgramSettings.pnlContent">
-	<summary>
-pnlContent control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmProgramSettings.btnAdd">
-	<summary>
-btnAdd control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmProgramSettings.participantHeader">
-	<summary>
-participantHeader control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmProgramSettings.gvCodeLtterMapdetails">
-	<summary>
-gvCodeLtterMapdetails control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmProgramSettings.UpdatePanel1">
-	<summary>
-UpdatePanel1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmProgramSettings.targetButton">
-	<summary>
-targetButton control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmProgramSettings.pgrmsettingModal">
-	<summary>
-pgrmsettingModal control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmProgramSettings.pnlpopup">
-	<summary>
-pnlpopup control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmProgramSettings.hintParticipantListId">
-	<summary>
-hintParticipantListId control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmProgramSettings.txtPgrmDate">
-	<summary>
-txtPgrmDate control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmProgramSettings.CalPgrmDate">
-	<summary>
-CalPgrmDate control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmProgramSettings.txtSection">
-	<summary>
-txtSection control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmProgramSettings.btnSave">
-	<summary>
-btnSave control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmProgramSettings.btnUpdate">
-	<summary>
-btnUpdate control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmProgramSettings.btnCancel">
-	<summary>
-btnCancel control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Sahithyolsav.frmProgramSettings.lblmsg">
+</member><member name="F:Sahithyolsav.frmUnit.lblmsg">
 	<summary>
 lblmsg control.
 </summary>

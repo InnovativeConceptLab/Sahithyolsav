@@ -4,7 +4,7 @@
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
     <title></title>
     <script src="../Scripts/jquery-1.6.min.js" type="text/javascript"></script>
     <link href="../Styles/IiframeCss.css" rel="stylesheet" type="text/css" />
@@ -76,7 +76,7 @@
             return true;
         }
         function checkImage(fupID) {
-           // ShowLoading();
+            // ShowLoading();
             var btnSendAppro = document.getElementById(fupID);
             if (btnSendAppro.value == "") {
 
@@ -87,7 +87,46 @@
                 return true;
             }
         }
-      
+        function checkImageExtension(elem) {
+
+            var filePath = elem.value;
+
+
+
+            if (filePath.indexOf('.') == -1)
+
+                return false;
+
+
+
+            var validExtensions = new Array();
+
+            var ext = filePath.substring(filePath.lastIndexOf('.') + 1).toLowerCase();
+
+            //Add valid extentions in this array
+
+            validExtensions[0] = 'jpg';
+
+            //validExtensions[1] = 'pdf';
+
+
+
+            for (var i = 0; i < validExtensions.length; i++) {
+
+                if (ext == validExtensions[i]) {
+                    document.getElementById('btnUpload').disabled = false;
+                    return true;
+                }
+
+            }
+
+
+            document.getElementById('btnUpload').disabled = true;
+            alert('The only Image extension  allowed is JPG !');
+
+            return false;
+
+        }
 
     </script>
     <style type="text/css">
@@ -186,6 +225,32 @@
                             <asp:BoundField DataField="Program Level" HeaderText="Program Level" />
                             <asp:BoundField DataField="Participant From" HeaderText="Team" />
                             <asp:BoundField DataField="vchChessNo" HeaderText="Chess Number" />
+            <%--                 <asp:TemplateField HeaderText="Gateway" Visible ="false" >
+                        <ItemStyle Font-Size="10px" HorizontalAlign="Left" />
+                        <ItemTemplate>
+                            <asp:Label ID="lblintAge" runat="server" Text='<%#Eval("Age") %>' />
+                        </ItemTemplate>
+                    </asp:TemplateField>--%>
+                             <asp:TemplateField HeaderText="Age" Visible="false">
+                                <ItemTemplate>
+                                    <asp:Label ID="lblintAge" runat="server" Text='<%# Bind("Age") %>'></asp:Label>
+                                    
+                                </ItemTemplate>
+                                  </asp:TemplateField>
+                                   <asp:TemplateField HeaderText="Age" Visible="false">
+                                 <ItemTemplate>
+                                    <asp:Label ID="lblCampus" runat="server" Text='<%# Bind("vchCampusName") %>'></asp:Label>
+                                    
+                                </ItemTemplate>
+                                </asp:TemplateField>
+                                 <asp:TemplateField HeaderText="Age" Visible="false">
+                                 <ItemTemplate>
+                                    <asp:Label ID="lblCourse" runat="server" Text='<%# Bind("vchCourse") %>'></asp:Label>
+                                    
+                                </ItemTemplate>
+                                </asp:TemplateField>
+                             
+                          
                             <asp:TemplateField HeaderStyle-Width="60px" HeaderText="">
                                 <ItemTemplate>
                                     <asp:ImageButton ID="imgbtn" ImageUrl="~/image/edit.png" runat="server" Width="25"
@@ -207,7 +272,7 @@
             <asp:ModalPopupExtender ID="participantModal" runat="server" TargetControlID="targetButton"
                 PopupControlID="pnlpopup" CancelControlID="btnCancel" BackgroundCssClass="modalBackground">
             </asp:ModalPopupExtender>
-            <asp:Panel ID="pnlpopup" runat="server" BackColor="White" Height="530px" Width="650px"
+            <asp:Panel ID="pnlpopup" runat="server" BackColor="White" Height="530px" Width="666px"
                 Style="display: block" ScrollBars="Vertical">
                 <table width="100%" style="border: Solid 3px #4b6c9e; width: 650px; height: 100%; overflow: scroll;"
                     class="" cellpadding="5" cellspacing="0">
@@ -246,7 +311,7 @@
                         <td style="width: 70%">
                          <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
             <ContentTemplate>
-                <asp:FileUpload ID="fileUploadImage" runat="server"></asp:FileUpload>
+                <asp:FileUpload ID="fileUploadImage" runat="server"  onchange="checkImageExtension(this);"></asp:FileUpload>
                 <asp:Button ID="btnUpload" runat="server" Text="Upload Image" OnClick="btnUpload_Click" OnClientClick="return checkImage('fileUploadImage');"/>
            
             </ContentTemplate>
@@ -261,7 +326,7 @@
                         <td style="width: 30%" align="right">
                             Age</td>
                         <td style="width: 70%">
-                            <asp:TextBox ID="txtAge" runat="server" Width="90%" />
+                            <asp:TextBox ID="txtAge" runat="server" Width="50%" />
                         </td>
                     </tr>
                     <tr>
@@ -284,17 +349,17 @@
                             </asp:DropDownList>
                         </td>
                     </tr>
-                    <tr id="campusname" runat="server" >
+                    <tr id="campusname" runat="server" visible="false" >
                         <td align="right" style="width: 30%">
                           Campus</td>
                         <td style="width: 70%">
-                         <asp:TextBox ID="txtCampus" runat="server" Width="90%" /></td>
+                         <asp:TextBox ID="txtCampus" runat="server" Width="85%" /></td>
                     </tr>
-                    <tr>
+                    <tr id="course" runat="server" visible="false">
                         <td align="right" style="width: 30%">
                            Course</td>
                         <td style="width: 70%">
-                          <asp:TextBox ID="txtCorse" runat="server" Width="90%" /></td>
+                          <asp:TextBox ID="txtCorse" runat="server" Width="85%" /></td>
                     </tr>
                     <tr>
                         <td style="width: 30%" align="right">

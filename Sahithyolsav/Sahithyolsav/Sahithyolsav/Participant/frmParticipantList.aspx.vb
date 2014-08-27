@@ -53,6 +53,9 @@ Public Class frmParticipantList
         Dim participantListId As Integer
         Dim btndetails As ImageButton = TryCast(sender, ImageButton)
         Dim gvrow As GridViewRow = DirectCast(btndetails.NamingContainer, GridViewRow)
+        Dim lblintAge As Label = Nothing
+        Dim lblCampus As Label = Nothing
+        Dim lblCourse As Label = Nothing
         clearFields()
         loadPopup()
         btnSave.Visible = False
@@ -68,7 +71,19 @@ Public Class frmParticipantList
             ddlPartcipantLevelIdComboPopUp.SelectedValue = dt.Rows(0).ItemArray(8)
             ddlSection.SelectedValue = dt.Rows(0).ItemArray(3)
             txtChessNo.Text = dt.Rows(0).ItemArray(2)
-
+            lblintAge = gvrow.FindControl("lblintAge")
+            lblCampus = gvrow.FindControl("lblCampus")
+            lblCourse = gvrow.FindControl("lblCourse")
+            txtAge.Text = lblintAge.Text
+            txtCampus.Text = lblCampus.Text
+            txtCorse.Text = lblCourse.Text
+            If ddlSection.SelectedItem.ToString = "campus".ToLower Then
+                campusname.Visible = True
+                course.Visible = True
+            Else
+                campusname.Visible = False
+                course.Visible = False
+            End If
             '----------
             If dt.Rows(0).ItemArray(14).ToString = "True" Then
                 ddlType.SelectedIndex = 1
@@ -236,6 +251,11 @@ Public Class frmParticipantList
         txtChessNo.Enabled = True
         lblmsg.Text = ""
         ddlPartcipantLevelIdComboPopUp.Enabled = True
+        txtAge.Text = ""
+        txtCampus.Text = ""
+        txtCorse.Text = ""
+        campusname.Visible = False
+        course.Visible = False
         fillSection()
         Dim dt As New DataTable
         chkItemList.DataSource = dt
@@ -279,10 +299,10 @@ Public Class frmParticipantList
         bindItemList()
         If ddlSection.SelectedItem.ToString = "campus".ToLower Then
             campusname.Visible = True
-            ' campuscourse.Visible = True
+            course.Visible = True
         Else
             campusname.Visible = False
-            '  campuscourse.Visible = False
+            course.Visible = False
         End If
     End Sub
     Private Sub bindItemList()
@@ -436,6 +456,10 @@ Public Class frmParticipantList
         arrParticipant.Add(txtParticipant.Text.ToString())
         arrParticipant.Add(0)
         arrParticipant.Add(True)
+        arrParticipant.Add(Session("ImagePath"))
+        arrParticipant.Add(txtAge.Text)
+        arrParticipant.Add(txtCampus.Text)
+        arrParticipant.Add(txtCorse.Text)
         If Participant.SaveParticipant(arrParticipant, retParticipantId) = True Then
             arrParticipantList.Add(Convert.ToInt32(hparticpantLitsId.Value))
             arrParticipantList.Add(retParticipantId)
