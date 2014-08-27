@@ -6,6 +6,7 @@ Public Class schedule
         If Not IsPostBack Then
             fillSection()
             fillStage()
+            bindGrid()
         End If
     End Sub
     Private Sub fillSection()
@@ -36,12 +37,25 @@ Public Class schedule
         arrIn.Add(Convert.ToInt32(ddlSection.SelectedValue.ToString))
         arrIn.Add(Convert.ToInt32(ddlItem.SelectedValue.ToString))
         arrIn.Add(Convert.ToInt32(ddlStage.SelectedValue.ToString))
-        arrIn.Add(Date.Today)
-        arrIn.Add("Time")
-        arrIn.Add("AM")
-        Schedules.SaveSchedule(arrIn)
-    End Sub
+        arrIn.Add(Convert.ToDateTime(txtDate.Text))
+        arrIn.Add(txtTime1.Text)
+        arrIn.Add(txtTime2.Text)
+        arrIn.Add(ddlAMPM.SelectedValue.ToString)
+        If validateScedule() = True Then
+            Schedules.SaveSchedule(arrIn)
+            bindGrid()
+        Else
+            lblmsg.Text = "Can't schedule this item at this time"
+            scheduleModal.Show()
+        End If
 
+
+    End Sub
+    Private Function validateScedule() As Boolean
+        Dim dt As New DataTable
+        dt = Schedules.getItemOfCurrrentSchedules(Convert.ToInt32(ddlStage.SelectedValue.ToString), txtTime1.Text, txtTime2.Text, ddlAMPM.SelectedValue.ToString)
+        Return Schedules.CheckSceduleVallidation(dt.Rows(0).Item(0).ToString, ddlItem.SelectedValue.ToString, UserManagement.UserHigherMapId)
+    End Function
     Protected Sub ddlSection_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ddlSection.SelectedIndexChanged
         scheduleModal.Show()
         bindItemList()
@@ -55,5 +69,11 @@ Public Class schedule
             ddlItem.DataValueField = "intItemId"
             ddlItem.DataBind()
         End If
+    End Sub
+    Private Sub bindGrid()
+        Dim dt As New DataTable
+        dt = Schedules.getSchedules()
+        gvSchedule.DataSource = dt
+        gvSchedule.DataBind()
     End Sub
 End Class

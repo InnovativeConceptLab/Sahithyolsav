@@ -194,22 +194,40 @@ Partial Public Class schedule
     Protected WithEvents txtDate As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''txtTime control.
+    '''CalendarExtender2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtTime As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents CalendarExtender2 As Global.AjaxControlToolkit.CalendarExtender
 
     '''<summary>
-    '''txtAMPM control.
+    '''txtTime1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtAMPM As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtTime1 As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txtTime2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtTime2 As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''ddlAMPM control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ddlAMPM As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''btnSave control.

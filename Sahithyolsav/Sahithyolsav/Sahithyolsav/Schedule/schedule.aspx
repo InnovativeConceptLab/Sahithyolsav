@@ -59,7 +59,7 @@
                 <asp:Button ID="btnAddSch" runat="server" Text="Add Schedule" OnClientClick="loadUpdatePanel()" />
             </div>
             <div style="width: 100%; height: 350px; overflow: auto" class="rounded_corners">
-                <asp:GridView runat="server" ID="gvSchedule" DataKeyNames="intStageId" AutoGenerateColumns="false"
+                <asp:GridView runat="server" ID="gvSchedule" DataKeyNames="intShceduleID" AutoGenerateColumns="false"
                     Width="100%" HeaderStyle-Height="30px" EmptyDataText="No Data Seleted">
                     <RowStyle BackColor="#EFF3FB" />
                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -74,12 +74,15 @@
                             <HeaderStyle Width="5px" ForeColor="White" />
                             <ItemStyle Width="5px" />
                         </asp:TemplateField>
-                        <asp:BoundField DataField="VchStageName" HeaderText="Stage Name" />
-                        <asp:BoundField DataField="vchPlace" HeaderText="Place" />
+                        <asp:BoundField DataField="vchSectionName" HeaderText="Section Name" />
+                        <asp:BoundField DataField="vchItemName" HeaderText="Item Name" />
+                        <asp:BoundField DataField="VchStageName" HeaderText="Stage" />
+                        <asp:BoundField DataField="Date" HeaderText="Date" />
+                        <asp:BoundField DataField="Time" HeaderText="Time" />
                         <asp:TemplateField HeaderStyle-Width="60px" HeaderText="">
                             <ItemTemplate>
-                                <asp:ImageButton ID="ImageButton1" ImageUrl="~/image/delete.gif" runat="server" Width="25"
-                                    Height="25"  OnClientClick="return confirm('Are You Want to Delete this Stage ?')" />
+                                <asp:ImageButton ID="ImageButton1" ImageUrl="~/image/edit.gif" runat="server" Width="25"
+                                    Height="25" />
                             </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>
@@ -122,7 +125,7 @@
                             Select Item
                         </td>
                         <td style="width: 70%">
-                            <asp:DropDownList ID="ddlItem" runat="server" AutoPostBack="false" Width="90%" >
+                            <asp:DropDownList ID="ddlItem" runat="server" AutoPostBack="false" Width="90%">
                             </asp:DropDownList>
                         </td>
                     </tr>
@@ -131,33 +134,38 @@
                             Select Stage
                         </td>
                         <td style="width: 70%">
-                            <asp:DropDownList ID="ddlStage" runat="server" AutoPostBack="false" Width="90%" >
+                            <asp:DropDownList ID="ddlStage" runat="server" AutoPostBack="false" Width="90%">
                             </asp:DropDownList>
                         </td>
                     </tr>
-                  
-                     <tr>
+                    <tr>
                         <td style="width: 30%" align="right">
-                           Date
+                            Date
                         </td>
                         <td style="width: 70%">
-                            <asp:TextBox ID="txtDate" runat="server" Width="90%" Enabled="true" />                          
+                            <asp:TextBox ID="txtDate" runat="server" Width="90%" Enabled="true" />
+                            <asp:CalendarExtender ID="CalendarExtender2" TargetControlID="txtDate" PopupButtonID="imgbtnCalendar"
+                                runat="server" />
                         </td>
                     </tr>
-                     <tr>
+                    <tr>
                         <td style="width: 30%" align="right">
                             Time
                         </td>
                         <td style="width: 70%">
-                      <asp:TextBox ID="txtTime" runat="server" Width="90%" Enabled="true" />
+                            <asp:TextBox ID="txtTime1" runat="server" Width="20%" Enabled="true" />
+                            &nbsp;&nbsp;<asp:TextBox ID="txtTime2" runat="server" Width="20%" Enabled="true" />
                         </td>
                     </tr>
-                         <td style="width: 30%" align="right">
-                            AM/PM
-                        </td>
-                        <td style="width: 70%">
-                          <asp:TextBox ID="txtAMPM" runat="server" Width="90%" Enabled="true" />
-                        </td>
+                    <td style="width: 30%" align="right">
+                        AM/PM
+                    </td>
+                    <td style="width: 70%">
+                        <asp:DropDownList ID="ddlAMPM" runat="server" AutoPostBack="false" Width="90%">
+                            <asp:ListItem Text="AM" Value="AM"></asp:ListItem>
+                             <asp:ListItem Text="PM" Value="PM"></asp:ListItem>
+                        </asp:DropDownList>
+                    </td>
                     </tr>
                     <tr>
                         <td align="center" colspan="2">

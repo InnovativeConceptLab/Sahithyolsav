@@ -16,7 +16,9 @@ CREATE Proc [dbo].[spSaveSchedule]
     @intStageId int,
     @dtDate datetime,
     @vchTime varchar(10),
+    @vchTime1 varchar(10),
     @IsAMPM varchar(10)
+    
 As
 If not exists(Select * from [tbl_Schedule] where intShceduleID=@intShceduleID)
 BEGIN
@@ -26,6 +28,7 @@ INSERT INTO [tbl_Schedule]
            ,[intStageId]
            ,[dtDate]
            ,[vchTime]
+           ,[vchTime1]
            ,[IsAMPM])
      VALUES
            (
@@ -33,7 +36,7 @@ INSERT INTO [tbl_Schedule]
 			@intItemId,
 			@intStageId,
 			@dtDate,
-			@vchTime,
+			@vchTime,@vchTime1,
 			@IsAMPM
            )
 End
@@ -43,7 +46,7 @@ BEGIN
 	SET
 	   [intStageId]=@intStageId,
        [dtDate]=@dtDate,
-       [vchTime]=@vchTime,
+       [vchTime]=@vchTime,vchTime1=@vchTime1,
        [IsAMPM]=@IsAMPM
     WHERE 
     intShceduleID=@intShceduleID
