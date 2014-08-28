@@ -66,6 +66,7 @@
                         <li><a href="#" class="drop">Reports</a>
                             <div class="dropdown_2columns">
                                 <a href="#" onclick="loadIframe('rpt')">Show Reports</a>
+                                 <a href="#" onclick="loadIframe('Itemrpt')">Item Wise Reports</a>
                             </div>
                         </li>
                         <li><a href="#" class="drop">Settings</a>
