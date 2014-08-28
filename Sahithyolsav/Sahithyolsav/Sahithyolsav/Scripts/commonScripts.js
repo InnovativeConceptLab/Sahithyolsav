@@ -55,6 +55,9 @@ function loadIframe(id) {
         case 'sch':
             document.getElementById('iframeContent').src = "../Schedule/schedule.aspx";
             break;
+        case 'Itemrpt':
+            document.getElementById('iframeContent').src = "../Reports/frmItemWiseReport.aspx";
+            break;
     }
 }
 function isNumberKey(e) {
