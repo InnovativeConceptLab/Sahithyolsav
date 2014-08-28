@@ -54,7 +54,11 @@ Public Class schedule
     Private Function validateScedule() As Boolean
         Dim dt As New DataTable
         dt = Schedules.getItemOfCurrrentSchedules(Convert.ToInt32(ddlStage.SelectedValue.ToString), txtTime1.Text, txtTime2.Text, ddlAMPM.SelectedValue.ToString)
-        Return Schedules.CheckSceduleVallidation(dt.Rows(0).Item(0).ToString, ddlItem.SelectedValue.ToString, UserManagement.UserHigherMapId)
+        If dt.Rows.Count > 0 Then
+            Return Schedules.CheckSceduleVallidation(dt.Rows(0).Item(0).ToString, ddlItem.SelectedValue.ToString, UserManagement.UserTypeId)
+        Else
+            Return True
+        End If
     End Function
     Protected Sub ddlSection_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ddlSection.SelectedIndexChanged
         scheduleModal.Show()

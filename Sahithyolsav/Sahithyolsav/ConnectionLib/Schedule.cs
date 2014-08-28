@@ -150,7 +150,7 @@ namespace ConnectionLib
             p[3] = new SqlParameter("@ampm", ampm);
 
             Query = "SELECT intItemId FROM tbl_Schedule "
-                   + " WHERE intStageId=@stageId and vchTime=@time1 and vchTime1=@time2 AND IsAMPM=@ampm";
+                   + " WHERE vchTime=@time1 and vchTime1=@time2 AND IsAMPM=@ampm";
 
             try
             {
@@ -179,14 +179,16 @@ namespace ConnectionLib
             p[1] = new SqlParameter("@itemid2", itemid2);
             p[2] = new SqlParameter("@tolevelId", tolevelId);
 
-            Query = "SELECT * FROM tbl_ParticipantList"
+            Query = "SELECT intParticipantId,COUNT(*) FROM tbl_ParticipantList"
                 + " INNER JOIN tbl_ItemList on tbl_ParticipantList.intParticipantListId=tbl_ItemList.intParticipantListId"
-                + " WHERE intItemId in(@itemid1,@itemid2) and intParticipantToLevelId=@tolevelId AND vchStatus='Yes'";
+                + " WHERE intItemId in(@itemid1,@itemid2) and intParticipantLevelTypeID=@tolevelId AND vchStatus='Yes'"
+                + " GROUP BY intParticipantId HAVING COUNT(*) > 1";
+
 
             try
             {
                 ds = DataLayer.SqlHelper.ExecuteDataset(Utilities.GetConnectionString(Utilities.DataBase.Sahithyolsav), CommandType.Text, Query,p);
-                if (ds.Tables[0].Rows.Count > 1)
+                if (ds.Tables[0].Rows.Count > 0)
                     return false;
                 else
                     return true; 
