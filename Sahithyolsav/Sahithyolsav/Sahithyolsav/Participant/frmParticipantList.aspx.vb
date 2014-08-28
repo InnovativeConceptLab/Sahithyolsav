@@ -560,10 +560,11 @@ Public Class frmParticipantList
         If fileUploadImage.HasFile Then
             Dim fileName As String
             fileName = fileUploadImage.FileName
-            Dim randomValue = CInt(Math.Floor((100 - 1 + 1) * Rnd())) + 1
+
+            Dim randomValue As String = rand()
             fileUploadImage.SaveAs(Server.MapPath("~/ParticipantPhoto/" + "_" + randomValue.ToString + fileUploadImage.FileName))
            
-            Session("ImagePath") = "_" + randomValue.ToString + fileUploadImage.FileName
+            Session("ImagePath") = "~/ParticipantPhoto/" + "_" + randomValue.ToString + fileUploadImage.FileName
             ''   fileUploadImage.SaveAs(MapPath("~/Image/" + fileUploadImage.FileName))
 
             'Dim img1 As System.Drawing.Image = System.Drawing.Image.FromFile(MapPath("~/image/") + fileUploadImage.FileName)
@@ -571,5 +572,37 @@ Public Class frmParticipantList
         End If
         participantModal.Show()
     End Sub
+    Dim rng As Random = New Random
+    Sub Main()
+        Console.WriteLine(rand())
+        Console.WriteLine(rand())
+        Console.WriteLine(rand())
+        Console.WriteLine(rand())
+    End Sub
+
+    Public Function rand() As String
+
+        Dim sb As New StringBuilder
+
+        ' Selection of pure numbers sequence or mixed one
+        Dim pureNumbers = rng.Next(1, 11)
+        If pureNumbers < 7 Then
+            ' Generate a sequence of only digits
+            Dim number As Integer = rng.Next(1, 1000000)
+            Dim digits As String = number.ToString("000000")
+            For i As Integer = 1 To 6
+                Dim idx As Integer = rng.Next(0, digits.Length)
+                sb.Append(digits.Substring(idx, 1))
+            Next
+        Else
+            ' Generate a sequence of digits and letters 
+            Dim s As String = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+            For i As Integer = 1 To 6
+                Dim idx As Integer = rng.Next(0, 36)
+                sb.Append(s.Substring(idx, 1))
+            Next
+        End If
+        Return sb.ToString()
+    End Function
 
 End Class
