@@ -374,7 +374,11 @@ Public Class frmParticipantList
         arrParticipant.Add(txtParticipant.Text.ToString())
         arrParticipant.Add(0)
         arrParticipant.Add(True)
-        arrParticipant.Add(Session("ImagePath"))
+        If Session("ImagePath") IsNot Nothing Then
+            arrParticipant.Add(Session("ImagePath"))
+        Else
+            arrParticipant.Add("")
+        End If
         arrParticipant.Add(txtAge.Text)
         arrParticipant.Add(txtCampus.Text)
         arrParticipant.Add(txtCorse.Text)
@@ -438,6 +442,7 @@ Public Class frmParticipantList
             End If
         End If
         bindGrid()
+        Session("ImagePath") = ""
     End Sub
 
     Protected Sub btnUpdate_Click(ByVal sender As Object, ByVal e As System.Web.UI.ImageClickEventArgs) Handles btnUpdate.Click
@@ -456,7 +461,12 @@ Public Class frmParticipantList
         arrParticipant.Add(txtParticipant.Text.ToString())
         arrParticipant.Add(0)
         arrParticipant.Add(True)
-        arrParticipant.Add(Session("ImagePath"))
+        If Session("ImagePath") IsNot Nothing Then
+            arrParticipant.Add(Session("ImagePath"))
+        Else
+            arrParticipant.Add("")
+        End If
+
         arrParticipant.Add(txtAge.Text)
         arrParticipant.Add(txtCampus.Text)
         arrParticipant.Add(txtCorse.Text)
@@ -520,6 +530,7 @@ Public Class frmParticipantList
             End If
         End If
         bindGrid()
+        Session("ImagePath") = ""
     End Sub
 
     'Protected Sub rbgSingleItem_CheckedChanged(ByVal sender As Object, ByVal e As EventArgs) Handles rbgSingleItem.CheckedChanged
