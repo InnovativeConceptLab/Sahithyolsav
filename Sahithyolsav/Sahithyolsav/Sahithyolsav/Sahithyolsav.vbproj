@@ -137,6 +137,7 @@
     <Content Include="Participant\frmCodeLetterMap.aspx" />
     <Content Include="Participant\frmParticipantList.aspx" />
     <Content Include="Participant\frmTabulation.aspx" />
+    <Content Include="Reports\frmItemWiseReport.aspx" />
     <Content Include="Reports\frmReports.aspx" />
     <Content Include="Schedule\frmStage.aspx" />
     <Content Include="Schedule\schedule.aspx" />
@@ -340,6 +341,13 @@
     <Compile Include="Participant\frmTabulation.aspx.vb">
       <DependentUpon>frmTabulation.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Reports\frmItemWiseReport.aspx.designer.vb">
+      <DependentUpon>frmItemWiseReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmItemWiseReport.aspx.vb">
+      <DependentUpon>frmItemWiseReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Reports\frmReports.aspx.designer.vb">
       <DependentUpon>frmReports.aspx</DependentUpon>

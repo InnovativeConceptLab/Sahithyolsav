@@ -4,6 +4,12 @@ Public Class frmChessNumber
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        If UserManagement.UserTypeId = 1 Then
+            divGenerate.Visible = True
+            lblchessNumMsg.Visible = False
+        Else
+            divGenerate.Visible = False
+        End If
         If ConnectionLib.UserManagement.Userlogin = False Then
             Response.Redirect("Default.aspx")
         End If
@@ -160,5 +166,13 @@ Public Class frmChessNumber
 
     Protected Sub ddlSearchSection_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ddlSearchSection.SelectedIndexChanged
 
+    End Sub
+
+    Protected Sub btnGenerte_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnGenerte.Click
+        If ConnectionLib.Participant.GenerateChessNumber(UserManagement.UserTypeId) = True Then
+            lblchessNumMsg.Text = "CHESS NUMBER GENERATED SUCSESSFULLY"
+            lblchessNumMsg.ForeColor = Drawing.Color.Green
+            lblchessNumMsg.Visible = True
+        End If
     End Sub
 End Class

@@ -194,6 +194,33 @@ Partial Public Class frmChessNumber
     Protected WithEvents participantHeader As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''divGenerate control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents divGenerate As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''btnGenerte control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnGenerte As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''lblchessNumMsg control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblchessNumMsg As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''ddlSearchSection control.
     '''</summary>
     '''<remarks>

@@ -278,14 +278,14 @@ Public Class frmTabulation
         arrin.Add(totalmarks)
         arrin.Add(itemID)
         If totalmarks >= 70 And totalmarks <= 100 Then
-            DtPoint = item.GetPoints(itemID, "First")
-            Point = DtPoint.Rows(0).Item(0)
+            ' DtPoint = item.GetPoints(itemID, "First")
+            Point = 3 'DtPoint.Rows(0).Item(0)
         ElseIf totalmarks >= 60 And totalmarks <= 69 Then
-            DtPoint = item.GetPoints(itemID, "Second")
-            Point = DtPoint.Rows(0).Item(0)
+            'DtPoint = item.GetPoints(itemID, "Second")
+            Point = 2 'DtPoint.Rows(0).Item(0)
         ElseIf totalmarks >= 50 And totalmarks <= 59 Then
-            DtPoint = item.GetPoints(itemID, "Third")
-            Point = DtPoint.Rows(0).Item(0)
+            'DtPoint = item.GetPoints(itemID, "Third")
+            Point = 1 'DtPoint.Rows(0).Item(0)
         Else
             Point = 0
         End If

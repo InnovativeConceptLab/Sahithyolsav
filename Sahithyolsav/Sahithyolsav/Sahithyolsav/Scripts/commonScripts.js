@@ -1,6 +1,5 @@
 ﻿function resizeIframe(obj) {
-    console.log($(window).height());
-    obj.style.height = ($(window).height() - 150) + "px";  //(obj.contentWindow.document.body.scrollHeight + 40) + 'px';
+    obj.style.height = ($(window).height() - 100) + "px";  //(obj.contentWindow.document.body.scrollHeight + 40) + 'px';
 }
 function loadIframe(id) {
     switch (id) {

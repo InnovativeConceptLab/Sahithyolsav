@@ -123,8 +123,22 @@
                 <div class="bannerTableStyle" style="width: 100%">
                     <table width="100%">
                         <tr>
-                            <td align="center" style="width: 100%; font-weight: bold;text-transform:uppercase;">
+                            <td align="center" style="width: 100%; font-weight: bold; text-transform: uppercase;">
                                 <asp:Label runat="server" ID="participantHeader" ForeColor="White"></asp:Label>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="searchTableStyle" style="width: 99.5%" runat="server" id="divGenerate">
+                    <table cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                            <td align="center" style="width: 100%">
+                                <asp:Button ID="btnGenerte" runat="server" Text="GENERATE CHESS NUMBER" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" style="width: 100%">
+                                <asp:Label ID="lblchessNumMsg" runat="server" Visible="false"></asp:Label>
                             </td>
                         </tr>
                     </table>
@@ -153,8 +167,8 @@
                         </tr>
                     </table>
                 </div>
-                <div style="width: 100%; height: 350px; overflow: auto" class="rounded_corners">
-                    <asp:GridView runat="server" ID="gvChessNumMapdetails" DataKeyNames="intParticipantListId" 
+                <div style="width: 100%; height: 320px; overflow: auto" class="rounded_corners">
+                    <asp:GridView runat="server" ID="gvChessNumMapdetails" DataKeyNames="intParticipantListId"
                         AutoGenerateColumns="false" Width="100%" HeaderStyle-Height="30px" EmptyDataText="No Data Seleted">
                         <RowStyle BackColor="#EFF3FB" />
                         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

@@ -234,10 +234,10 @@ namespace ConnectionLib
             p[0] = new SqlParameter("@participantListd", participantListd);
             String Query;
             Query = "SELECT [intParticipantListId],tbl_ParticipantList.[intParticipantId],[vchChessNo],[intSectionId],[intItemListID],[dtDateAdded] "
-                    +" ,[intadedUserId],[intProgramLevelId],[intParticipantLevelId],tbl_ParticipantList.[IsActive],[intParticipantToLevelId]"
+                    + " ,[intadedUserId],[intProgramLevelId],[intParticipantLevelId],tbl_ParticipantList.[IsActive],[intParticipantToLevelId]"
                     + " ,[intParticipantLevelTypeID],vchPartcipantName,tbl_Participant.intParticipantId,ISNULL(tbl_ParticipantList.isGroupPaticipant,0) FROM [tbl_ParticipantList] "
-                    +" INNER JOIN tbl_Participant on tbl_Participant.intParticipantId=tbl_ParticipantList.intParticipantId"
-                    +" WHERE intParticipantListId=@participantListd";
+                    + " INNER JOIN tbl_Participant on tbl_Participant.intParticipantId=tbl_ParticipantList.intParticipantId"
+                    + " WHERE intParticipantListId=@participantListd";
             try
             {
                 ds = DataLayer.SqlHelper.ExecuteDataset(Utilities.GetConnectionString(Utilities.DataBase.Sahithyolsav), CommandType.Text, Query, p);
@@ -338,10 +338,34 @@ namespace ConnectionLib
             p[0] = new SqlParameter("@SectionId", SectionId);
             p[1] = new SqlParameter("@intItemId", intItemId);
             p[2] = new SqlParameter("@intParticipantToLevelId", toLvelId);
-        
+
             try
             {
                 ds = DataLayer.SqlHelper.ExecuteDataset(Utilities.GetConnectionString(Utilities.DataBase.Sahithyolsav), CommandType.StoredProcedure, "spGetParticipantItemBySectionandItemId", p);
+                return ds.Tables[0];
+            }
+            catch
+            {
+                return null;
+            }
+
+            finally
+            {
+                ds.Dispose();
+            }
+        }
+        public static DataTable GetProgramChartByItem(int SectionId, int intItemId, int toLvelId)
+        {
+            DataSet ds = new DataSet();
+            SqlParameter[] p = new SqlParameter[3];
+
+            p[0] = new SqlParameter("@SectionId", SectionId);
+            p[1] = new SqlParameter("@intItemId", intItemId);
+            p[2] = new SqlParameter("@intParticipantToLevelId", toLvelId);
+
+            try
+            {
+                ds = DataLayer.SqlHelper.ExecuteDataset(Utilities.GetConnectionString(Utilities.DataBase.Sahithyolsav), CommandType.StoredProcedure, "spGetProgramChartByItem", p);
                 return ds.Tables[0];
             }
             catch
@@ -364,7 +388,7 @@ namespace ConnectionLib
             Query = "SELECT * FROM tbl_ParticipantGroupList WHERE intParticipantListId=@intParticipantListId";
             try
             {
-                ds = DataLayer.SqlHelper.ExecuteDataset(Utilities.GetConnectionString(Utilities.DataBase.Sahithyolsav), CommandType.Text, Query , p);
+                ds = DataLayer.SqlHelper.ExecuteDataset(Utilities.GetConnectionString(Utilities.DataBase.Sahithyolsav), CommandType.Text, Query, p);
                 return ds.Tables[0];
             }
             catch
@@ -477,7 +501,7 @@ namespace ConnectionLib
                 return false;
             }
         }
-        public static bool UpdateChessNumber(int intParticipantListId,String chessNumber)
+        public static bool UpdateChessNumber(int intParticipantListId, String chessNumber)
         {
             SqlParameter[] p = new SqlParameter[2];
             String Query;
@@ -503,7 +527,7 @@ namespace ConnectionLib
                 return false;
             }
         }
-        public static bool ValidateItem(int ParticipantLevelId,int ItemId,int participantID)
+        public static bool ValidateItem(int ParticipantLevelId, int ItemId, int participantID)
         {
             SqlParameter[] p = new SqlParameter[3];
             String Query;
@@ -526,15 +550,64 @@ namespace ConnectionLib
 
             try
             {
-               ds = DataLayer.SqlHelper.ExecuteDataset(Utilities.GetConnectionString(Utilities.DataBase.Sahithyolsav), CommandType.Text, Query, p);
-               if(ds.Tables[0].Rows.Count > 0)
-               {
-                   return true  ;
-               }
-               else
-               {
-                   return false;
-               }
+                ds = DataLayer.SqlHelper.ExecuteDataset(Utilities.GetConnectionString(Utilities.DataBase.Sahithyolsav), CommandType.Text, Query, p);
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public static bool GenerateChessNumber(int ParticipantToLevelId)
+        {
+            SqlParameter[] p = new SqlParameter[1];
+            String Query,updQuery;
+            int chessNumber = 0, resetChessNumber, setLevelId = 0;
+            DataSet ds = new DataSet();
+            p[0] = new SqlParameter("@ParticipantToLevelId", ParticipantToLevelId);
+            
+            Query = "SELECT intParticipantListId,intParticipantLevelId,intParticipantToLevelId,vchChessNo FROM tbl_ParticipantList"
+                     + " WHERE intParticipantToLevelId=@ParticipantToLevelId"
+                     + " ORDER BY  intParticipantLevelId";
+
+
+            try
+            {
+                resetChessNumber = 100;
+                ds = DataLayer.SqlHelper.ExecuteDataset(Utilities.GetConnectionString(Utilities.DataBase.Sahithyolsav), CommandType.Text, Query, p);
+                for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                {
+                    if (i == 0)
+                    {
+                        chessNumber = 100;
+                        resetChessNumber = 100;
+                        setLevelId = Convert.ToInt32(ds.Tables[0].Rows[i].ItemArray[1].ToString());
+                    }
+                    else
+                    {
+                        if (setLevelId == Convert.ToInt32(ds.Tables[0].Rows[i].ItemArray[1].ToString()))
+                        {
+                            chessNumber = chessNumber + 1;
+                        }
+                        else
+                        {
+                            resetChessNumber = resetChessNumber + 200;
+                            chessNumber = resetChessNumber;
+                            setLevelId = Convert.ToInt32(ds.Tables[0].Rows[i].ItemArray[1].ToString());
+                        }
+                        
+                    }
+                    updQuery = "UPDATE tbl_ParticipantList SET vchChessNo=" + chessNumber + " WHERE intParticipantListId="+ Convert.ToInt32( ds.Tables[0].Rows[i].ItemArray[0].ToString()) ;
+                    DataLayer.SqlHelper.ExecuteNonQuery(Utilities.GetConnectionString(Utilities.DataBase.Sahithyolsav), CommandType.Text, updQuery);
+                }
+                return true;
             }
             catch
             {

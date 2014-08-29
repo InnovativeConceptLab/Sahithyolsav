@@ -53,9 +53,17 @@ Public Class schedule
     End Sub
     Private Function validateScedule() As Boolean
         Dim dt As New DataTable
+        Dim items As String = ""
         dt = Schedules.getItemOfCurrrentSchedules(Convert.ToInt32(ddlStage.SelectedValue.ToString), txtTime1.Text, txtTime2.Text, ddlAMPM.SelectedValue.ToString)
         If dt.Rows.Count > 0 Then
-            Return Schedules.CheckSceduleVallidation(dt.Rows(0).Item(0).ToString, ddlItem.SelectedValue.ToString, UserManagement.UserTypeId)
+            For i = 0 To dt.Rows.Count - 1
+                If i = 0 Then
+                    items = dt.Rows(i).Item(0).ToString
+                Else
+                    items = items + "," + dt.Rows(i).Item(0).ToString
+                End If
+            Next
+            Return Schedules.CheckSceduleVallidation(items, ddlItem.SelectedValue.ToString, UserManagement.UserTypeId)
         Else
             Return True
         End If

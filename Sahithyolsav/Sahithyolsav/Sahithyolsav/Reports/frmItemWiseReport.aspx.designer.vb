@@ -122,11 +122,11 @@ Partial Public Class frmItemWiseReport
     Protected WithEvents imgPdf As Global.System.Web.UI.WebControls.ImageButton
 
     '''<summary>
-    '''gvReport control.
+    '''gvItemDetails control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents gvReport As Global.System.Web.UI.WebControls.GridView
+    Protected WithEvents gvItemDetails As Global.System.Web.UI.WebControls.GridView
 End Class

@@ -1,6 +1,12 @@
 ﻿Imports ConnectionLib
 Imports System.Data.Sql
+Imports iTextSharp.text.html.simpleparser
+Imports iTextSharp.text
+Imports iTextSharp.text.pdf
+Imports iTextSharp.text.html
 Imports System.Web.UI.Control
+Imports System.IO
+Imports System.Text
 Public Class frmItemWiseReport
     Inherits System.Web.UI.Page
 
@@ -13,12 +19,12 @@ Public Class frmItemWiseReport
     End Sub
     Private Sub fillSearchSection()
         Dim dt As New DataTable
-        dt = Section.getAllSections()
+        dt = ConnectionLib.Section.getAllSections()
         ddlSearchSection.DataSource = dt
         ddlSearchSection.DataTextField = "vchSectionName"
         ddlSearchSection.DataValueField = "intSectionID"
         ddlSearchSection.DataBind()
-        ddlSearchSection.Items.Insert(0, New ListItem("----Select----", "0"))
+        ' ddlSearchSection.Items.Insert(0, New ListItem("----Select----", "0"))
     End Sub
 
     Private Sub ddlSearchSection_SelectedIndexChanged(sender As Object, e As System.EventArgs) Handles ddlSearchSection.SelectedIndexChanged
@@ -37,33 +43,11 @@ Public Class frmItemWiseReport
     End Sub
 
     Protected Sub imgSearch_Click(sender As Object, e As System.Web.UI.ImageClickEventArgs) Handles imgSearch.Click
-        Dim dt As New DataTable
-        Dim arrIn As New ArrayList()
-        arrIn.Add(1)
-        arrIn.Add(Convert.ToInt32(ddlSearchSection.SelectedValue.ToString()))
-        arrIn.Add(Convert.ToInt32(ddlSearchItem.SelectedValue.ToString()))
-        arrIn.Add(UserManagement.UserMapId)
-        arrIn.Add(UserManagement.UserTypeId)
-        arrIn.Add(0)
-        dt = Reports.ExecuteReportQuery(arrIn)
-        bindReportGrid(dt)
+        bindReportGrid()
     End Sub
-    Private Sub bindReportGrid(ByVal dt As DataTable)
-        'Code to bind grid,dt will contain grid data
-        divgridRport.Visible = True
-        If Not (IsDBNull(dt)) Then
-            If dt.Rows.Count > 0 Then
-                ViewState("ColCount") = dt.Columns.Count
-                gvReport.DataSource = dt
-                gvReport.DataBind()
-            Else
-                gvReport.DataSource = dt
-                gvReport.DataBind()
-            End If
-        Else
-            gvReport.DataSource = dt
-            gvReport.DataBind()
-        End If
+    Private Sub bindReportGrid()
+        gvItemDetails.DataSource = Participant.GetProgramChartByItem(Convert.ToInt32(ddlSearchSection.SelectedValue.ToString), Convert.ToInt32(ddlSearchItem.SelectedValue.ToString), UserManagement.UserMapId)
+        gvItemDetails.DataBind()
     End Sub
     Protected Sub gvReport_RowCreated(ByVal sender As Object, ByVal e As GridViewRowEventArgs)
         Dim colCount As Integer
@@ -77,7 +61,7 @@ Public Class frmItemWiseReport
             HeaderCell.ColumnSpan = colCount + 1
             HeaderCell.HorizontalAlign = HorizontalAlign.Center
             HeaderGridRow.Cells.Add(HeaderCell)
-            gvReport.Controls(0).Controls.AddAt(0, HeaderGridRow)
+            gvItemDetails.Controls(0).Controls.AddAt(0, HeaderGridRow)
 
             Dim HeaderGrid1 As GridView = DirectCast(sender, GridView)
             Dim HeaderGridRow1 As New GridViewRow(1, 0, DataControlRowType.Header, DataControlRowState.Insert)
@@ -87,7 +71,7 @@ Public Class frmItemWiseReport
             HeaderCell1.ColumnSpan = colCount + 1
             HeaderCell1.HorizontalAlign = HorizontalAlign.Center
             HeaderGridRow1.Cells.Add(HeaderCell1)
-            gvReport.Controls(0).Controls.AddAt(1, HeaderGridRow1)
+            gvItemDetails.Controls(0).Controls.AddAt(1, HeaderGridRow1)
         End If
     End Sub
     Private Function HeaderText() As String
@@ -114,4 +98,43 @@ Public Class frmItemWiseReport
     Private Sub bindHeader()
         participantHeader.Text = HeaderText()
     End Sub
+
+    Protected Sub imgPdf_Click(ByVal sender As Object, ByVal e As System.Web.UI.ImageClickEventArgs) Handles imgPdf.Click
+        'Response.ContentType = "application/pdf"
+        'Response.AddHeader("content-disposition", _
+        ' "attachment;filename=GridViewExport.pdf")
+        'Response.Cache.SetCacheability(HttpCacheability.NoCache)
+        'Dim sw As New StringWriter()
+        'Dim hw As New HtmlTextWriter(sw)
+        'gvItemDetails.AllowPaging = False
+        gvItemDetails.DataSource = Participant.GetProgramChartByItem(Convert.ToInt32(ddlSearchSection.SelectedValue.ToString), Convert.ToInt32(ddlSearchItem.SelectedValue.ToString), UserManagement.UserMapId)
+        gvItemDetails.DataBind()
+        ConnectionLib.Utilities.ExportGrid(gvItemDetails, "pdf", "itemchart")
+        'gvItemDetails.RenderControl(hw)
+        'Dim sr As New StringReader(sw.ToString())
+        'Dim pdfDoc As New Document(PageSize.A4, 7.0F, 7.0F, 7.0F, 0.0F)
+        'Dim htmlparser As New HTMLWorker(pdfDoc)
+        'PdfWriter.GetInstance(pdfDoc, Response.OutputStream)
+        'pdfDoc.Open()
+        'htmlparser.Parse(sr)
+        'pdfDoc.Close()
+        'Response.Write(pdfDoc)
+        'Response.End()
+    End Sub
+    Public Overloads Overrides Sub VerifyRenderingInServerForm(ByVal control As Control)
+
+        ' Verifies that the control is rendered
+    End Sub
+    Protected Function GetUrl(ByVal imagepath As String) As String
+        Dim splits As String() = Request.Url.AbsoluteUri.Split("/"c)
+        If splits.Length >= 2 Then
+            Dim url As String = splits(0) & "//"
+            For i As Integer = 2 To 2
+                url += splits(i)
+                url += "/"
+            Next
+            Return url + imagepath
+        End If
+        Return imagepath
+    End Function
 End Class

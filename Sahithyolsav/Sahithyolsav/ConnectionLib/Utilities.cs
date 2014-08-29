@@ -236,6 +236,7 @@ namespace ConnectionLib
                 gv.Style.Add("font-size", "11px");
                 gv.ForeColor = System.Drawing.Color.Black;
 
+                gv.RowStyle.Height = 10;
                 gv.RenderControl(hw);
                 StringReader sr = new StringReader(sw.ToString());
                 Document pdfDoc = new Document(PageSize.A4, 7f, 7f, 7f, 0f);

@@ -20,14 +20,14 @@ F:\WORK\TESTPROJECTS\Sahithyolsav\Sahithyolsav\Sahithyolsav\Sahithyolsav\obj\Deb
 F:\WORK\TESTPROJECTS\Sahithyolsav\Sahithyolsav\Sahithyolsav\Sahithyolsav\obj\Debug\Sahithyolsav.dll
 F:\WORK\TESTPROJECTS\Sahithyolsav\Sahithyolsav\Sahithyolsav\Sahithyolsav\obj\Debug\Sahithyolsav.xml
 F:\WORK\TESTPROJECTS\Sahithyolsav\Sahithyolsav\Sahithyolsav\Sahithyolsav\obj\Debug\Sahithyolsav.pdb
+D:\My Projects\Sahithyolsav-2014\Sahithyolsav\Sahithyolsav\Sahithyolsav\Sahithyolsav\obj\Debug\Sahithyolsav.vbprojResolveAssemblyReference.cache
+D:\My Projects\Sahithyolsav-2014\Sahithyolsav\Sahithyolsav\Sahithyolsav\Sahithyolsav\obj\Debug\Sahithyolsav.Resources.resources
+D:\My Projects\Sahithyolsav-2014\Sahithyolsav\Sahithyolsav\Sahithyolsav\Sahithyolsav\obj\Debug\Sahithyolsav.vbproj.GenerateResource.Cache
 D:\My Projects\Sahithyolsav-2014\Sahithyolsav\Sahithyolsav\Sahithyolsav\Sahithyolsav\bin\Sahithyolsav.dll
 D:\My Projects\Sahithyolsav-2014\Sahithyolsav\Sahithyolsav\Sahithyolsav\Sahithyolsav\bin\Sahithyolsav.pdb
 D:\My Projects\Sahithyolsav-2014\Sahithyolsav\Sahithyolsav\Sahithyolsav\Sahithyolsav\bin\Sahithyolsav.xml
 D:\My Projects\Sahithyolsav-2014\Sahithyolsav\Sahithyolsav\Sahithyolsav\Sahithyolsav\bin\ConnectionLib.dll
 D:\My Projects\Sahithyolsav-2014\Sahithyolsav\Sahithyolsav\Sahithyolsav\Sahithyolsav\bin\ConnectionLib.pdb
-D:\My Projects\Sahithyolsav-2014\Sahithyolsav\Sahithyolsav\Sahithyolsav\Sahithyolsav\obj\Debug\Sahithyolsav.vbprojResolveAssemblyReference.cache
-D:\My Projects\Sahithyolsav-2014\Sahithyolsav\Sahithyolsav\Sahithyolsav\Sahithyolsav\obj\Debug\Sahithyolsav.Resources.resources
-D:\My Projects\Sahithyolsav-2014\Sahithyolsav\Sahithyolsav\Sahithyolsav\Sahithyolsav\obj\Debug\Sahithyolsav.vbproj.GenerateResource.Cache
 D:\My Projects\Sahithyolsav-2014\Sahithyolsav\Sahithyolsav\Sahithyolsav\Sahithyolsav\obj\Debug\Sahithyolsav.dll
 D:\My Projects\Sahithyolsav-2014\Sahithyolsav\Sahithyolsav\Sahithyolsav\Sahithyolsav\obj\Debug\Sahithyolsav.xml
 D:\My Projects\Sahithyolsav-2014\Sahithyolsav\Sahithyolsav\Sahithyolsav\Sahithyolsav\obj\Debug\Sahithyolsav.pdb

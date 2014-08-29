@@ -190,6 +190,110 @@ lblmsg control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
+</member><member name="F:Sahithyolsav.frmItemWiseReport.Head1">
+	<summary>
+Head1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItemWiseReport.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItemWiseReport.ScriptManager1">
+	<summary>
+ScriptManager1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItemWiseReport.UpdateProgress">
+	<summary>
+UpdateProgress control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItemWiseReport.modalPopup">
+	<summary>
+modalPopup control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItemWiseReport.participantHeader">
+	<summary>
+participantHeader control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItemWiseReport.divItemSection">
+	<summary>
+divItemSection control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItemWiseReport.ddlSearchSection">
+	<summary>
+ddlSearchSection control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItemWiseReport.ddlSearchItem">
+	<summary>
+ddlSearchItem control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItemWiseReport.imgSearch">
+	<summary>
+imgSearch control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItemWiseReport.divgridRport">
+	<summary>
+divgridRport control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItemWiseReport.imgPdf">
+	<summary>
+imgPdf control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmItemWiseReport.gvItemDetails">
+	<summary>
+gvItemDetails control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
 </member><member name="F:Sahithyolsav.frmDistrict.Head1">
 	<summary>
 Head1 control.
@@ -1914,6 +2018,30 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:Sahithyolsav.frmChessNumber.participantHeader">
 	<summary>
 participantHeader control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.divGenerate">
+	<summary>
+divGenerate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.btnGenerte">
+	<summary>
+btnGenerte control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Sahithyolsav.frmChessNumber.lblchessNumMsg">
+	<summary>
+lblchessNumMsg control.
 </summary>
 	<remarks>
 Auto-generated field.

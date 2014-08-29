@@ -105,8 +105,8 @@
             <asp:ImageButton ID="imgPdf" runat="server" ImageUrl="~/image/downloadButton.jpg"
                 ToolTip="Download as pdf" Height="32px" Width="160px" />
             <div style="width: 100%; height: 300px; overflow: auto" class="rounded_corners">
-                <asp:GridView runat="server" ID="gvReport" Width="100%" HeaderStyle-Height="30px"
-                    EmptyDataText="No Data Seleted" OnRowCreated="gvReport_RowCreated" 
+                <asp:GridView runat="server" ID="gvItemDetails" Width="100%" HeaderStyle-Height="30px"
+                    EmptyDataText="No Data Seleted" 
                     AutoGenerateColumns="False">
                     <RowStyle BackColor="#EFF3FB" />
                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -121,18 +121,17 @@
                             <HeaderStyle Width="5px" ForeColor="White" />
                             <ItemStyle Width="5px" />
                         </asp:TemplateField>
-                        <asp:BoundField DataField="Name" HeaderText="Name" />
-                        <asp:BoundField DataField="Section" HeaderText="Section" />
-                        <asp:BoundField DataField="Team" HeaderText="Team" />
-                        <asp:BoundField DataField="Chess No" HeaderText="Chess No" />
-                        <asp:BoundField DataField="Code Letter" HeaderText="Code Letter" />
-                        <asp:BoundField DataField="Mark" HeaderText="Mark" />
-                        <asp:BoundField DataField="Point" HeaderText="Point" />
+                        <asp:BoundField DataField="vchPartcipantName" HeaderText="Participant Name" />
+                         <asp:BoundField DataField="Participant From" HeaderText="Team" />
+                        <asp:BoundField DataField="vchSectionName" HeaderText="Section" />
+                        <asp:BoundField DataField="vchItemName" HeaderText="Item" />
+                        <asp:BoundField DataField="vchChessNo" HeaderText="Chess No" />
+                        <asp:BoundField DataField="CodeLetter" HeaderText="Code Letter" />
                        
-                        <asp:TemplateField HeaderText="Photo">
-                        <ItemTemplate><asp:Image ID="Image2" runat="server" ImageUrl='<%# Bind("ImgPath") %>'></asp:Image></ItemTemplate>
+                        <asp:TemplateField HeaderText="Photo" HeaderStyle-Height="20px" HeaderStyle-Width="20px">
+                        <ItemTemplate><asp:Image ID="imgpath"  runat="server" Width="50px" Height="50px" ImageUrl = '<%# Eval("imgPath", GetUrl("{0}")) %>'></asp:Image></ItemTemplate>
                         </asp:TemplateField>
-                       
+                         <asp:BoundField DataField="Sign" HeaderText="Signature" />
                     </Columns>
                 </asp:GridView>
             </div>

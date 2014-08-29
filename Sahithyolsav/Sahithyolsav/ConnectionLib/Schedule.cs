@@ -11,10 +11,10 @@ namespace ConnectionLib
     public class Schedules
     {
         public static bool SaveStage(ArrayList Param)
-        { 
+        {
             SqlParameter[] p = new SqlParameter[3];
 
-            p[0] = new SqlParameter("@intStageId", Param[0]);  
+            p[0] = new SqlParameter("@intStageId", Param[0]);
             p[1] = new SqlParameter("@VchStageName", Param[1]);
             p[2] = new SqlParameter("@vchPlace", Param[2]);
 
@@ -116,11 +116,11 @@ namespace ConnectionLib
 
             Query = "SELECT tbl_Schedule.intShceduleID,tbl_Section.vchSectionName,vchItemName,VchStageName,"
                     + " CONVERT(VARCHAR(10),dtDate,106)'Date',vchTime +':' + vchTime1 +' ' +IsAMPM 'Time'"
-                    +" FROM tbl_Schedule"
-                    +" INNER JOIN tbl_Item ON tbl_Item.intItemId=tbl_Schedule.intItemId"
-                    +" INNER JOIN tbl_Section on tbl_Section.intSectionID=tbl_Schedule.intSectionID"
-                    +" INNER JOIN tbl_Stage ON tbl_Stage.intStageId=tbl_Schedule.intStageId";
-            
+                    + " FROM tbl_Schedule"
+                    + " INNER JOIN tbl_Item ON tbl_Item.intItemId=tbl_Schedule.intItemId"
+                    + " INNER JOIN tbl_Section on tbl_Section.intSectionID=tbl_Schedule.intSectionID"
+                    + " INNER JOIN tbl_Stage ON tbl_Stage.intStageId=tbl_Schedule.intStageId";
+
             try
             {
                 ds = DataLayer.SqlHelper.ExecuteDataset(Utilities.GetConnectionString(Utilities.DataBase.Sahithyolsav), CommandType.Text, Query);
@@ -137,7 +137,7 @@ namespace ConnectionLib
                 Query = "";
             }
         }
-        public static DataTable getItemOfCurrrentSchedules(int stageId,String time1,String time2,String ampm)
+        public static DataTable getItemOfCurrrentSchedules(int stageId, String time1, String time2, String ampm)
         {
             DataSet ds = new DataSet();
             String Query;
@@ -154,7 +154,7 @@ namespace ConnectionLib
 
             try
             {
-                ds = DataLayer.SqlHelper.ExecuteDataset(Utilities.GetConnectionString(Utilities.DataBase.Sahithyolsav), CommandType.Text, Query,p);
+                ds = DataLayer.SqlHelper.ExecuteDataset(Utilities.GetConnectionString(Utilities.DataBase.Sahithyolsav), CommandType.Text, Query, p);
                 return ds.Tables[0];
             }
             catch
@@ -168,7 +168,7 @@ namespace ConnectionLib
                 Query = "";
             }
         }
-        public static bool CheckSceduleVallidation(int itemid1, int itemid2,int tolevelId)
+        public static bool CheckSceduleVallidation(String itemid1, int itemid2, int tolevelId)
         {
             DataSet ds = new DataSet();
             String Query;
@@ -181,21 +181,21 @@ namespace ConnectionLib
 
             Query = "SELECT intParticipantId,COUNT(*) FROM tbl_ParticipantList"
                 + " INNER JOIN tbl_ItemList on tbl_ParticipantList.intParticipantListId=tbl_ItemList.intParticipantListId"
-                + " WHERE intItemId in(@itemid1,@itemid2) and intParticipantLevelTypeID=@tolevelId AND vchStatus='Yes'"
+                + " WHERE intItemId in(" + itemid1 + "," + itemid2 + ") and intParticipantLevelTypeID=@tolevelId AND vchStatus='Yes'"
                 + " GROUP BY intParticipantId HAVING COUNT(*) > 1";
 
 
             try
             {
-                ds = DataLayer.SqlHelper.ExecuteDataset(Utilities.GetConnectionString(Utilities.DataBase.Sahithyolsav), CommandType.Text, Query,p);
+                ds = DataLayer.SqlHelper.ExecuteDataset(Utilities.GetConnectionString(Utilities.DataBase.Sahithyolsav), CommandType.Text, Query, p);
                 if (ds.Tables[0].Rows.Count > 0)
                     return false;
                 else
-                    return true; 
+                    return true;
             }
             catch
             {
-                return false ;
+                return false;
             }
 
             finally
