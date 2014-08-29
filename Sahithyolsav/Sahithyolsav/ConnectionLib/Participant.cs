@@ -565,7 +565,7 @@ namespace ConnectionLib
                 return false;
             }
         }
-        public static bool GenerateChessNumber(int ParticipantToLevelId)
+        public static bool GenerateChessNumbers(int ParticipantToLevelId)
         {
             SqlParameter[] p = new SqlParameter[1];
             String Query,updQuery;

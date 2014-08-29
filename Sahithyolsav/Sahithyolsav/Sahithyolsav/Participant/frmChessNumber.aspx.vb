@@ -169,7 +169,7 @@ Public Class frmChessNumber
     End Sub
 
     Protected Sub btnGenerte_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnGenerte.Click
-        If ConnectionLib.Participant.GenerateChessNumber(UserManagement.UserTypeId) = True Then
+        If ConnectionLib.Participant.GenerateChessNumbers(UserManagement.UserTypeId) = True Then
             lblchessNumMsg.Text = "CHESS NUMBER GENERATED SUCSESSFULLY"
             lblchessNumMsg.ForeColor = Drawing.Color.Green
             lblchessNumMsg.Visible = True
