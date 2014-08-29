@@ -323,6 +323,12 @@
                              </td>
                     </tr>
                     <tr>
+                        <td align="right" style="width: 30%">
+                            &nbsp;</td>
+                        <td style="width: 70%; color: #33CC33;">
+                            Click Upload Button to Upload the Photo</td>
+                    </tr>
+                    <tr>
                         <td style="width: 30%" align="right">
                             Age</td>
                         <td style="width: 70%">
