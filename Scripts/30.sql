@@ -1,6 +1,7 @@
+
 USE [DB_Sahithyolsav]
 GO
-/****** Object:  StoredProcedure [dbo].[spGetParticipantItemBySectionandItemId]    Script Date: 08/29/2014 21:23:41 ******/
+/****** Object:  StoredProcedure [dbo].[spGetProgramChartByItem]    Script Date: 08/30/2014 23:58:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -46,7 +47,7 @@ SELECT
 			WHERE tbl_Unit.intUnitId = intParticipantLevelId)
 		WHEN intProgramLevelId = 5 THEN ('Individual')
 	END AS 'Participant From',
-	tbl_Participant.vchImagePath 'imgPath',
+SUBSTRING(tbl_Participant.vchImagePath,3,LEN(tbl_Participant.vchImagePath)) 'imgPath',
 	'' 'Sign'
 FROM tbl_ParticipantList
 INNER JOIN tbl_Participant

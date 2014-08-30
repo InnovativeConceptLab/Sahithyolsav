@@ -53,20 +53,19 @@
                                 <a href="#" onclick="loadIframe('part')">Participant</a><br />
                                 <a href="#" onclick="loadIframe('chess')">Chess Number</a><br />
                                 <a href="#" onclick="loadIframe('codeletter')">Code Letter</a><br />
+                                     <a href="#" onclick="loadIframe('Itemrpt')">Item Wise Program Chart</a><br />
                                 <a href="#" onclick="loadIframe('tabulation')">Tabulation</a>
                             </div>
                         </li>
-                         <li><a href="#" class="drop">Schedule</a>
+                        <li><a href="#" class="drop">Schedule</a>
                             <div class="dropdown_2columns">
                                 <a href="#" onclick="loadIframe('stage')">Stages</a><br />
                                 <a href="#" onclick="loadIframe('sch')">Schedule Stage</a><br />
-                              
                             </div>
                         </li>
                         <li><a href="#" class="drop">Reports</a>
                             <div class="dropdown_2columns">
                                 <a href="#" onclick="loadIframe('rpt')">Show Reports</a>
-                                 <a href="#" onclick="loadIframe('Itemrpt')">Item Wise Reports</a>
                             </div>
                         </li>
                         <li><a href="#" class="drop">Settings</a>

@@ -41,7 +41,7 @@ Public Class frmItem
         Dim btndetails As ImageButton = TryCast(sender, ImageButton)
         Dim gvrow As GridViewRow = DirectCast(btndetails.NamingContainer, GridViewRow)
         dt = item.getItemsById(Convert.ToInt32(gvusectiondetails.DataKeys(gvrow.RowIndex).Value.ToString()))
-        '   btnUpdate.Visible = True
+        btnUpdate.Visible = True
         btnSave.Visible = False
         clearFields()
         ddlSection.SelectedValue = dt.Rows(0).Item(3)
@@ -138,5 +138,31 @@ Public Class frmItem
             txtNoofpartcpnts.Text = ""
         End If
         itemModal.Show()
+    End Sub
+
+    Protected Sub btnUpdate_Click(ByVal sender As Object, ByVal e As System.Web.UI.ImageClickEventArgs) Handles btnUpdate.Click
+        Dim arrIn As New ArrayList
+        arrIn.Add(Convert.ToInt32(lblId.Value.ToString))
+        arrIn.Add(txtItemName.Text)
+        arrIn.Add(txtCode.Text)
+        arrIn.Add(Convert.ToInt32(ddlSection.SelectedValue.ToString()))
+        If ChkGrpItem.Checked = True Then
+            arrIn.Add(True)
+            arrIn.Add(txtNoofpartcpnts.Text.ToString)
+        Else
+            arrIn.Add(False)
+            arrIn.Add(1)
+        End If
+        arrIn.Add(txtMarkFrst.Text)
+        arrIn.Add(txtMarkSecnd.Text)
+        arrIn.Add(txtMarkThrd.Text)
+        If ConnectionLib.item.SaveItem(arrIn) = True Then
+            clearFields()
+            bindGrid()
+            itemModal.Hide()
+        Else
+            lblmsg.Text = "Saving Failed.Try again later"
+            lblmsg.ForeColor = Drawing.Color.Red
+        End If
     End Sub
 End Class

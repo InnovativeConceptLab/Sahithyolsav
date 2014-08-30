@@ -42,9 +42,10 @@ SELECT
 FROM tbl_ParticipantList
 INNER JOIN tbl_Participant
 	ON tbl_Participant.intParticipantId = tbl_ParticipantList.intParticipantId
-INNER JOIN tbl_Section
-	ON tbl_ParticipantList.intSectionId = tbl_Section.intSectionID
+
 	inner join tbl_GroupSection 
 	ON tbl_ParticipantList.intParticipantListId=tbl_GroupSection.intParticipantListId
+	INNER JOIN tbl_Section
+	ON tbl_GroupSection.intSectionId = tbl_Section.intSectionID
 WHERE tbl_GroupSection.intSectionId=@SectionId
 AND intParticipantToLevelId = @intParticipantToLevelId AND intParticipantLevelId=@intParticipantLevelId
