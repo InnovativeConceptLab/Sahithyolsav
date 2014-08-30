@@ -326,13 +326,13 @@
                         <td align="right" style="width: 30%">
                             &nbsp;</td>
                         <td style="width: 70%; color: #33CC33;">
-                            Click Upload Button to Upload the Photo</td>
+                            Click Upload Button Before Save to Upload the Photo</td>
                     </tr>
                     <tr>
                         <td style="width: 30%" align="right">
                             Age</td>
                         <td style="width: 70%">
-                            <asp:TextBox ID="txtAge" runat="server" Width="50%" />
+                            <asp:TextBox ID="txtAge" runat="server" Width="50%" onkeypress="return isNumberKey(event);"/>
                         </td>
                     </tr>
                     <tr>
@@ -389,7 +389,29 @@
                             <asp:TextBox ID="txtChessNo" runat="server" Width="90%" Visible="false" />
                         </td>
                     </tr>
-                     <tr id="rowGrpParticipant" runat="server">
+                  
+                      <tr id="Tr1" runat="server">
+                        <td style="width: 30%" align="right">
+                            &nbsp;</td>
+                        <td style="width: 70%">
+                        <asp:CheckBox ID="ChkItmGrp" runat="server" Text="Is Participating in Group Item" 
+                                AutoPostBack="True" onchange="ShowLoading()"></asp:CheckBox>
+                      </td>
+                    </tr>
+                      <tr id="RowGrpItem" runat="server" visible="false">
+                        <td style="width: 30%" align="right">
+                            Select Item
+                        </td>
+                        <td style="width: 70%">
+                            <asp:Panel ID="chkpnl2" runat="server" ScrollBars="Vertical" Width="90%" Height="120px"
+                                BackColor="AliceBlue" BorderColor="Gray" BorderWidth="1" Font-Names="Tahoma"
+                                Font-Size="Medium" Visible="true">
+                                <asp:CheckBoxList ID="chkGrpItmList" runat="server" Width="90%" Height="120px" AutoPostBack="false">
+                                </asp:CheckBoxList>
+                            </asp:Panel>
+                        </td>
+                    </tr>
+                       <tr id="rowGrpParticipant" runat="server">
                         <td style="width: 30%" align="right">
                             Group Participant
                         </td>

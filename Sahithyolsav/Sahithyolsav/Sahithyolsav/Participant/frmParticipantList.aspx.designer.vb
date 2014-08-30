@@ -329,6 +329,51 @@ Partial Public Class frmParticipantList
     Protected WithEvents txtChessNo As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''Tr1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Tr1 As Global.System.Web.UI.HtmlControls.HtmlTableRow
+
+    '''<summary>
+    '''ChkItmGrp control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ChkItmGrp As Global.System.Web.UI.WebControls.CheckBox
+
+    '''<summary>
+    '''RowGrpItem control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RowGrpItem As Global.System.Web.UI.HtmlControls.HtmlTableRow
+
+    '''<summary>
+    '''chkpnl2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents chkpnl2 As Global.System.Web.UI.WebControls.Panel
+
+    '''<summary>
+    '''chkGrpItmList control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents chkGrpItmList As Global.System.Web.UI.WebControls.CheckBoxList
+
+    '''<summary>
     '''rowGrpParticipant control.
     '''</summary>
     '''<remarks>

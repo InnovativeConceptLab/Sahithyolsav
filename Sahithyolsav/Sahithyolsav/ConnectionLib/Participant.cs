@@ -614,5 +614,55 @@ namespace ConnectionLib
                 return false;
             }
         }
+        public static bool SaveGroupSection(ArrayList Param)
+        {
+            SqlParameter[] p = new SqlParameter[3];
+
+            p[0] = new SqlParameter("@intGrpSectID", Param[0]);
+            p[1] = new SqlParameter("@intParticipantListId", Param[1]);
+            p[2] = new SqlParameter("@intSectionID", Param[2]);
+          
+
+            try
+            {
+                if (DataLayer.SqlHelper.ExecuteNonQuery(Utilities.GetConnectionString(Utilities.DataBase.Sahithyolsav), CommandType.StoredProcedure, "spSaveGroupSection", p) == 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public static bool ResetGroupSection(int intParticipantListId)
+        {
+            SqlParameter[] p = new SqlParameter[1];
+            String Query;
+
+            p[0] = new SqlParameter("@intParticipantListId", intParticipantListId);
+
+            Query = "DELETE FROM [tbl_GroupSection] WHERE  [intParticipantListId]=@intParticipantListId";
+
+            try
+            {
+                if (DataLayer.SqlHelper.ExecuteNonQuery(Utilities.GetConnectionString(Utilities.DataBase.Sahithyolsav), CommandType.Text, Query, p) > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

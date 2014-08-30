@@ -13,6 +13,7 @@ Public Class frmParticipantList
             fillSection()
             manageAddBuuton()
             fillType()
+
         End If
     End Sub
     Private Sub fillType()
@@ -88,6 +89,7 @@ Public Class frmParticipantList
             If dt.Rows(0).ItemArray(14).ToString = "True" Then
                 ddlType.SelectedIndex = 1
                 rowGrpParticipant.Visible = True
+                RowGrpItem.Visible = True
                 dtGrp = Participant.getParticipantGroupByID(Convert.ToInt32(hparticpantLitsId.Value.ToString))
                 Dim grpParticipant As String = ""
                 For value As Integer = 0 To dtGrp.Rows.Count - 1
@@ -102,6 +104,7 @@ Public Class frmParticipantList
             Else
                 ddlType.SelectedIndex = 0
                 rowGrpParticipant.Visible = False
+                RowGrpItem.Visible = False
             End If
             ddlType.Enabled = False
             '----------
@@ -141,7 +144,7 @@ Public Class frmParticipantList
             bindHeader()
         End If
     End Sub
- 
+
     Protected Sub btnParticipant_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnParticipant.Click
         clearFields()
         btnSave.Visible = True
@@ -263,6 +266,11 @@ Public Class frmParticipantList
         For Each item As ListItem In chkItemList.Items
             item.Selected = False
         Next
+        chkGrpItmList.DataSource = dt
+        chkGrpItmList.DataBind()
+        For Each item As ListItem In chkGrpItmList.Items
+            item.Selected = False
+        Next
         txtGroupParticiapnt.Text = ""
         ddlType.Enabled = True
     End Sub
@@ -304,15 +312,25 @@ Public Class frmParticipantList
             campusname.Visible = False
             course.Visible = False
         End If
+        If ddlSection.SelectedItem.ToString = "GENERAL" Then
+            ChkItmGrp.Checked = False
+            ChkItmGrp.Enabled = False
+            RowGrpItem.Visible = False
+            rowGrpParticipant.Visible = False
+            chkGrpItmList.Items.Clear()
+        Else
+            ChkItmGrp.Checked = False
+            ChkItmGrp.Enabled = True
+            RowGrpItem.Visible = False
+            rowGrpParticipant.Visible = False
+            chkGrpItmList.Items.Clear()
+        End If
     End Sub
     Private Sub bindItemList()
         Dim dt As New DataTable
         If (ddlSection.SelectedValue <> "0") Then
-            If ddlType.SelectedValue = "1" Then
-                dt = ConnectionLib.item.getGroupItemsBySectionId(Convert.ToInt32(ddlSection.SelectedValue.ToString()))
-            Else
-                dt = ConnectionLib.item.getItemsBySectionId(Convert.ToInt32(ddlSection.SelectedValue.ToString()))
-            End If
+
+            dt = ConnectionLib.item.getItemsBySectionId(Convert.ToInt32(ddlSection.SelectedValue.ToString()))
 
             chkItemList.DataSource = dt
             chkItemList.DataTextField = "vchItemName"
@@ -323,10 +341,32 @@ Public Class frmParticipantList
             chkItemList.DataBind()
         End If
     End Sub
+    Private Sub bindGeneralItemList()
+        Dim dt As New DataTable
+        'HardCoded for General section
+        dt = ConnectionLib.item.getItemsBySectionId(22)
+
+        chkGrpItmList.DataSource = dt
+        chkGrpItmList.DataTextField = "vchItemName"
+        chkGrpItmList.DataValueField = "intItemId"
+        chkGrpItmList.DataBind()
+
+    End Sub
 
     Private Function validateItem()
         If ddlPartcipantLevelIdCombo1.SelectedValue <> "5" Then
             For Each item As ListItem In chkItemList.Items
+                If item.Selected = True Then
+                    If Participant.ValidateItem(Convert.ToInt32(ddlPartcipantLevelIdComboPopUp.SelectedValue.ToString), Convert.ToInt32(item.Value.ToString()), 0) = True Then
+                        lblmsg.Visible = True
+                        lblmsg.Text = "Already One Participant is Partciapting from  " & ddlPartcipantLevelIdComboPopUp.SelectedItem.ToString() & " for item " & item.Text & ". Please delselect this item"
+                        lblmsg.ForeColor = Drawing.Color.Red
+                        Return True
+                    End If
+                End If
+            Next
+            'For Validating Group Item
+            For Each item As ListItem In chkGrpItmList.Items
                 If item.Selected = True Then
                     If Participant.ValidateItem(Convert.ToInt32(ddlPartcipantLevelIdComboPopUp.SelectedValue.ToString), Convert.ToInt32(item.Value.ToString()), 0) = True Then
                         lblmsg.Visible = True
@@ -356,14 +396,14 @@ Public Class frmParticipantList
         Return False
         lblmsg.Visible = False
     End Function
-   
+
     Protected Sub btnSave_Click(ByVal sender As Object, ByVal e As System.Web.UI.ImageClickEventArgs) Handles btnSave.Click
         Dim arrItemList As New ArrayList
         Dim arrParticipant As New ArrayList
         Dim arrParticipantList As New ArrayList
         Dim arrParticipantGrpList As New ArrayList
         Dim retParticipantId, retParticipantListId As Integer
-
+        Dim arrGrpSection As New ArrayList
         If validateItem() = True Then
             participantModal.Show()
             Exit Sub
@@ -374,7 +414,7 @@ Public Class frmParticipantList
         arrParticipant.Add(txtParticipant.Text.ToString())
         arrParticipant.Add(0)
         arrParticipant.Add(True)
-        If Session("ImagePath") IsNot Nothing Then
+        If Session("ImagePath") <> "" Then
             arrParticipant.Add(Session("ImagePath"))
         Else
             arrParticipant.Add("")
@@ -403,20 +443,24 @@ Public Class frmParticipantList
             Else
                 arrParticipantList.Add(Convert.ToInt32(ddlPartcipantLevelIdCombo1.SelectedValue) + 1)
             End If
-            If ddlType.SelectedValue = "0" Then
-                arrParticipantList.Add(0)
-                arrParticipantList.Add(0)
-            Else
+            'For identifyng is groupitem
+            If ChkItmGrp.Checked = True Then
                 arrParticipantList.Add(1)
-                For Each item As ListItem In chkItemList.Items
-                    If item.Selected = True Then
-                        arrParticipantList.Add(ConnectionLib.item.getMaxNumofParticiapntForItem(Convert.ToInt32(item.Value.ToString())))
-                    End If
-                Next
+                arrParticipantList.Add(1)
+                'Comented by sajith
+                'For Each item As ListItem In chkItemList.Items
+                '    If item.Selected = True Then
+                '        arrParticipantList.Add(ConnectionLib.item.getMaxNumofParticiapntForItem(Convert.ToInt32(item.Value.ToString())))
+                '    End If
+                'Next
+            Else
+                arrParticipantList.Add(0)
+                arrParticipantList.Add(0)
             End If
             If Participant.SaveParticipantList(arrParticipantList, retParticipantListId) Then
-               
+
                 For Each item As ListItem In chkItemList.Items
+
                     arrItemList.Add(0) ' When Update
                     arrItemList.Add(retParticipantListId)
                     arrItemList.Add(item.Value.ToString())
@@ -427,8 +471,28 @@ Public Class frmParticipantList
                     End If
                     Participant.SaveItemList(arrItemList)
                     arrItemList.Clear()
+
+
                 Next
-                If ddlType.SelectedValue = "1" Then
+                'For saving GroupItem participant Done by sajith
+                If chkGrpItmList.Visible = True Then
+                    For Each item As ListItem In chkGrpItmList.Items
+
+                        arrItemList.Add(0) ' When Update
+                        arrItemList.Add(retParticipantListId)
+                        arrItemList.Add(item.Value.ToString())
+                        If item.Selected = True Then
+                            arrItemList.Add("Yes")
+                        Else
+                            arrItemList.Add("No")
+                        End If
+                        Participant.SaveItemList(arrItemList)
+                        arrItemList.Clear()
+
+                    Next
+                End If
+
+                If rowGrpParticipant.Visible = True Then
                     Participant.DeleteParticipantGroup(retParticipantListId)
                     Dim names As String() = txtGroupParticiapnt.Text.ToString.Split(","c)
                     For Each participantName As String In names
@@ -438,6 +502,19 @@ Public Class frmParticipantList
                         Participant.SaveParticipantGroupList(arrParticipantGrpList)
                         arrParticipantGrpList.Clear()
                     Next
+                End If
+                'For saving sectionID to tbl_GroupSection
+                arrGrpSection.Add(0)
+                arrGrpSection.Add(retParticipantListId)
+                arrGrpSection.Add(ddlSection.SelectedValue)
+                Participant.SaveGroupSection(arrGrpSection)
+                arrGrpSection.Clear()
+                If chkGrpItmList.Visible = True Then
+                    arrGrpSection.Add(0)
+                    arrGrpSection.Add(retParticipantListId)
+                    arrGrpSection.Add(22)
+                    Participant.SaveGroupSection(arrGrpSection)
+                    arrGrpSection.Clear()
                 End If
             End If
         End If
@@ -451,7 +528,7 @@ Public Class frmParticipantList
         Dim arrParticipantList As New ArrayList
         Dim arrParticipantGrpList As New ArrayList
         Dim retParticipantId, retParticipantListId As Integer
-
+        Dim arrGrpSection As New ArrayList
         If validateItemUpdate(Convert.ToInt32(hparticpantId.Value)) = True Then
             participantModal.Show()
             Exit Sub
@@ -461,7 +538,7 @@ Public Class frmParticipantList
         arrParticipant.Add(txtParticipant.Text.ToString())
         arrParticipant.Add(0)
         arrParticipant.Add(True)
-        If Session("ImagePath") IsNot Nothing Then
+        If Session("ImagePath") <> "" Then
             arrParticipant.Add(Session("ImagePath"))
         Else
             arrParticipant.Add("")
@@ -516,7 +593,25 @@ Public Class frmParticipantList
                     Participant.SaveItemList(arrItemList)
                     arrItemList.Clear()
                 Next
-                If ddlType.SelectedValue = "1" Then
+                'For saving GroupItem participant Done by sajith
+                If chkGrpItmList.Visible = True Then
+                    For Each item As ListItem In chkGrpItmList.Items
+
+                        arrItemList.Add(0) ' When Update
+                        arrItemList.Add(retParticipantListId)
+                        arrItemList.Add(item.Value.ToString())
+                        If item.Selected = True Then
+                            arrItemList.Add("Yes")
+                        Else
+                            arrItemList.Add("No")
+                        End If
+                        Participant.SaveItemList(arrItemList)
+                        arrItemList.Clear()
+
+                    Next
+                End If
+
+                If rowGrpParticipant.Visible = True Then
                     Participant.DeleteParticipantGroup(retParticipantListId)
                     Dim names As String() = txtGroupParticiapnt.Text.ToString.Split(","c)
                     For Each participantName As String In names
@@ -526,6 +621,20 @@ Public Class frmParticipantList
                         Participant.SaveParticipantGroupList(arrParticipantGrpList)
                         arrParticipantGrpList.Clear()
                     Next
+                End If
+                'For Updating sectionID to tbl_GroupSection
+                Participant.ResetGroupSection(retParticipantListId)
+                arrGrpSection.Add(0)
+                arrGrpSection.Add(retParticipantListId)
+                arrGrpSection.Add(ddlSection.SelectedValue)
+                Participant.SaveGroupSection(arrGrpSection)
+                arrGrpSection.Clear()
+                If chkGrpItmList.Visible = True Then
+                    arrGrpSection.Add(0)
+                    arrGrpSection.Add(retParticipantListId)
+                    arrGrpSection.Add(22)
+                    Participant.SaveGroupSection(arrGrpSection)
+                    arrGrpSection.Clear()
                 End If
             End If
         End If
@@ -552,21 +661,21 @@ Public Class frmParticipantList
     'End Sub
 
     Protected Sub btnCancel_Click(ByVal sender As Object, ByVal e As System.Web.UI.ImageClickEventArgs) Handles btnCancel.Click
-         participantModal.Dispose()
+        participantModal.Dispose()
     End Sub
 
     Protected Sub ddlType_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ddlType.SelectedIndexChanged
         clearFields()
         ddlPartcipantLevelIdComboPopUp.Enabled = False
         If ddlType.SelectedValue = "0" Then
-            rowGrpParticipant.Visible = False
+            '  rowGrpParticipant.Visible = False
         Else
-            rowGrpParticipant.Visible = True
+            '  rowGrpParticipant.Visible = True
         End If
         participantModal.Show()
     End Sub
 
-  
+
     Protected Sub btnUpload_Click(sender As Object, e As EventArgs) Handles btnUpload.Click
         If fileUploadImage.HasFile Then
             Dim fileName As String
@@ -574,7 +683,7 @@ Public Class frmParticipantList
 
             Dim randomValue As String = rand()
             fileUploadImage.SaveAs(Server.MapPath("~/ParticipantPhoto/" + "_" + randomValue.ToString + fileUploadImage.FileName))
-           
+
             Session("ImagePath") = "~/ParticipantPhoto/" + "_" + randomValue.ToString + fileUploadImage.FileName
             ''   fileUploadImage.SaveAs(MapPath("~/Image/" + fileUploadImage.FileName))
 
@@ -616,4 +725,18 @@ Public Class frmParticipantList
         Return sb.ToString()
     End Function
 
+    Protected Sub ChkItmGrp_CheckedChanged(sender As Object, e As EventArgs) Handles ChkItmGrp.CheckedChanged
+        If ddlSection.SelectedValue <> 22 Then
+            bindGeneralItemList()
+            If ChkItmGrp.Checked = True Then
+                RowGrpItem.Visible = True
+                rowGrpParticipant.Visible = True
+            Else
+                RowGrpItem.Visible = False
+                rowGrpParticipant.Visible = False
+            End If
+        End If
+
+        participantModal.Show()
+    End Sub
 End Class
