@@ -1,0 +1,1 @@
+alter table [tbl_Participant] alter column [vchImagePath] varchar(500)
