@@ -68,7 +68,9 @@ INNER JOIN tbl_GroupSection
 	ON tbl_ParticipantList.intParticipantListId = tbl_GroupSection.intParticipantListId
 INNER JOIN tbl_Section
 	ON tbl_GroupSection.intSectionId = tbl_Section.intSectionID
-WHERE tbl_Section.intSectionId = @SectionId
+WHERE 
+tbl_Section.intSectionId = @SectionId
 AND tbl_ItemList.intItemId = @intItemId
 AND intParticipantToLevelId = @intParticipantToLevelId
-AND ISNULL(tbl_ItemList.vchStatus, 'No') = 'Yes'
+AND 
+ISNULL(tbl_ItemList.vchStatus, 'No') = 'Yes'

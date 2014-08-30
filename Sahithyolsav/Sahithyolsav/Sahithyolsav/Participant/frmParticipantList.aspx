@@ -286,10 +286,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="width: 30%" align="right">
+                        <td style="width: 30%; display:none;" align="right">
                            Select Program Type
                         </td>
-                        <td  style="width:70%" >
+                        <td  style="width:70%;display:none;" >
                                <asp:DropDownList ID="ddlType" runat="server" Width="90%" AutoPostBack="true"
                                 onchange="ShowLoading()">
                             </asp:DropDownList>
