@@ -59,6 +59,24 @@ Partial Public Class frmParticipantList
     Protected WithEvents modalPopup As Global.AjaxControlToolkit.ModalPopupExtender
 
     '''<summary>
+    '''GridView1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
+
+    '''<summary>
+    '''lbldownload control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbldownload As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
     '''levelUpdatePnel control.
     '''</summary>
     '''<remarks>

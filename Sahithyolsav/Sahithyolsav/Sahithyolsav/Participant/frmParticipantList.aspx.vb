@@ -4,6 +4,7 @@ Public Class frmParticipantList
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+       
         If ConnectionLib.UserManagement.Userlogin = False Then
             Response.Redirect("Default.aspx")
         End If
@@ -60,7 +61,12 @@ Public Class frmParticipantList
         clearFields()
         loadPopup()
         btnSave.Visible = False
-        btnUpdate.Visible = True
+        If UserManagement.UserTypeId = 1 Then
+            btnUpdate.Visible = False
+        Else
+            btnUpdate.Visible = True
+        End If
+
         participantListId = Convert.ToInt32(gvParticipantdetails.DataKeys(gvrow.RowIndex).Value.ToString())
         dt = Participant.getParticipantListById(participantListId)
         If dt.Rows.Count > 0 Then
@@ -368,7 +374,7 @@ Public Class frmParticipantList
             'For Validating Group Item
             For Each item As ListItem In chkGrpItmList.Items
                 If item.Selected = True Then
-                    If Participant.ValidateItem(Convert.ToInt32(ddlPartcipantLevelIdComboPopUp.SelectedValue.ToString), Convert.ToInt32(item.Value.ToString()), 0) = True Then
+                    If Participant.ValidateGrpItem(Convert.ToInt32(ddlPartcipantLevelIdComboPopUp.SelectedValue.ToString), Convert.ToInt32(item.Value.ToString()), 0) = True Then
                         lblmsg.Visible = True
                         lblmsg.Text = "Already One Participant is Partciapting from  " & ddlPartcipantLevelIdComboPopUp.SelectedItem.ToString() & " for item " & item.Text & ". Please delselect this item"
                         lblmsg.ForeColor = Drawing.Color.Red
@@ -676,7 +682,7 @@ Public Class frmParticipantList
     End Sub
 
 
-    Protected Sub btnUpload_Click(sender As Object, e As EventArgs) Handles btnUpload.Click
+    Protected Sub btnUpload_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnUpload.Click
         If fileUploadImage.HasFile Then
             Dim fileName As String
             fileName = fileUploadImage.FileName
@@ -725,12 +731,12 @@ Public Class frmParticipantList
         Return sb.ToString()
     End Function
 
-    Protected Sub ChkItmGrp_CheckedChanged(sender As Object, e As EventArgs) Handles ChkItmGrp.CheckedChanged
+    Protected Sub ChkItmGrp_CheckedChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ChkItmGrp.CheckedChanged
         If ddlSection.SelectedValue <> 22 Then
             bindGeneralItemList()
             If ChkItmGrp.Checked = True Then
                 RowGrpItem.Visible = True
-                rowGrpParticipant.Visible = True
+                'rowGrpParticipant.Visible = True
             Else
                 RowGrpItem.Visible = False
                 rowGrpParticipant.Visible = False
@@ -738,5 +744,83 @@ Public Class frmParticipantList
         End If
 
         participantModal.Show()
+    End Sub
+
+    Protected Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles lbldownload.Click
+        pnlContent.Visible = True
+        Dim dt As New DataTable
+        If UserManagement.UserTypeId = 1 Then
+            dt = Participant.getParticipantByLevelId(Convert.ToInt32(ddlPartcipantLevelIdCombo1.SelectedValue.ToString))
+        Else
+            If ddlPartcipantLevelIdCombo1.SelectedValue.ToString <> UserManagement.UserTypeId.ToString Then
+                dt = Participant.getParticipantByLevelId(Convert.ToInt32(ddlPartcipantLevelIdCombo1.SelectedValue.ToString), UserManagement.UserHigherMapId, UserManagement.UserID)
+            Else
+                dt = Participant.getParticipantByLevelId(Convert.ToInt32(ddlPartcipantLevelIdCombo1.SelectedValue.ToString), UserManagement.UserMapId)
+            End If
+        End If
+        If gvParticipantdetails.Rows.Count > 0 Then
+            Dim table As New DataTable
+            table.Columns.Add("Name", GetType(String))
+            table.Columns.Add("Section", GetType(String))
+            table.Columns.Add("items", GetType(String))
+            Dim itemlist As DataTable
+            Dim items As String = ""
+            For i As Integer = 0 To dt.Rows.Count - 1
+                itemlist = Participant.getItemListByParticipantId(Convert.ToInt32(dt.Rows(i).Item(0).ToString))
+                For value As Integer = 0 To itemlist.Rows.Count - 1
+                    If itemlist.Rows(value).ItemArray(3).ToString = "Yes" Then
+                        If value = 0 Then
+                            items = items + item.getItemsById(Convert.ToInt32(itemlist.Rows(value).ItemArray(2).ToString)).Rows(0).Item(1).ToString
+                        Else
+                            items = items + "," + item.getItemsById(Convert.ToInt32(itemlist.Rows(value).ItemArray(2).ToString)).Rows(0).Item(1).ToString
+                        End If
+
+                    Else
+                    End If
+                Next
+                table.Rows.Add(dt.Rows(i).Item(1).ToString, dt.Rows(i).Item(7).ToString, items)
+            Next
+            GridView1.DataSource = table
+            GridView1.DataBind()
+            ViewState("ColCount") = table.Columns.Count
+            ConnectionLib.Utilities.ExportGrid(GridView1, "pdf", "itemchart")
+        End If
+    End Sub
+    Public Overloads Overrides Sub VerifyRenderingInServerForm(ByVal control As Control)
+
+        ' Verifies that the control is rendered
+    End Sub
+    Protected Sub GridView1_RowCreated(ByVal sender As Object, ByVal e As GridViewRowEventArgs)
+        Dim colCount As Integer
+        colCount = ViewState("ColCount")
+        If e.Row.RowType = DataControlRowType.Header Then
+            Dim HeaderGrid As GridView = DirectCast(sender, GridView)
+            Dim HeaderGridRow As New GridViewRow(0, 0, DataControlRowType.Header, DataControlRowState.Insert)
+            Dim HeaderCell As New TableCell()
+            HeaderCell.Text = "SSF SAHITHYOLSAV -2014 "
+            HeaderCell.ForeColor = Drawing.Color.Black
+            HeaderCell.ColumnSpan = 4
+            HeaderCell.HorizontalAlign = HorizontalAlign.Center
+            HeaderGridRow.Cells.Add(HeaderCell)
+            GridView1.Controls(0).Controls.AddAt(0, HeaderGridRow)
+
+            Dim dt As New DataTable
+            dt = District.GetDistricts("", "", 0).Tables(0)
+
+            Dim HeaderGrid1 As GridView = DirectCast(sender, GridView)
+            Dim HeaderGridRow1 As New GridViewRow(1, 0, DataControlRowType.Header, DataControlRowState.Insert)
+            Dim HeaderCell1 As New TableCell()
+            HeaderCell1.Text = dt.Rows(0).Item(1) & " DISTRICT PARTICIAPNT LIST"
+            HeaderCell1.ForeColor = Drawing.Color.Black
+            HeaderCell1.ColumnSpan = 4
+            HeaderCell1.HorizontalAlign = HorizontalAlign.Center
+            HeaderGridRow1.Cells.Add(HeaderCell1)
+            GridView1.Controls(0).Controls.AddAt(1, HeaderGridRow1)
+        End If
+    End Sub
+
+    Protected Sub lbldownload_Click(ByVal sender As Object, ByVal e As EventArgs) Handles lbldownload.Click
+       
+       
     End Sub
 End Class

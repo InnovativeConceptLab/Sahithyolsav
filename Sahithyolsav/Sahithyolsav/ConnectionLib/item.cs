@@ -92,6 +92,32 @@ namespace ConnectionLib
                 Query = "";
             }
         }
+        public static DataTable getItemDetailsById(int intItemId)
+        {
+            DataSet ds = new DataSet();
+            String Query;
+            SqlParameter[] p = new SqlParameter[1];
+
+            p[0] = new SqlParameter("@intItemId", intItemId);
+
+            Query = "SELECT * FROM tbl_Item  WHERE intItemId=@intItemId";
+
+            try
+            {
+                ds = DataLayer.SqlHelper.ExecuteDataset(Utilities.GetConnectionString(Utilities.DataBase.Sahithyolsav), CommandType.Text, Query, p);
+                return ds.Tables[0];
+            }
+            catch
+            {
+                return null;
+            }
+
+            finally
+            {
+                ds.Dispose();
+                Query = "";
+            }
+        }
         public static DataTable getItemsBySectionId(int intSectionId)
         {
             DataSet ds = new DataSet();

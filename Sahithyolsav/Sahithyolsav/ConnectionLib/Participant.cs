@@ -565,6 +565,39 @@ namespace ConnectionLib
                 return false;
             }
         }
+        public static bool ValidateGrpItem(int ParticipantLevelId, int ItemId, int participantID)
+        {
+            SqlParameter[] p = new SqlParameter[3];
+            String Query;
+            DataSet ds = new DataSet();
+            p[0] = new SqlParameter("@ParticipantLevelId", ParticipantLevelId);
+            p[1] = new SqlParameter("@ItemId", ItemId);
+            p[2] = new SqlParameter("@participantID", participantID);
+
+            Query = "SELECT * FROM tbl_ParticipantList"
+                    +" INNER JOIN tbl_ItemList"
+		            +" ON tbl_ItemList.intParticipantListId=tbl_ParticipantList.intParticipantListId"
+                    + " WHERE intParticipantLevelId=@ParticipantLevelId AND tbl_ItemList.intItemId=@ItemId AND ISNULL(vchStatus,'No')='Yes'";
+
+            int maxNum=1;
+            maxNum=Convert.ToInt32(item.getItemDetailsById(ItemId).Rows[0].ItemArray[5].ToString());
+            try
+            {
+                ds = DataLayer.SqlHelper.ExecuteDataset(Utilities.GetConnectionString(Utilities.DataBase.Sahithyolsav), CommandType.Text, Query, p);
+                if (ds.Tables[0].Rows.Count >= maxNum)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
         public static bool GenerateChessNumbers(int ParticipantToLevelId)
         {
             SqlParameter[] p = new SqlParameter[1];

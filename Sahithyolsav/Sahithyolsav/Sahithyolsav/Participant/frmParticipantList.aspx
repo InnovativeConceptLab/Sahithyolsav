@@ -173,7 +173,25 @@
     </asp:UpdateProgress>
     <asp:ModalPopupExtender ID="modalPopup" runat="server" TargetControlID="UpdateProgress"
         PopupControlID="UpdateProgress" BackgroundCssClass="modalPopup" />
-    <asp:UpdatePanel ID="levelUpdatePnel" runat="server">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="true" Visible="true"
+        OnRowCreated="GridView1_RowCreated">
+        <RowStyle BackColor="#EFF3FB" />
+        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+        <AlternatingRowStyle BackColor="White" />
+        <Columns>
+            <asp:TemplateField HeaderText="SlNo#">
+                <ItemTemplate>
+                    <%#Container.DataItemIndex+1 %>
+                </ItemTemplate>
+                <HeaderStyle Width="5px" ForeColor="White" />
+                <ItemStyle Width="5px" />
+            </asp:TemplateField>
+        </Columns>
+    </asp:GridView>
+    <asp:LinkButton ID="lbldownload" runat="server" Text="Click Here to Download Particiapnt List" OnClick="Button1_Click"></asp:LinkButton>
+     <asp:UpdatePanel ID="levelUpdatePnel" runat="server">
         <ContentTemplate>
             <div class="searchTableStyle" style="width: 99.5%">
                 <table cellpadding="0" cellspacing="0" width="100%">
@@ -198,14 +216,14 @@
                                 <%--  <asp:ImageButton ID="btnParticipant" runat="server" ImageUrl="~/image/addpart.png" OnClientClick="return ValidateForm()"
                                     Style="height: 25px" />--%>
                             </td>
-                            <td style="width: 90%; padding-left: 30%; font-weight: bold;text-transform:uppercase;">
+                            <td style="width: 90%; padding-left: 30%; font-weight: bold; text-transform: uppercase;">
                                 <asp:Label runat="server" ID="participantHeader" ForeColor="White"></asp:Label>
                             </td>
                         </tr>
                     </table>
                 </div>
                 <div style="width: 100%; height: 350px; overflow: auto" class="rounded_corners">
-                    <asp:GridView runat="server" ID="gvParticipantdetails" DataKeyNames="intParticipantListId" 
+                    <asp:GridView runat="server" ID="gvParticipantdetails" DataKeyNames="intParticipantListId"
                         AutoGenerateColumns="false" Width="100%" HeaderStyle-Height="30px" EmptyDataText="No Data Seleted">
                         <RowStyle BackColor="#EFF3FB" />
                         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -225,32 +243,27 @@
                             <asp:BoundField DataField="Program Level" HeaderText="Program Level" />
                             <asp:BoundField DataField="Participant From" HeaderText="Team" />
                             <asp:BoundField DataField="vchChessNo" HeaderText="Chess Number" />
-            <%--                 <asp:TemplateField HeaderText="Gateway" Visible ="false" >
+                            <%--                 <asp:TemplateField HeaderText="Gateway" Visible ="false" >
                         <ItemStyle Font-Size="10px" HorizontalAlign="Left" />
                         <ItemTemplate>
                             <asp:Label ID="lblintAge" runat="server" Text='<%#Eval("Age") %>' />
                         </ItemTemplate>
                     </asp:TemplateField>--%>
-                             <asp:TemplateField HeaderText="Age" Visible="false">
+                            <asp:TemplateField HeaderText="Age" Visible="false">
                                 <ItemTemplate>
                                     <asp:Label ID="lblintAge" runat="server" Text='<%# Bind("Age") %>'></asp:Label>
-                                    
                                 </ItemTemplate>
-                                  </asp:TemplateField>
-                                   <asp:TemplateField HeaderText="Age" Visible="false">
-                                 <ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Age" Visible="false">
+                                <ItemTemplate>
                                     <asp:Label ID="lblCampus" runat="server" Text='<%# Bind("vchCampusName") %>'></asp:Label>
-                                    
                                 </ItemTemplate>
-                                </asp:TemplateField>
-                                 <asp:TemplateField HeaderText="Age" Visible="false">
-                                 <ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Age" Visible="false">
+                                <ItemTemplate>
                                     <asp:Label ID="lblCourse" runat="server" Text='<%# Bind("vchCourse") %>'></asp:Label>
-                                    
                                 </ItemTemplate>
-                                </asp:TemplateField>
-                             
-                          
+                            </asp:TemplateField>
                             <asp:TemplateField HeaderStyle-Width="60px" HeaderText="">
                                 <ItemTemplate>
                                     <asp:ImageButton ID="imgbtn" ImageUrl="~/image/edit.png" runat="server" Width="25"
@@ -274,8 +287,8 @@
             </asp:ModalPopupExtender>
             <asp:Panel ID="pnlpopup" runat="server" BackColor="White" Height="530px" Width="666px"
                 Style="display: block" ScrollBars="Vertical">
-                <table width="100%" style="border: Solid 3px #4b6c9e; width: 650px; height: 100%; overflow: scroll;"
-                    class="" cellpadding="5" cellspacing="0">
+                <table width="100%" style="border: Solid 3px #4b6c9e; width: 650px; height: 100%;
+                    overflow: scroll;" class="" cellpadding="5" cellspacing="0">
                     <tr style="background-color: #4b6c9e">
                         <td colspan="2" style="height: 10%; color: White; font-weight: bold; font-size: larger"
                             align="center">
@@ -286,15 +299,13 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="width: 30%; display:none;" align="right">
-                           Select Program Type
+                        <td style="width: 30%; display: none;" align="right">
+                            Select Program Type
                         </td>
-                        <td  style="width:70%;display:none;" >
-                               <asp:DropDownList ID="ddlType" runat="server" Width="90%" AutoPostBack="true"
-                                onchange="ShowLoading()">
+                        <td style="width: 70%; display: none;">
+                            <asp:DropDownList ID="ddlType" runat="server" Width="90%" AutoPostBack="true" onchange="ShowLoading()">
                             </asp:DropDownList>
                         </td>
-                        
                     </tr>
                     <tr>
                         <td style="width: 30%" align="right">
@@ -304,35 +315,38 @@
                             <asp:TextBox ID="txtParticipant" runat="server" Width="85%" />
                         </td>
                     </tr>
-              
                     <tr>
                         <td align="right" style="width: 30%">
-                            &nbsp;</td>
+                            &nbsp;
+                        </td>
                         <td style="width: 70%">
-                         <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
-            <ContentTemplate>
-                <asp:FileUpload ID="fileUploadImage" runat="server"  onchange="checkImageExtension(this);"></asp:FileUpload>
-                <asp:Button ID="btnUpload" runat="server" Text="Upload Image" OnClick="btnUpload_Click" OnClientClick="return checkImage('fileUploadImage');"/>
-           
-            </ContentTemplate>
-            <Triggers>
-               <asp:PostBackTrigger ControlID="btnUpload"  />
-            
-            </Triggers>
- </asp:UpdatePanel>
-                             </td>
+                            <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
+                                <ContentTemplate>
+                                    <asp:FileUpload ID="fileUploadImage" runat="server" onchange="checkImageExtension(this);">
+                                    </asp:FileUpload>
+                                    <asp:Button ID="btnUpload" runat="server" Text="Upload Image" OnClick="btnUpload_Click"
+                                        OnClientClick="return checkImage('fileUploadImage');" />
+                                </ContentTemplate>
+                                <Triggers>
+                                    <asp:PostBackTrigger ControlID="btnUpload" />
+                                </Triggers>
+                            </asp:UpdatePanel>
+                        </td>
                     </tr>
                     <tr>
                         <td align="right" style="width: 30%">
-                            &nbsp;</td>
+                            &nbsp;
+                        </td>
                         <td style="width: 70%; color: #33CC33;">
-                            Click Upload Button Before Save to Upload the Photo</td>
+                            Click Upload Button Before Save to Upload the Photo
+                        </td>
                     </tr>
                     <tr>
                         <td style="width: 30%" align="right">
-                            Age</td>
+                            Age
+                        </td>
                         <td style="width: 70%">
-                            <asp:TextBox ID="txtAge" runat="server" Width="50%" onkeypress="return isNumberKey(event);"/>
+                            <asp:TextBox ID="txtAge" runat="server" Width="50%" onkeypress="return isNumberKey(event);" />
                         </td>
                     </tr>
                     <tr>
@@ -340,8 +354,8 @@
                             Select
                         </td>
                         <td style="width: 70%">
-                            <asp:DropDownList ID="ddlPartcipantLevelIdComboPopUp" runat="server" 
-                                onchange="ShowLoading()" Width="90%">
+                            <asp:DropDownList ID="ddlPartcipantLevelIdComboPopUp" runat="server" onchange="ShowLoading()"
+                                Width="90%">
                             </asp:DropDownList>
                         </td>
                     </tr>
@@ -355,17 +369,21 @@
                             </asp:DropDownList>
                         </td>
                     </tr>
-                    <tr id="campusname" runat="server" visible="false" >
+                    <tr id="campusname" runat="server" visible="false">
                         <td align="right" style="width: 30%">
-                          Campus</td>
+                            Campus
+                        </td>
                         <td style="width: 70%">
-                         <asp:TextBox ID="txtCampus" runat="server" Width="85%" /></td>
+                            <asp:TextBox ID="txtCampus" runat="server" Width="85%" />
+                        </td>
                     </tr>
                     <tr id="course" runat="server" visible="false">
                         <td align="right" style="width: 30%">
-                           Course</td>
+                            Course
+                        </td>
                         <td style="width: 70%">
-                          <asp:TextBox ID="txtCorse" runat="server" Width="85%" /></td>
+                            <asp:TextBox ID="txtCorse" runat="server" Width="85%" />
+                        </td>
                     </tr>
                     <tr>
                         <td style="width: 30%" align="right">
@@ -389,16 +407,16 @@
                             <asp:TextBox ID="txtChessNo" runat="server" Width="90%" Visible="false" />
                         </td>
                     </tr>
-                  
-                      <tr id="Tr1" runat="server">
+                    <tr id="Tr1" runat="server">
                         <td style="width: 30%" align="right">
-                            &nbsp;</td>
+                            &nbsp;
+                        </td>
                         <td style="width: 70%">
-                        <asp:CheckBox ID="ChkItmGrp" runat="server" Text="Is Participating in Group Item" 
+                            <asp:CheckBox ID="ChkItmGrp" runat="server" Text="Is Participating in Group Item"
                                 AutoPostBack="True" onchange="ShowLoading()"></asp:CheckBox>
-                      </td>
+                        </td>
                     </tr>
-                      <tr id="RowGrpItem" runat="server" visible="false">
+                    <tr id="RowGrpItem" runat="server" visible="false">
                         <td style="width: 30%" align="right">
                             Select Item
                         </td>
@@ -411,13 +429,13 @@
                             </asp:Panel>
                         </td>
                     </tr>
-                       <tr id="rowGrpParticipant" runat="server">
+                    <tr id="rowGrpParticipant" runat="server">
                         <td style="width: 30%" align="right">
                             Group Participant
                         </td>
                         <td style="width: 70%">
-                            <asp:TextBox TextMode="MultiLine"  ID="txtGroupParticiapnt" runat="server" Width="90%" /><br />
-                            <span style="color:Green">Enter the group member seperated by comma(name1,name2)</span>
+                            <asp:TextBox TextMode="MultiLine" ID="txtGroupParticiapnt" runat="server" Width="90%" /><br />
+                            <span style="color: Green">Enter the group member seperated by comma(name1,name2)</span>
                         </td>
                     </tr>
                     <tr>
