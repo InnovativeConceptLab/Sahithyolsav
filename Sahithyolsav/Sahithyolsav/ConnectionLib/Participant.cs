@@ -197,6 +197,27 @@ namespace ConnectionLib
                 ds.Dispose();
             }
         }
+        public static DataTable getParticipantByLevelId1(int LevelId, int participantLeveleId)
+        {
+            DataSet ds = new DataSet();
+            SqlParameter[] p = new SqlParameter[2];
+            p[0] = new SqlParameter("@LevelId", LevelId);
+            p[1] = new SqlParameter("@intParticipantLevelId", participantLeveleId);
+                 try
+            {
+                ds = DataLayer.SqlHelper.ExecuteDataset(Utilities.GetConnectionString(Utilities.DataBase.Sahithyolsav), CommandType.StoredProcedure, "SpGetParticipantByLevelId3", p);
+                return ds.Tables[0];
+            }
+            catch
+            {
+                return null;
+            }
+
+            finally
+            {
+                ds.Dispose();
+            }
+        }
         public static DataTable getParticipantByHeigherLevelId(int LevelId, int participantLeveleId)
         {
             DataSet ds = new DataSet();
@@ -260,6 +281,28 @@ namespace ConnectionLib
             p[0] = new SqlParameter("@participantListd", participantListd);
             String Query;
             Query = "SELECT [intItemListId],[intParticipantListId],[intItemId],ISNULL([vchStatus],'No')  FROM [tbl_ItemList] WHERE intParticipantListId=@participantListd";
+            try
+            {
+                ds = DataLayer.SqlHelper.ExecuteDataset(Utilities.GetConnectionString(Utilities.DataBase.Sahithyolsav), CommandType.Text, Query, p);
+                return ds.Tables[0];
+            }
+            catch
+            {
+                return null;
+            }
+
+            finally
+            {
+                ds.Dispose();
+            }
+        }
+        public static DataTable getItemListByParticipantId1(int participantListd)
+        {
+            DataSet ds = new DataSet();
+            SqlParameter[] p = new SqlParameter[1];
+            p[0] = new SqlParameter("@participantListd", participantListd);
+            String Query;
+            Query = "SELECT [intItemListId],[intParticipantListId],[intItemId],ISNULL([vchStatus],'No')  FROM [tbl_ItemList] WHERE intParticipantListId=@participantListd AND ISNULL([vchStatus],'No')='Yes'";
             try
             {
                 ds = DataLayer.SqlHelper.ExecuteDataset(Utilities.GetConnectionString(Utilities.DataBase.Sahithyolsav), CommandType.Text, Query, p);
@@ -579,7 +622,7 @@ namespace ConnectionLib
 		            +" ON tbl_ItemList.intParticipantListId=tbl_ParticipantList.intParticipantListId"
                     + " WHERE intParticipantLevelId=@ParticipantLevelId AND tbl_ItemList.intItemId=@ItemId AND ISNULL(vchStatus,'No')='Yes'";
 
-            int maxNum=1;
+            int maxNum=0;
             maxNum=Convert.ToInt32(item.getItemDetailsById(ItemId).Rows[0].ItemArray[5].ToString());
             try
             {

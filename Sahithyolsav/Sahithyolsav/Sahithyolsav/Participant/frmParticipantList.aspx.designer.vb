@@ -113,6 +113,33 @@ Partial Public Class frmParticipantList
     Protected WithEvents ddlPartcipantLevelIdCombo1 As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
+    '''level2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents level2 As Global.System.Web.UI.HtmlControls.HtmlTableCell
+
+    '''<summary>
+    '''level3 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents level3 As Global.System.Web.UI.HtmlControls.HtmlTableCell
+
+    '''<summary>
+    '''ddlDistrict control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ddlDistrict As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
     '''pnlContent control.
     '''</summary>
     '''<remarks>

@@ -174,7 +174,6 @@
                                 <tr>
                                     <td colspan="2" align="center" style="color: #000000;">
                                         sahithyolsav niyamavali&nbsp;<asp:LinkButton ID="lnkClick" runat="server" Text="Click here"></asp:LinkButton>
-                                        circular: UT61/2014 .. Places of District Sahithyolsav
                                     </td>
                                 </tr>
                                 <tr>

@@ -1,0 +1,3 @@
+
+ALTER table tbl_ParticipantList add isGroupPaticipant bit
+ALTER table tbl_ParticipantList add intNumberOfPaticiapnt int

@@ -173,7 +173,7 @@
     </asp:UpdateProgress>
     <asp:ModalPopupExtender ID="modalPopup" runat="server" TargetControlID="UpdateProgress"
         PopupControlID="UpdateProgress" BackgroundCssClass="modalPopup" />
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="true" Visible="true"
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" Visible="true"
         OnRowCreated="GridView1_RowCreated">
         <RowStyle BackColor="#EFF3FB" />
         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -181,26 +181,39 @@
         <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
         <AlternatingRowStyle BackColor="White" />
         <Columns>
-            <asp:TemplateField HeaderText="SlNo#">
+          <%--  <asp:TemplateField HeaderText="SlNo#" HeaderStyle-Width="20px">
                 <ItemTemplate>
                     <%#Container.DataItemIndex+1 %>
                 </ItemTemplate>
                 <HeaderStyle Width="5px" ForeColor="White" />
                 <ItemStyle Width="5px" />
-            </asp:TemplateField>
+            </asp:TemplateField>--%>
+             <asp:BoundField DataField="slno" HeaderText="Slno" HeaderStyle-Width="10px" />
+            <asp:BoundField DataField="Name" HeaderText="Name" HeaderStyle-Width="100px"/>
+            <asp:BoundField DataField="Section" HeaderText="Section" HeaderStyle-Width="100px"/>
+            <asp:BoundField DataField="items" HeaderText="items" HeaderStyle-Width="100px"/>
         </Columns>
     </asp:GridView>
-    <asp:LinkButton ID="lbldownload" runat="server" Text="Click Here to Download Particiapnt List" OnClick="Button1_Click"></asp:LinkButton>
-     <asp:UpdatePanel ID="levelUpdatePnel" runat="server">
+    <asp:LinkButton ID="lbldownload" runat="server" Text="Click Here to Download Particiapnt List"
+        OnClick="Button1_Click"></asp:LinkButton>
+    <asp:UpdatePanel ID="levelUpdatePnel" runat="server">
         <ContentTemplate>
             <div class="searchTableStyle" style="width: 99.5%">
                 <table cellpadding="0" cellspacing="0" width="100%">
                     <tr>
-                        <td runat="server" id="level1Text" align="center" style="width: 30%">
+                        <td runat="server" id="level1Text" align="center" style="width: 25%">
                             Select Level
                         </td>
-                        <td runat="server" id="level1" style="width: 50%">
-                            <asp:DropDownList ID="ddlPartcipantLevelIdCombo1" runat="server" Width="45%" AutoPostBack="true"
+                        <td runat="server" id="level1" style="width: 25%">
+                            <asp:DropDownList ID="ddlPartcipantLevelIdCombo1" runat="server" Width="80%" AutoPostBack="true"
+                                onChange="loadUpdatePanel()">
+                            </asp:DropDownList>
+                        </td>
+                        <td runat="server" id="level2" align="center" style="width: 25%">
+                            Select District
+                        </td>
+                        <td runat="server" id="level3" style="width: 25%">
+                            <asp:DropDownList ID="ddlDistrict" runat="server" Width="80%" AutoPostBack="true"
                                 onChange="loadUpdatePanel()">
                             </asp:DropDownList>
                         </td>

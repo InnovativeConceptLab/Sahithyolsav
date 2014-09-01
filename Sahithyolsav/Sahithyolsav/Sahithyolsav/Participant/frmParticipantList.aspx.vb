@@ -14,7 +14,14 @@ Public Class frmParticipantList
             fillSection()
             manageAddBuuton()
             fillType()
-
+            fillDistrict()
+            If UserManagement.UserTypeId = 1 Then
+                level2.Visible = True
+                level3.Visible = True
+            Else
+                level2.Visible = False
+                level3.Visible = False
+            End If
         End If
     End Sub
     Private Sub fillType()
@@ -39,6 +46,15 @@ Public Class frmParticipantList
     End Sub
     Private Sub bindHeader()
         participantHeader.Text = "Paricipant List in " & ddlPartcipantLevelIdCombo1.SelectedItem.ToString
+    End Sub
+    Private Sub fillDistrict()
+        Dim dt As New DataTable
+        dt = District.GetDistricts("", "", 0).Tables(0)
+        ddlDistrict.DataSource = dt
+        ddlDistrict.DataTextField = "vchDistrictName"
+        ddlDistrict.DataValueField = "intDistrictID"
+        ddlDistrict.DataBind()
+        ddlDistrict.Items.Insert(0, New ListItem("----Select----", "0"))
     End Sub
     Private Sub fillLevels()
         Dim dt As New DataTable
@@ -285,7 +301,11 @@ Public Class frmParticipantList
         pnlContent.Visible = True
         Dim dt As New DataTable
         If UserManagement.UserTypeId = 1 Then
-            dt = Participant.getParticipantByLevelId(Convert.ToInt32(ddlPartcipantLevelIdCombo1.SelectedValue.ToString))
+            If ddlDistrict.SelectedValue = 0 Then
+                dt = Participant.getParticipantByLevelId(Convert.ToInt32(ddlPartcipantLevelIdCombo1.SelectedValue.ToString))
+            Else
+                dt = Participant.getParticipantByLevelId1(Convert.ToInt32(ddlPartcipantLevelIdCombo1.SelectedValue.ToString), Convert.ToInt32(ddlDistrict.SelectedValue.ToString))
+            End If
         Else
             If ddlPartcipantLevelIdCombo1.SelectedValue.ToString <> UserManagement.UserTypeId.ToString Then
                 dt = Participant.getParticipantByLevelId(Convert.ToInt32(ddlPartcipantLevelIdCombo1.SelectedValue.ToString), UserManagement.UserHigherMapId, UserManagement.UserID)
@@ -750,7 +770,11 @@ Public Class frmParticipantList
         pnlContent.Visible = True
         Dim dt As New DataTable
         If UserManagement.UserTypeId = 1 Then
-            dt = Participant.getParticipantByLevelId(Convert.ToInt32(ddlPartcipantLevelIdCombo1.SelectedValue.ToString))
+            If ddlDistrict.SelectedValue = 0 Then
+                dt = Participant.getParticipantByLevelId(Convert.ToInt32(ddlPartcipantLevelIdCombo1.SelectedValue.ToString))
+            Else
+                dt = Participant.getParticipantByLevelId1(Convert.ToInt32(ddlPartcipantLevelIdCombo1.SelectedValue.ToString), Convert.ToInt32(ddlDistrict.SelectedValue.ToString))
+            End If
         Else
             If ddlPartcipantLevelIdCombo1.SelectedValue.ToString <> UserManagement.UserTypeId.ToString Then
                 dt = Participant.getParticipantByLevelId(Convert.ToInt32(ddlPartcipantLevelIdCombo1.SelectedValue.ToString), UserManagement.UserHigherMapId, UserManagement.UserID)
@@ -760,25 +784,29 @@ Public Class frmParticipantList
         End If
         If gvParticipantdetails.Rows.Count > 0 Then
             Dim table As New DataTable
+            Dim k As Integer = 0
+            table.Columns.Add("slno", GetType(Integer))
             table.Columns.Add("Name", GetType(String))
             table.Columns.Add("Section", GetType(String))
             table.Columns.Add("items", GetType(String))
             Dim itemlist As DataTable
             Dim items As String = ""
             For i As Integer = 0 To dt.Rows.Count - 1
-                itemlist = Participant.getItemListByParticipantId(Convert.ToInt32(dt.Rows(i).Item(0).ToString))
+                itemlist = Participant.getItemListByParticipantId1(Convert.ToInt32(dt.Rows(i).Item(0).ToString))
                 For value As Integer = 0 To itemlist.Rows.Count - 1
+
                     If itemlist.Rows(value).ItemArray(3).ToString = "Yes" Then
                         If value = 0 Then
                             items = items + item.getItemsById(Convert.ToInt32(itemlist.Rows(value).ItemArray(2).ToString)).Rows(0).Item(1).ToString
                         Else
-                            items = items + "," + item.getItemsById(Convert.ToInt32(itemlist.Rows(value).ItemArray(2).ToString)).Rows(0).Item(1).ToString
+                            items = Environment.NewLine + items + " , " + item.getItemsById(Convert.ToInt32(itemlist.Rows(value).ItemArray(2).ToString)).Rows(0).Item(1).ToString + Environment.NewLine
                         End If
-
                     Else
                     End If
                 Next
-                table.Rows.Add(dt.Rows(i).Item(1).ToString, dt.Rows(i).Item(7).ToString, items)
+                k = k + 1
+                table.Rows.Add(k, dt.Rows(i).Item(1).ToString, dt.Rows(i).Item(7).ToString, items)
+                items = ""
             Next
             GridView1.DataSource = table
             GridView1.DataBind()
@@ -804,13 +832,25 @@ Public Class frmParticipantList
             HeaderGridRow.Cells.Add(HeaderCell)
             GridView1.Controls(0).Controls.AddAt(0, HeaderGridRow)
 
-            Dim dt As New DataTable
-            dt = District.GetDistricts("", "", 0).Tables(0)
+            
+
 
             Dim HeaderGrid1 As GridView = DirectCast(sender, GridView)
             Dim HeaderGridRow1 As New GridViewRow(1, 0, DataControlRowType.Header, DataControlRowState.Insert)
             Dim HeaderCell1 As New TableCell()
-            HeaderCell1.Text = dt.Rows(0).Item(1) & " DISTRICT PARTICIAPNT LIST"
+            Dim dt As New DataTable
+            If UserManagement.UserTypeId = 1 Then
+                If ddlDistrict.SelectedValue = 0 Then
+                    HeaderCell1.Text = "KERALA STATE PARTICIAPANT LIST"
+                Else
+                    dt = District.GetDistricts("", "", Convert.ToInt32(ddlDistrict.SelectedValue.ToString())).Tables(0)
+                    HeaderCell1.Text = dt.Rows(0).Item(1) & " DISTRICT PARTICIAPANT LIST"
+                End If
+            Else
+                dt = District.GetDistricts("", "", UserManagement.UserMapId).Tables(0)
+                HeaderCell1.Text = dt.Rows(0).Item(1) & " DISTRICT PARTICIAPANT LIST"
+            End If
+
             HeaderCell1.ForeColor = Drawing.Color.Black
             HeaderCell1.ColumnSpan = 4
             HeaderCell1.HorizontalAlign = HorizontalAlign.Center
@@ -822,5 +862,13 @@ Public Class frmParticipantList
     Protected Sub lbldownload_Click(ByVal sender As Object, ByVal e As EventArgs) Handles lbldownload.Click
        
        
+    End Sub
+
+    Protected Sub ddlDistrict_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ddlDistrict.SelectedIndexChanged
+        manageAddBuuton()
+        bindGrid()
+        If ddlPartcipantLevelIdCombo1.SelectedValue <> "0" Then
+            bindHeader()
+        End If
     End Sub
 End Class
