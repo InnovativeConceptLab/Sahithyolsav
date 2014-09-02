@@ -51,7 +51,8 @@
                         <li><a href="#" class="drop">Program</a>
                             <div class="dropdown_2columns">
                                 <a href="#" onclick="loadIframe('part')">Participant</a><br />
-                                <a href="#" onclick="loadIframe('chess')">Chess Number</a><br />
+                                 <a href="#" onclick="loadIframe('Gchess')">Generate Chess Number</a><br />
+                                <a href="#" onclick="loadIframe('chess')">View Chess Number</a><br />
                                 <a href="#" onclick="loadIframe('codeletter')">Code Letter</a><br />
                                      <a href="#" onclick="loadIframe('Itemrpt')">Item Wise Program Chart</a><br />
                                 <a href="#" onclick="loadIframe('tabulation')">Tabulation</a>

@@ -135,6 +135,7 @@
     <Content Include="Masters\frmUnit.aspx" />
     <Content Include="Participant\frmChessNumber.aspx" />
     <Content Include="Participant\frmCodeLetterMap.aspx" />
+    <Content Include="Participant\frmGenerateChessNum.aspx" />
     <Content Include="Participant\frmParticipantList.aspx" />
     <Content Include="Participant\frmTabulation.aspx" />
     <Content Include="Reports\frmItemWiseReport.aspx" />
@@ -326,6 +327,13 @@
     </Compile>
     <Compile Include="Participant\frmCodeLetterMap.aspx.vb">
       <DependentUpon>frmCodeLetterMap.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Participant\frmGenerateChessNum.aspx.designer.vb">
+      <DependentUpon>frmGenerateChessNum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Participant\frmGenerateChessNum.aspx.vb">
+      <DependentUpon>frmGenerateChessNum.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Participant\frmParticipantList.aspx.designer.vb">

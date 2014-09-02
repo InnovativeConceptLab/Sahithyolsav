@@ -57,6 +57,9 @@ function loadIframe(id) {
         case 'Itemrpt':
             document.getElementById('iframeContent').src = "../Reports/frmItemWiseReport.aspx";
             break;
+        case 'Gchess':
+            document.getElementById('iframeContent').src = "../Participant/frmGenerateChessNum.aspx";
+            break;
     }
 }
 function isNumberKey(e) {
