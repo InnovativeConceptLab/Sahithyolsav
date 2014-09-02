@@ -383,12 +383,22 @@ Public Class frmParticipantList
         If ddlPartcipantLevelIdCombo1.SelectedValue <> "5" Then
             For Each item As ListItem In chkItemList.Items
                 If item.Selected = True Then
-                    If Participant.ValidateItem(Convert.ToInt32(ddlPartcipantLevelIdComboPopUp.SelectedValue.ToString), Convert.ToInt32(item.Value.ToString()), 0) = True Then
-                        lblmsg.Visible = True
-                        lblmsg.Text = "Already One Participant is Partciapting from  " & ddlPartcipantLevelIdComboPopUp.SelectedItem.ToString() & " for item " & item.Text & ". Please delselect this item"
-                        lblmsg.ForeColor = Drawing.Color.Red
-                        Return True
+                    If ddlSection.SelectedItem.Text = "GENERAL" Then
+                        If Participant.ValidateGrpItem(Convert.ToInt32(ddlPartcipantLevelIdComboPopUp.SelectedValue.ToString), Convert.ToInt32(item.Value.ToString()), 0) = True Then
+                            lblmsg.Visible = True
+                            lblmsg.Text = "Already One Participant is Partciapting from  " & ddlPartcipantLevelIdComboPopUp.SelectedItem.ToString() & " for item " & item.Text & ". Please delselect this item"
+                            lblmsg.ForeColor = Drawing.Color.Red
+                            Return True
+                        End If
+                    Else
+                        If Participant.ValidateItem(Convert.ToInt32(ddlPartcipantLevelIdComboPopUp.SelectedValue.ToString), Convert.ToInt32(item.Value.ToString()), 0) = True Then
+                            lblmsg.Visible = True
+                            lblmsg.Text = "Already One Participant is Partciapting from  " & ddlPartcipantLevelIdComboPopUp.SelectedItem.ToString() & " for item " & item.Text & ". Please delselect this item"
+                            lblmsg.ForeColor = Drawing.Color.Red
+                            Return True
+                        End If
                     End If
+                  
                 End If
             Next
             'For Validating Group Item
