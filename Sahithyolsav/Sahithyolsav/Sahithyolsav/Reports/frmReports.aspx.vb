@@ -31,9 +31,19 @@ Public Class frmReports
         dt = Reports.GetReportById(Convert.ToInt32(ddlReports.SelectedValue.ToString()))
         If dt.Rows(0).ItemArray(3).ToString = "1" Then
             divItemSection.Visible = True
+            ddlSearchItem.Enabled = True
             fillSearchSection()
+            If ddlReports.SelectedValue.ToString() = "3" Then
+                ddlSearchItem.Enabled = False
+                ddlSearchItem.Items.Clear()
+            End If
+            'ElseIf dt.Rows(0).ItemArray(3).ToString = "2" Then
+            '    divItemSection.Visible = True
+            '    ddlSearchItem.Enabled = False
+            '    fillSearchSection()
         Else
             divItemSection.Visible = False
+            ddlSearchItem.Enabled = True
             Dim dtRpt As New DataTable
             Dim arrIn As New ArrayList()
             arrIn.Add(Convert.ToInt32(ddlReports.SelectedValue.ToString()))
@@ -82,17 +92,20 @@ Public Class frmReports
 
     Protected Sub ddlSearchSection_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ddlSearchSection.SelectedIndexChanged
         Dim dt As New DataTable
-        If (ddlSearchSection.SelectedValue <> "0") Then
-            dt = ConnectionLib.item.getItemsBySectionId(Convert.ToInt32(ddlSearchSection.SelectedValue.ToString()))
-            ddlSearchItem.DataSource = dt
-            ddlSearchItem.DataTextField = "vchItemName"
-            ddlSearchItem.DataValueField = "intItemId"
-            ddlSearchItem.DataBind()
-        Else
-            ddlSearchItem.DataSource = dt
-            ddlSearchItem.DataBind()
-            '  ddlItem.Items.Insert(0, New ListItem("----Select----", "0"))
+        If ddlReports.SelectedValue <> "3" Then
+            If (ddlSearchSection.SelectedValue <> "0") Then
+                dt = ConnectionLib.item.getItemsBySectionId(Convert.ToInt32(ddlSearchSection.SelectedValue.ToString()))
+                ddlSearchItem.DataSource = dt
+                ddlSearchItem.DataTextField = "vchItemName"
+                ddlSearchItem.DataValueField = "intItemId"
+                ddlSearchItem.DataBind()
+            Else
+                ddlSearchItem.DataSource = dt
+                ddlSearchItem.DataBind()
+                '  ddlItem.Items.Insert(0, New ListItem("----Select----", "0"))
+            End If
         End If
+       
     End Sub
 
     Protected Sub imgSearch_Click(ByVal sender As Object, ByVal e As System.Web.UI.ImageClickEventArgs) Handles imgSearch.Click
@@ -100,7 +113,12 @@ Public Class frmReports
         Dim arrIn As New ArrayList()
         arrIn.Add(Convert.ToInt32(ddlReports.SelectedValue.ToString()))
         arrIn.Add(Convert.ToInt32(ddlSearchSection.SelectedValue.ToString()))
-        arrIn.Add(Convert.ToInt32(ddlSearchItem.SelectedValue.ToString()))
+        If ddlReports.SelectedValue.ToString = "3" Then
+            arrIn.Add(0)
+        Else
+            arrIn.Add(Convert.ToInt32(ddlSearchItem.SelectedValue.ToString()))
+        End If
+
         arrIn.Add(UserManagement.UserMapId)
         arrIn.Add(UserManagement.UserTypeId)
         arrIn.Add(0)
