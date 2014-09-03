@@ -129,7 +129,7 @@
                         </tr>
                     </table>
                 </div>
-                <div class="searchTableStyle" style="width: 99.5%" runat="server" id="divGenerate">
+                <div class="searchTableStyle" style="width: 99.5%;display:none;" runat="server" id="divGenerate">
                     <table cellpadding="0" cellspacing="0" width="100%">
                         <tr>
                             <td align="center" style="width: 100%">
