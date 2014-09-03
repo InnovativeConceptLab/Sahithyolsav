@@ -13,7 +13,7 @@ namespace ConnectionLib
         public static bool SaveStage(ArrayList Param)
         {
             SqlParameter[] p = new SqlParameter[3];
-
+            //test
             p[0] = new SqlParameter("@intStageId", Param[0]);
             p[1] = new SqlParameter("@VchStageName", Param[1]);
             p[2] = new SqlParameter("@vchPlace", Param[2]);
@@ -115,7 +115,7 @@ namespace ConnectionLib
             String Query;
 
             Query = "SELECT tbl_Schedule.intShceduleID,tbl_Section.vchSectionName,vchItemName,VchStageName,"
-                    + " CONVERT(VARCHAR(10),dtDate,106)'Date',vchTime +':' + vchTime1 +' ' +IsAMPM 'Time'"
+                    + " CONVERT(VARCHAR(15),dtDate,106)'Date',vchTime +':' + vchTime1 +' ' +IsAMPM 'Time',tbl_Schedule.intSectionId,tbl_Schedule.intItemId,tbl_Schedule.intStageId"
                     + " FROM tbl_Schedule"
                     + " INNER JOIN tbl_Item ON tbl_Item.intItemId=tbl_Schedule.intItemId"
                     + " INNER JOIN tbl_Section on tbl_Section.intSectionID=tbl_Schedule.intSectionID"
@@ -136,21 +136,21 @@ namespace ConnectionLib
                 ds.Dispose();
                 Query = "";
             }
-        }
-        public static DataTable getItemOfCurrrentSchedules(int stageId, String time1, String time2, String ampm)
+        }//
+        public static DataTable getItemOfCurrrentSchedules(int stageId, String time1, String time2, String ampm,string date)
         {
             DataSet ds = new DataSet();
             String Query;
 
-            SqlParameter[] p = new SqlParameter[4];
+            SqlParameter[] p = new SqlParameter[5];
 
             p[0] = new SqlParameter("@stageId", stageId);
             p[1] = new SqlParameter("@time1", time1);
             p[2] = new SqlParameter("@time2", time2);
             p[3] = new SqlParameter("@ampm", ampm);
-
+            p[4] = new SqlParameter("@date", date);
             Query = "SELECT intItemId FROM tbl_Schedule "
-                   + " WHERE vchTime=@time1 and vchTime1=@time2 AND IsAMPM=@ampm";
+                   + " WHERE vchTime=@time1 and vchTime1=@time2 AND IsAMPM=@ampm and convert(varchar,dtDate,103)=@date";
 
             try
             {
@@ -184,6 +184,40 @@ namespace ConnectionLib
                 + " WHERE intItemId in(" + itemid1 + "," + itemid2 + ") and intParticipantLevelTypeID=@tolevelId AND vchStatus='Yes'"
                 + " GROUP BY intParticipantId HAVING COUNT(*) > 1";
 
+
+            try
+            {
+                ds = DataLayer.SqlHelper.ExecuteDataset(Utilities.GetConnectionString(Utilities.DataBase.Sahithyolsav), CommandType.Text, Query, p);
+                if (ds.Tables[0].Rows.Count > 0)
+                    return false;
+                else
+                    return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+            finally
+            {
+                ds.Dispose();
+                Query = "";
+            }
+        }
+        public static bool CheckSceduleVallidationWithStage(int stageId, String time1, String time2, String ampm, string date)
+        {
+            DataSet ds = new DataSet();
+            String Query;
+
+            SqlParameter[] p = new SqlParameter[5];
+
+            p[0] = new SqlParameter("@stageId", stageId);
+            p[1] = new SqlParameter("@time1", time1);
+            p[2] = new SqlParameter("@time2", time2);
+            p[3] = new SqlParameter("@ampm", ampm);
+            p[4] = new SqlParameter("@date", date);
+            Query = "SELECT intItemId FROM tbl_Schedule "
+                   + " WHERE vchTime=@time1 and vchTime1=@time2 AND IsAMPM=@ampm and convert(varchar,dtDate,103)=@date and intStageId=@stageId";
 
             try
             {
