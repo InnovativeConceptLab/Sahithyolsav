@@ -33,6 +33,25 @@
                 popup.hide();
             }
         }
+        function ValidateForm() 
+        {
+            if ($.trim(document.getElementById("ddlItem").value) == "") {
+                $("#lblmsg").css("display", "block");
+                $("#lblmsg").css("color", "red");
+                $("#lblmsg").text("Please eneter the item ");
+                return false;
+            }
+            if ($.trim(document.getElementById("txtDate").value) == "") {
+                $("#lblmsg").css("display", "block");
+                $("#lblmsg").css("color", "red");
+                $("#lblmsg").text("Please eneter the Date ");
+                return false;
+            }
+            ShowLoading();
+            $("#lblmsg").css("display", "none");
+            $("#lblmsg").css("color", "black");
+            return true;
+        }
     </script>
     <asp:UpdateProgress ID="UpdateProgress" runat="server">
         <ProgressTemplate>
@@ -81,9 +100,33 @@
                         <asp:BoundField DataField="Time" HeaderText="Time" />
                         <asp:TemplateField HeaderStyle-Width="60px" HeaderText="">
                             <ItemTemplate>
-                                <asp:ImageButton ID="ImageButton1" ImageUrl="~/image/edit.gif" runat="server" Width="25"
-                                    Height="25" />
+                                <asp:ImageButton ID="ImageButton1" ImageUrl="~/image/edit.png" runat="server" Width="25"
+                                    Height="25" OnClick="imgEdit_Click" />
                             </ItemTemplate>
+                        </asp:TemplateField>
+                         <asp:TemplateField HeaderText="SchdleID" Visible="false">
+                            <ItemTemplate>
+                                <asp:Label ID="lblSchdleID" runat="server" Text='<%# Bind("intShceduleID") %>'></asp:Label>
+                            </ItemTemplate>
+                            <ItemStyle Font-Size="10px" />
+                        </asp:TemplateField>
+                          <asp:TemplateField HeaderText="SchdleID" Visible="false">
+                            <ItemTemplate>
+                                <asp:Label ID="lblSectID" runat="server" Text='<%# Bind("intSectionId") %>'></asp:Label>
+                            </ItemTemplate>
+                            <ItemStyle Font-Size="10px" />
+                        </asp:TemplateField>
+                          <asp:TemplateField HeaderText="SchdleID" Visible="false">
+                            <ItemTemplate>
+                                <asp:Label ID="lblItemID" runat="server" Text='<%# Bind("intItemId") %>'></asp:Label>
+                            </ItemTemplate>
+                            <ItemStyle Font-Size="10px" />
+                        </asp:TemplateField>
+                          <asp:TemplateField HeaderText="SchdleID" Visible="false">
+                            <ItemTemplate>
+                                <asp:Label ID="lblStageID" runat="server" Text='<%# Bind("intStageId") %>'></asp:Label>
+                            </ItemTemplate>
+                            <ItemStyle Font-Size="10px" />
                         </asp:TemplateField>
                     </Columns>
                 </asp:GridView>
@@ -104,6 +147,7 @@
                     <tr style="background-color: #4b6c9e">
                         <td colspan="2" style="height: 10%; color: White; font-weight: bold; font-size: larger"
                             align="center">
+                             <asp:HiddenField ID="lblId" runat="server" />
                             <asp:HiddenField ID="hintParticipantListId" runat="server" />
                             <asp:HiddenField ID="hintItemId" runat="server" />
                             <asp:HiddenField ID="hCodeLetterMapID" runat="server" />
@@ -143,9 +187,11 @@
                             Date
                         </td>
                         <td style="width: 70%">
-                            <asp:TextBox ID="txtDate" runat="server" Width="90%" Enabled="true" />
+                            <asp:TextBox ID="txtDate" runat="server" Width="90%" Enabled="true" 
+                                TextMode="Date" />
+                              
                             <asp:CalendarExtender ID="CalendarExtender2" TargetControlID="txtDate" PopupButtonID="imgbtnCalendar"
-                                runat="server" />
+                                runat="server"  Format="dd/MM/yyyy"/>
                         </td>
                     </tr>
                     <tr>
@@ -157,6 +203,7 @@
                             &nbsp;&nbsp;<asp:TextBox ID="txtTime2" runat="server" Width="20%" Enabled="true" />
                         </td>
                     </tr>
+                    </tr>
                     <td style="width: 30%" align="right">
                         AM/PM
                     </td>
@@ -166,10 +213,10 @@
                              <asp:ListItem Text="PM" Value="PM"></asp:ListItem>
                         </asp:DropDownList>
                     </td>
-                    </tr>
                     <tr>
                         <td align="center" colspan="2">
                             <asp:ImageButton ID="btnSave" runat="server" ImageUrl="~/image/save.gif" OnClientClick="return ValidateForm()" />
+                             <asp:ImageButton ID="btnUpdate" runat="server" ImageUrl="~/image/update.gif" OnClientClick="return ValidateForm()" />
                             <asp:ImageButton ID="btnCancel" runat="server" ImageUrl="~/image/cancel.gif" />
                         </td>
                     </tr>
