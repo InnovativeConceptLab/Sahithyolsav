@@ -13,7 +13,7 @@ namespace ConnectionLib
         public static bool SaveStage(ArrayList Param)
         {
             SqlParameter[] p = new SqlParameter[3];
-
+            //test
             p[0] = new SqlParameter("@intStageId", Param[0]);
             p[1] = new SqlParameter("@VchStageName", Param[1]);
             p[2] = new SqlParameter("@vchPlace", Param[2]);

@@ -128,9 +128,16 @@
                             </ItemTemplate>
                             <ItemStyle Font-Size="10px" />
                         </asp:TemplateField>
+                        <%--   <asp:TemplateField HeaderText="SchdleID" Visible="false">
+                            <ItemTemplate>
+                                <asp:Label ID="lblStageID" runat="server" Text='<%# Bind("intStageId") %>'></asp:Label>
+                            </ItemTemplate>
+                            <ItemStyle Font-Size="10px" />
+                        </asp:TemplateField>--%>
                     </Columns>
                 </asp:GridView>
             </div>
+         <%--   <asp:Button ID="Button1" runat="server" Style="display: none;" />--%>
         </ContentTemplate>
     </asp:UpdatePanel>
     <!-- Modal Popup-->
