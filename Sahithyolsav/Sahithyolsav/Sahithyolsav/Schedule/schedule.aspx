@@ -47,6 +47,7 @@
                 $("#lblmsg").text("Please eneter the Date ");
                 return false;
             }
+           
             ShowLoading();
             $("#lblmsg").css("display", "none");
             $("#lblmsg").css("color", "black");
@@ -76,7 +77,13 @@
             </asp:Panel>
             <div>
                 <asp:Button ID="btnAddSch" runat="server" Text="Add Schedule" OnClientClick="loadUpdatePanel()" />
+            
             </div>
+           <div align="center" style="padding: 6px; vertical-align: top">
+               <asp:DropDownList ID="ddlStageS" runat="server" 
+                   AutoPostBack="True" Width="30%">
+                            </asp:DropDownList>
+           </div>
             <div style="width: 100%; height: 350px; overflow: auto" class="rounded_corners">
                 <asp:GridView runat="server" ID="gvSchedule" DataKeyNames="intShceduleID" AutoGenerateColumns="false"
                     Width="100%" HeaderStyle-Height="30px" EmptyDataText="No Data Seleted">
@@ -137,6 +144,7 @@
                     </Columns>
                 </asp:GridView>
             </div>
+            
          <%--   <asp:Button ID="Button1" runat="server" Style="display: none;" />--%>
         </ContentTemplate>
     </asp:UpdatePanel>
@@ -194,11 +202,23 @@
                             Date
                         </td>
                         <td style="width: 70%">
-                            <asp:TextBox ID="txtDate" runat="server" Width="90%" Enabled="true" 
-                                TextMode="Date" />
+                      
+                      
+                            <asp:TextBox ID="txtDate" runat="server" placeholder="YYYY" Width="20%" 
+                                Enabled="true" onkeypress="return isNumberKey(event);" MaxLength="4" TabIndex="100"
+                               />
                               
-                            <asp:CalendarExtender ID="CalendarExtender2" TargetControlID="txtDate" PopupButtonID="imgbtnCalendar"
-                                runat="server"  Format="dd/MM/yyyy"/>
+                   <%--         <asp:CalendarExtender ID="CalendarExtender2" TargetControlID="txtDate" PopupButtonID="imgbtnCalendar"
+                                runat="server"  Format="dd/MM/yyyy"/>--%>
+                                &nbsp;&nbsp;<asp:TextBox ID="txtmnth" runat="server" placeholder="MM" 
+                                Width="20%" Enabled="true" onkeypress="return isNumberKey(event);" 
+                                MaxLength="2" TabIndex="101" />
+                                &nbsp;&nbsp;<asp:TextBox ID="txtday" runat="server" placeholder="DD" 
+                                Width="20%" Enabled="true" onkeypress="return isNumberKey(event);" 
+                                MaxLength="2" TabIndex="102"/>
+                       
+                       
+                    
                         </td>
                     </tr>
                     <tr>
@@ -211,27 +231,30 @@
                         </td>
                     </tr>
                     </tr>
-                    <td style="width: 30%" align="right">
-                        AM/PM
-                    </td>
-                    <td style="width: 70%">
-                        <asp:DropDownList ID="ddlAMPM" runat="server" AutoPostBack="false" Width="90%">
-                            <asp:ListItem Text="AM" Value="AM"></asp:ListItem>
-                             <asp:ListItem Text="PM" Value="PM"></asp:ListItem>
-                        </asp:DropDownList>
-                    </td>
                     <tr>
-                        <td align="center" colspan="2">
-                            <asp:ImageButton ID="btnSave" runat="server" ImageUrl="~/image/save.gif" OnClientClick="return ValidateForm()" />
-                             <asp:ImageButton ID="btnUpdate" runat="server" ImageUrl="~/image/update.gif" OnClientClick="return ValidateForm()" />
-                            <asp:ImageButton ID="btnCancel" runat="server" ImageUrl="~/image/cancel.gif" />
+                        <td align="right" style="width: 30%">
+                            AM/PM
                         </td>
-                    </tr>
-                    <tr>
-                        <td align="center" colspan="2">
-                            <asp:Label ID="lblmsg" runat="server" Text=""></asp:Label>
+                        <td style="width: 70%">
+                            <asp:DropDownList ID="ddlAMPM" runat="server" AutoPostBack="false" Width="90%">
+                                <asp:ListItem Text="AM" Value="AM"></asp:ListItem>
+                                <asp:ListItem Text="PM" Value="PM"></asp:ListItem>
+                            </asp:DropDownList>
                         </td>
-                    </tr>
+                        <tr>
+                            <td align="center" colspan="2">
+                                <asp:ImageButton ID="btnSave" runat="server" ImageUrl="~/image/save.gif" 
+                                    OnClientClick="return ValidateForm()" />
+                                <asp:ImageButton ID="btnUpdate" runat="server" ImageUrl="~/image/update.gif" 
+                                    OnClientClick="return ValidateForm()" />
+                                <asp:ImageButton ID="btnCancel" runat="server" ImageUrl="~/image/cancel.gif" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" colspan="2">
+                                <asp:Label ID="lblmsg" runat="server" Text=""></asp:Label>
+                            </td>
+                        </tr>
                     </tr>
                 </table>
             </asp:Panel>

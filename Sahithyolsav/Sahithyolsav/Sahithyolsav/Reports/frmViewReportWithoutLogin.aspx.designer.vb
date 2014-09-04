@@ -11,7 +11,25 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class _Default
+Partial Public Class frmViewReportWithoutLogin
+
+    '''<summary>
+    '''Head1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Head1 As Global.System.Web.UI.HtmlControls.HtmlHead
+
+    '''<summary>
+    '''form1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
     '''ScriptManager1 control.
@@ -20,131 +38,113 @@ Partial Public Class _Default
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
+    Protected WithEvents ScriptManager1 As Global.AjaxControlToolkit.ToolkitScriptManager
 
     '''<summary>
-    '''UpdatePanel1 control.
+    '''UpdateProgress control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents UpdatePanel1 As Global.System.Web.UI.UpdatePanel
+    Protected WithEvents UpdateProgress As Global.System.Web.UI.UpdateProgress
 
     '''<summary>
-    '''lnkClick control.
+    '''modalPopup control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lnkClick As Global.System.Web.UI.WebControls.LinkButton
+    Protected WithEvents modalPopup As Global.AjaxControlToolkit.ModalPopupExtender
 
     '''<summary>
-    '''Button1 control.
+    '''participantHeader control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents participantHeader As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''lbblogin control.
+    '''sublist control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbblogin As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents sublist As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''btnAdmin control.
+    '''ddlReports control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnAdmin As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents ddlReports As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''btnState control.
+    '''divItemSection control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnState As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents divItemSection As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''btnDistrict control.
+    '''ddlSearchSection control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnDistrict As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents ddlSearchSection As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''btnDivision control.
+    '''ddlSearchItem control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnDivision As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents ddlSearchItem As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''btnSector control.
+    '''imgSearch control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnSector As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents imgSearch As Global.System.Web.UI.WebControls.ImageButton
 
     '''<summary>
-    '''btnUnit control.
+    '''divgridRport control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnUnit As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents divgridRport As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''txtUserName control.
+    '''imgPdf control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtUserName As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents imgPdf As Global.System.Web.UI.WebControls.ImageButton
 
     '''<summary>
-    '''txtPassword control.
+    '''gvReport control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtPassword As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''lblErrorMsg control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblErrorMsg As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''imgLogin control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents imgLogin As Global.System.Web.UI.WebControls.ImageButton
+    Protected WithEvents gvReport As Global.System.Web.UI.WebControls.GridView
 End Class

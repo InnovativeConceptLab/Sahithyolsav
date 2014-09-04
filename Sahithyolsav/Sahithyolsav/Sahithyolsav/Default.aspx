@@ -200,7 +200,14 @@
                         </td>
                         <td style="width: 20%; border-left: 1px solid #4b6c9e; vertical-align: top">
                             <table style="font-family: Arial, Helvetica, sans-serif;" width="100%">
-                                <tr>
+                              
+                             <tr style="padding: 25px">
+                                     <td style="text-align: center; padding: 5px">
+                                         <asp:Button ID="Button1" runat="server" Text="View Results" class="myButton" >
+                                        </asp:Button>
+                                    </td>
+                                </tr>
+                                  <tr>
                                     <td style="padding-left: 25px; font-family: 'Times New Roman', Times, serif; font-size: 12px;
                                         font-weight: bold;">
                                         <asp:Label ID="lbblogin" runat="server" Text="Login Here ..." ForeColor="#3366FF"
