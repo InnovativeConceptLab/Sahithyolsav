@@ -178,7 +178,7 @@ namespace ConnectionLib
             p[3] = new SqlParameter("@ampm", ampm);
             p[4] = new SqlParameter("@date", date);
             Query = "SELECT intItemId FROM tbl_Schedule "
-                   + " WHERE vchTime=@time1 and vchTime1=@time2 AND IsAMPM=@ampm and convert(varchar,dtDate,103)=@date";
+                   + " WHERE vchTime=@time1 and vchTime1=@time2 AND IsAMPM=@ampm and convert(varchar(11),dtDate,105)=@date";
 
             try
             {
@@ -245,7 +245,7 @@ namespace ConnectionLib
             p[3] = new SqlParameter("@ampm", ampm);
             p[4] = new SqlParameter("@date", date);
             Query = "SELECT intItemId FROM tbl_Schedule "
-                   + " WHERE vchTime=@time1 and vchTime1=@time2 AND IsAMPM=@ampm and convert(varchar,dtDate,103)=@date and intStageId=@stageId";
+                   + " WHERE vchTime=@time1 and vchTime1=@time2 AND IsAMPM=@ampm and convert(varchar(11),dtDate,105)=@date and intStageId=@stageId";
 
             try
             {
