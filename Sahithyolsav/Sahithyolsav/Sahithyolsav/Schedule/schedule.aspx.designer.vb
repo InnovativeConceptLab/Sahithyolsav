@@ -86,6 +86,15 @@ Partial Public Class schedule
     Protected WithEvents btnAddSch As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
+    '''ddlStageS control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ddlStageS As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
     '''gvSchedule control.
     '''</summary>
     '''<remarks>
@@ -203,13 +212,22 @@ Partial Public Class schedule
     Protected WithEvents txtDate As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''CalendarExtender2 control.
+    '''txtmnth control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents CalendarExtender2 As Global.AjaxControlToolkit.CalendarExtender
+    Protected WithEvents txtmnth As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txtday control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtday As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''txtTime1 control.

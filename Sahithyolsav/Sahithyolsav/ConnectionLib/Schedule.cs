@@ -115,11 +115,39 @@ namespace ConnectionLib
             String Query;
 
             Query = "SELECT tbl_Schedule.intShceduleID,tbl_Section.vchSectionName,vchItemName,VchStageName,"
-                    + " CONVERT(VARCHAR(15),dtDate,106)'Date',vchTime +':' + vchTime1 +' ' +IsAMPM 'Time',tbl_Schedule.intSectionId,tbl_Schedule.intItemId,tbl_Schedule.intStageId"
+                    + " CONVERT(VARCHAR(11),dtDate,120)'Date',vchTime +':' + vchTime1 +' ' +IsAMPM 'Time',tbl_Schedule.intSectionId,tbl_Schedule.intItemId,tbl_Schedule.intStageId"
                     + " FROM tbl_Schedule"
                     + " INNER JOIN tbl_Item ON tbl_Item.intItemId=tbl_Schedule.intItemId"
                     + " INNER JOIN tbl_Section on tbl_Section.intSectionID=tbl_Schedule.intSectionID"
                     + " INNER JOIN tbl_Stage ON tbl_Stage.intStageId=tbl_Schedule.intStageId";
+
+            try
+            {
+                ds = DataLayer.SqlHelper.ExecuteDataset(Utilities.GetConnectionString(Utilities.DataBase.Sahithyolsav), CommandType.Text, Query);
+                return ds.Tables[0];
+            }
+            catch
+            {
+                return null;
+            }
+
+            finally
+            {
+                ds.Dispose();
+                Query = "";
+            }
+        }//
+        public static DataTable getSchedulesWithStageID(int intStageID)
+        {
+            DataSet ds = new DataSet();
+            String Query;
+
+            Query = "SELECT tbl_Schedule.intShceduleID,tbl_Section.vchSectionName,vchItemName,VchStageName,"
+                    + " CONVERT(VARCHAR(11),dtDate,120)'Date',vchTime +':' + vchTime1 +' ' +IsAMPM 'Time',tbl_Schedule.intSectionId,tbl_Schedule.intItemId,tbl_Schedule.intStageId"
+                    + " FROM tbl_Schedule"
+                    + " INNER JOIN tbl_Item ON tbl_Item.intItemId=tbl_Schedule.intItemId"
+                    + " INNER JOIN tbl_Section on tbl_Section.intSectionID=tbl_Schedule.intSectionID"
+                    + " INNER JOIN tbl_Stage ON tbl_Stage.intStageId=tbl_Schedule.intStageId where tbl_Schedule.intStageId=" + intStageID;
 
             try
             {

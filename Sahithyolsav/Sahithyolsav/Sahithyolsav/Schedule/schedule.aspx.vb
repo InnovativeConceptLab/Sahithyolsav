@@ -27,6 +27,11 @@ Public Class schedule
         ddlStage.DataValueField = "intStageId"
         ddlStage.DataBind()
         ddlStage.Items.Insert(0, New ListItem("----Select----", "0"))
+        ddlStageS.DataSource = dt
+        ddlStageS.DataTextField = "VchStageName"
+        ddlStageS.DataValueField = "intStageId"
+        ddlStageS.DataBind()
+        ddlStageS.Items.Insert(0, New ListItem("----Select Stage----", "0"))
     End Sub
     Protected Sub btnAddSch_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnAddSch.Click
         clearFields()
@@ -41,7 +46,8 @@ Public Class schedule
         arrIn.Add(Convert.ToInt32(ddlSection.SelectedValue.ToString))
         arrIn.Add(Convert.ToInt32(ddlItem.SelectedValue.ToString))
         arrIn.Add(Convert.ToInt32(ddlStage.SelectedValue.ToString))
-        arrIn.Add(Convert.ToDateTime(txtDate.Text))
+        Dim ScheduleDate As New DateTime(txtDate.Text, txtmnth.Text, txtday.Text)
+        arrIn.Add(Convert.ToDateTime(ScheduleDate))
         '  arrIn.Add(Convert.ToDateTime(txtDate.Text).ToString("dd/MM/yyyy", CultureInfo.InvariantCulture))
         arrIn.Add(txtTime1.Text)
         arrIn.Add(txtTime2.Text)
@@ -60,7 +66,8 @@ Public Class schedule
         Dim dt As New DataTable
         Dim items As String = ""
         Dim ValidStage As Boolean = True
-        Dim ScheduleDate As String = Convert.ToDateTime(txtDate.Text).ToString("dd/MM/yyyy", CultureInfo.InvariantCulture)
+        Dim ScheduleDate As New DateTime(txtDate.Text, txtmnth.Text, txtday.Text)
+        '  Dim ScheduleDate As String = Convert.ToDateTime(txtDate.Text).ToString("dd/MM/yyyy", CultureInfo.InvariantCulture)
         ValidStage = Schedules.CheckSceduleVallidationWithStage(Convert.ToInt32(ddlStage.SelectedValue.ToString), txtTime1.Text, txtTime2.Text, ddlAMPM.SelectedValue.ToString, ScheduleDate)
         If ValidStage = True Then
             dt = Schedules.getItemOfCurrrentSchedules(Convert.ToInt32(ddlStage.SelectedValue.ToString), txtTime1.Text, txtTime2.Text, ddlAMPM.SelectedValue.ToString, ScheduleDate)
@@ -97,7 +104,12 @@ Public Class schedule
     End Sub
     Private Sub bindGrid()
         Dim dt As New DataTable
-        dt = Schedules.getSchedules()
+        If ddlStageS.SelectedIndex <> 0 Then
+            dt = Schedules.getSchedulesWithStageID(ddlStageS.SelectedValue)
+        Else
+            dt = Schedules.getSchedules()
+        End If
+
         gvSchedule.DataSource = dt
         gvSchedule.DataBind()
     End Sub
@@ -120,7 +132,9 @@ Public Class schedule
             lblItemID = gRow.FindControl("lblItemID")
             lblStageID = gRow.FindControl("lblStageID")
             lblId.Value = lblSchdleID.Text
-            txtDate.Text = gvrow.Cells(4).Text
+            txtDate.Text = gvrow.Cells(4).Text.Split("-")(0)
+            txtmnth.Text = gvrow.Cells(4).Text.Split("-")(1)
+            txtday.Text = gvrow.Cells(4).Text.Split("-")(2)
             'Convert.ToDateTime(gvrow.Cells(4).Text).ToString("dd-MM-yyyy", CultureInfo.InvariantCulture)
             txtTime1.Text = gvrow.Cells(5).Text.Split(":")(0)
             txtTime2.Text = gvrow.Cells(5).Text.Split(":")(1).Split(" ")(0)
@@ -141,6 +155,9 @@ Public Class schedule
         ddlStage.SelectedIndex = 0
         ddlItem.Items.Clear()
         lblmsg.Text = ""
+        ddlStageS.SelectedIndex = 0
+        txtmnth.Text = ""
+        txtday.Text = ""
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As System.Web.UI.ImageClickEventArgs) Handles btnUpdate.Click
@@ -150,8 +167,9 @@ Public Class schedule
             arrIn.Add(Convert.ToInt32(ddlSection.SelectedValue.ToString))
             arrIn.Add(Convert.ToInt32(ddlItem.SelectedValue.ToString))
             arrIn.Add(Convert.ToInt32(ddlStage.SelectedValue.ToString))
-            arrIn.Add(Convert.ToDateTime(txtDate.Text))
-            '    arrIn.Add(Convert.ToDateTime(txtDate.Text).ToString("dd/MM/yyyy", CultureInfo.InvariantCulture))
+            ' arrIn.Add(Convert.ToDateTime(txtDate.Text))
+            Dim ScheduleDate As New DateTime(txtDate.Text, txtmnth.Text, txtday.Text)
+            arrIn.Add(ScheduleDate)
             arrIn.Add(txtTime1.Text)
             arrIn.Add(txtTime2.Text)
             arrIn.Add(ddlAMPM.SelectedValue.ToString)
@@ -169,5 +187,9 @@ Public Class schedule
         End Try
 
       
+    End Sub
+
+    Protected Sub ddlStageS_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlStageS.SelectedIndexChanged
+        bindGrid()
     End Sub
 End Class

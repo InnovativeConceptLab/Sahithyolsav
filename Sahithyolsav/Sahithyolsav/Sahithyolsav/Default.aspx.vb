@@ -35,4 +35,13 @@ Public Class _Default
         Response.TransmitFile(Server.MapPath("~/Files/Sahithyolsavu_manual_2013.pdf"))
         Response.End()
     End Sub
+
+    Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Try
+            Response.Redirect("frmViewResults.aspx")
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
 End Class
