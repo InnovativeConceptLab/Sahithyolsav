@@ -365,7 +365,7 @@ namespace ConnectionLib
         public static bool UpdatePassword(int intUsrID, string NewPwd)
         {
 
-            string Query = "update tbl_User set vcbPassword=" + NewPwd + "where intUserId=" + intUsrID;
+            string Query = "update tbl_User set vcbPassword='" + NewPwd + "' where intUserId=" + intUsrID;
             try
             {
                 if (DataLayer.SqlHelper.ExecuteNonQuery(Utilities.GetConnectionString(Utilities.DataBase.Sahithyolsav), CommandType.Text, Query) == 1)
