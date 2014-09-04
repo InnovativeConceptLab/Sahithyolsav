@@ -138,4 +138,22 @@ Partial Public Class frmReports
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents gvReport As Global.System.Web.UI.WebControls.GridView
+
+    '''<summary>
+    '''btnPublish control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnPublish As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''lblmsg control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblmsg As Global.System.Web.UI.WebControls.Label
 End Class

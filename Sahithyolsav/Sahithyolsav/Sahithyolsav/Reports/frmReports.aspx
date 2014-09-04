@@ -124,6 +124,10 @@
                 </asp:GridView>
             </div>
         </div>
+        <div>
+            <asp:Button ID="btnPublish" runat="server" Text="Publish" Visible="false" />
+            <asp:Label ID="lblmsg" runat="server" Text="" Visible="false"></asp:Label>
+        </div>
     </div>
     </form>
 </body>

@@ -798,6 +798,7 @@ Public Class frmParticipantList
             table.Columns.Add("slno", GetType(Integer))
             table.Columns.Add("Name", GetType(String))
             table.Columns.Add("Section", GetType(String))
+            table.Columns.Add("Chess No", GetType(String))
             table.Columns.Add("items", GetType(String))
             Dim itemlist As DataTable
             Dim items As String = ""
@@ -815,7 +816,7 @@ Public Class frmParticipantList
                     End If
                 Next
                 k = k + 1
-                table.Rows.Add(k, dt.Rows(i).Item(1).ToString, dt.Rows(i).Item(7).ToString, items)
+                table.Rows.Add(k, dt.Rows(i).Item(1).ToString, dt.Rows(i).Item(7).ToString, dt.Rows(i).Item(4).ToString, items)
                 items = ""
             Next
             GridView1.DataSource = table
@@ -837,7 +838,7 @@ Public Class frmParticipantList
             Dim HeaderCell As New TableCell()
             HeaderCell.Text = "SSF SAHITHYOLSAV -2014 "
             HeaderCell.ForeColor = Drawing.Color.Black
-            HeaderCell.ColumnSpan = 4
+            HeaderCell.ColumnSpan = 5
             HeaderCell.HorizontalAlign = HorizontalAlign.Center
             HeaderGridRow.Cells.Add(HeaderCell)
             GridView1.Controls(0).Controls.AddAt(0, HeaderGridRow)
@@ -862,7 +863,7 @@ Public Class frmParticipantList
             End If
 
             HeaderCell1.ForeColor = Drawing.Color.Black
-            HeaderCell1.ColumnSpan = 4
+            HeaderCell1.ColumnSpan = 5
             HeaderCell1.HorizontalAlign = HorizontalAlign.Center
             HeaderGridRow1.Cells.Add(HeaderCell1)
             GridView1.Controls(0).Controls.AddAt(1, HeaderGridRow1)

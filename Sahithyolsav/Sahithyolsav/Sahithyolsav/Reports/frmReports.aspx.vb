@@ -29,6 +29,8 @@ Public Class frmReports
         Dim dt As New DataTable
         divgridRport.Visible = False
         dt = Reports.GetReportById(Convert.ToInt32(ddlReports.SelectedValue.ToString()))
+        btnPublish.Visible = False
+        lblmsg.Visible = False
         If dt.Rows(0).ItemArray(3).ToString = "1" Then
             divItemSection.Visible = True
             ddlSearchItem.Enabled = True
@@ -92,6 +94,8 @@ Public Class frmReports
 
     Protected Sub ddlSearchSection_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ddlSearchSection.SelectedIndexChanged
         Dim dt As New DataTable
+        btnPublish.Visible = False
+        lblmsg.Visible = False
         If ddlReports.SelectedValue <> "3" Then
             If (ddlSearchSection.SelectedValue <> "0") Then
                 dt = ConnectionLib.item.getItemsBySectionId(Convert.ToInt32(ddlSearchSection.SelectedValue.ToString()))
@@ -105,12 +109,19 @@ Public Class frmReports
                 '  ddlItem.Items.Insert(0, New ListItem("----Select----", "0"))
             End If
         End If
-       
+
     End Sub
 
     Protected Sub imgSearch_Click(ByVal sender As Object, ByVal e As System.Web.UI.ImageClickEventArgs) Handles imgSearch.Click
+
         Dim dt As New DataTable
         Dim arrIn As New ArrayList()
+
+        If ddlReports.SelectedValue.ToString() = "1" Then
+            btnPublish.Visible = True
+        Else
+            btnPublish.Visible = False
+        End If
         arrIn.Add(Convert.ToInt32(ddlReports.SelectedValue.ToString()))
         arrIn.Add(Convert.ToInt32(ddlSearchSection.SelectedValue.ToString()))
         If ddlReports.SelectedValue.ToString = "3" Then
@@ -124,6 +135,7 @@ Public Class frmReports
         arrIn.Add(0)
         dt = Reports.ExecuteReportQuery(arrIn)
         bindReportGrid(dt)
+
     End Sub
     Private Sub bindReportGrid(ByVal dt As DataTable)
         'Code to bind grid,dt will contain grid data
@@ -195,6 +207,22 @@ Public Class frmReports
             HeaderCell1.HorizontalAlign = HorizontalAlign.Center
             HeaderGridRow1.Cells.Add(HeaderCell1)
             gvReport.Controls(0).Controls.AddAt(1, HeaderGridRow1)
+        End If
+    End Sub
+
+    Protected Sub btnPublish_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnPublish.Click
+        If ddlReports.SelectedValue.ToString() = 1 Then
+            If ddlSearchItem.SelectedValue <> "0" Then
+                If ConnectionLib.item.updateItem(Convert.ToInt32(ddlSearchItem.SelectedValue.ToString())) = True Then
+                    lblmsg.Visible = True
+                    lblmsg.Text = "RESULT PUBLISHED SUCSESSFULLY"
+                    lblmsg.ForeColor = Drawing.Color.Green
+                Else
+                    lblmsg.Visible = True
+                    lblmsg.Text = "RESULT PUBLIS FAILED"
+                    lblmsg.ForeColor = Drawing.Color.Red
+                End If
+            End If
         End If
     End Sub
 End Class

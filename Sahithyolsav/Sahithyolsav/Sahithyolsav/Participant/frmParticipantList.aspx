@@ -191,6 +191,7 @@
              <asp:BoundField DataField="slno" HeaderText="Slno" HeaderStyle-Width="10px" />
             <asp:BoundField DataField="Name" HeaderText="Name" HeaderStyle-Width="100px"/>
             <asp:BoundField DataField="Section" HeaderText="Section" HeaderStyle-Width="100px"/>
+            <asp:BoundField DataField="Chess No" HeaderText="Chess No" HeaderStyle-Width="100px"/>
             <asp:BoundField DataField="items" HeaderText="items" HeaderStyle-Width="100px"/>
         </Columns>
     </asp:GridView>
