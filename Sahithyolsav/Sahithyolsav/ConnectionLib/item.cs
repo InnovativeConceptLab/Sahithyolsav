@@ -225,6 +225,31 @@ namespace ConnectionLib
                 return false;
             }
         }
+        public static bool updateItem(int intItemId)
+        {
+            SqlParameter[] p = new SqlParameter[1];
+            String Query;
+
+            p[0] = new SqlParameter("@intItemId", intItemId);
+
+            Query = "Update  tbl_Item   SET IsPublished=1 WHERE intItemId=@intItemId";
+
+            try
+            {
+                if (DataLayer.SqlHelper.ExecuteNonQuery(Utilities.GetConnectionString(Utilities.DataBase.Sahithyolsav), CommandType.Text, Query, p) == 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
         public static DataTable GetPoints(string itemId, string Position)
         {
             String Query;
